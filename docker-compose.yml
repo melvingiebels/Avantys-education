@@ -10,9 +10,8 @@ services:
     ports:
       - "15672:15672" # RabbitMQ management UI port
       - "5672:5672"   # RabbitMQ AMQP port
-    environment:
-      - RABBITMQ_DEFAULT_USER=admin
-      - RABBITMQ_DEFAULT_PASS=password
+    env_file:
+      - .env
 
   registrationmanagementapi:
     image: avantys-education/registrationmanagementapi:1.0
