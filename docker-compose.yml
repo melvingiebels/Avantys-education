@@ -1,0 +1,19 @@
+version: '3'
+services:
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq-avantys
+    volumes:
+      - ./rabbitmq/data:/var/lib/rabbitmq
+      - ./rabbitmq/logs:/var/log/rabbitmq
+    ports:
+      - "15672:15672" # RabbitMQ management UI port
+      - "5672:5672"   # RabbitMQ AMQP port
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=password
+
+volumes:
+  rabbitmqdata:
+    external: true
