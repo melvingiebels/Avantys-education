@@ -15,15 +15,13 @@ import { Appointment } from './domain/appointment.model';
   imports: [
     TypeOrmModule.forRoot({
       type: "mssql",
-      host: "localhost",
+      host: "sqlserver",
       port: 1433,
       database: "AvantysEducationGuidanceTalk",
-      extra: {
-        trustedConnection:true,
-        enableArithAbort: true,
-      },
-      options:{
-        trustServerCertificate : true,
+      username: "sa",
+      password: "MelvinIsEenBot34",
+      options: {
+        trustServerCertificate: true
       },
       entities: [Student,Teacher,Note,GuidanceTalk,Appointment],
       synchronize: true,
