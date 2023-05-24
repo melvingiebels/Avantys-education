@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToOne, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 import { Appointment } from "./appointment.model";
 import { Note } from "./note.model";
 
@@ -7,15 +7,14 @@ export class GuidanceTalk {
     @PrimaryGeneratedColumn()
     id:number;
     
-    @Column()
+    @ManyToOne(() => Appointment)
     appointment:Appointment;
     
-    @Column()
-    notes:Note;
+    @ManyToOne(() => Note)
+    note:Note;
 
-    constructor(id:number,appointment:Appointment,notes:Note){
-        this.id = id;
+    constructor(appointment:Appointment,note:Note){
         this.appointment = appointment;
-        this.notes = notes;
+        this.note = note;
     }
 }

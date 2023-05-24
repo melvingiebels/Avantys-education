@@ -1,23 +1,10 @@
-import { Column, PrimaryGeneratedColumn } from "typeorm";
-import { IUser } from "./user.interface";
+import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BaseUser } from "./user.abstract";
 
-export class Teacher implements IUser {
-    @PrimaryGeneratedColumn()
-    id: string;
-    
-    @Column()
-    name: string;
-    
-    @Column()
-    email: string;
+@Entity()
+export class Teacher extends BaseUser {
 
-    @Column()
-    phonenumber: number;
-
-    constructor(id:string,name:string,email:string,phonenumber:number){
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.phonenumber = phonenumber;
+    constructor(name:string,email:string,phonenumber:number){
+        super(name,email,phonenumber)
     }
 }

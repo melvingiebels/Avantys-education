@@ -1,5 +1,8 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
-import { IUser } from "./user.interface";
+import { Column, Entity, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { BaseUser } from "./user.abstract";
+import { Teacher } from "./teacher.model";
+import { Student } from "./student.model";
+import { GuidanceTalk } from "./guidanceTalk.model";
 
 @Entity()
 export class Appointment {
@@ -12,8 +15,11 @@ export class Appointment {
     @Column()
     description:string;
     
-    @Column()
-    attendees:IUser[];
+    @ManyToOne(() => Teacher)
+    teacher: Teacher;
+  
+    @ManyToOne(() => Student)
+    student: Student;
     
     @Column()
     startTime:Date;
@@ -22,11 +28,11 @@ export class Appointment {
     endTime:Date;
 
     
-    constructor(id:number,title:string,description:string,attendees:IUser[],startTime:Date,endTime:Date){
-        this.id = id;
+    constructor(title:string,description:string,teacher:Teacher,student:Student,startTime:Date,endTime:Date){
         this.title = title;
         this.description = description;
-        this.attendees = attendees;
+        this.teacher = teacher;
+        this.student = student;
         this.startTime = startTime;
         this.endTime = endTime
     }

@@ -1,20 +1,23 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
-import { IUser } from "./user.interface";
+import { Column, Entity, ManyToOne, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { BaseUser } from "./user.abstract";
+import { GuidanceTalk } from "./guidanceTalk.model";
+import { Student } from "./student.model";
+import { Teacher } from "./teacher.model";
 
 @Entity()
 export class Note{
     @PrimaryGeneratedColumn()
     id:number;
-    @Column()
-    user:IUser;
+    @ManyToOne(() => Student)
+    student:Student;
     @Column()
     title:string;
     @Column()
     description:string;
 
-    constructor(id:number,user:IUser,title:string,description:string){
-        this.id = id;
-        this.user = user;
+
+    constructor(student:Student,title:string,description:string){
+        this.student = student;
         this.title = title;
         this.description = description;
     }

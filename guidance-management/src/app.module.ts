@@ -9,6 +9,7 @@ import { Teacher } from './domain/teacher.model';
 import { Note } from './domain/note.model';
 import { GuidanceTalk } from './domain/guidanceTalk.model';
 import { Appointment } from './domain/appointment.model';
+import { BaseUser } from './domain/user.abstract';
 
 
 @Module({
@@ -23,11 +24,11 @@ import { Appointment } from './domain/appointment.model';
       options: {
         trustServerCertificate: true
       },
-      entities: [Student,Teacher,Note,GuidanceTalk,Appointment],
+      entities: [Student,Teacher,BaseUser,Note,GuidanceTalk,Appointment],
       synchronize: true,
       logging: false
     }),
-    TypeOrmModule.forFeature([Student,Teacher,Note,GuidanceTalk,Appointment])
+    TypeOrmModule.forFeature([Student,Teacher,BaseUser,Note,GuidanceTalk,Appointment])
   ],
   controllers: [AppController,GuidanceTalkController],
   providers: [AppService, GuidanceTalkService],

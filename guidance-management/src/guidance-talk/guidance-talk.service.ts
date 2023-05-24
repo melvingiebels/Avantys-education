@@ -3,15 +3,14 @@ import { Appointment } from 'src/domain/appointment.model';
 import { Note } from 'src/domain/note.model';
 import { Student } from 'src/domain/student.model';
 import { Teacher } from 'src/domain/teacher.model';
-import { IUser } from 'src/domain/user.interface';
+import { BaseUser } from 'src/domain/user.abstract';
 
 @Injectable()
 export class GuidanceTalkService {
 
     scheduleGuidanceTalkAppointment(title:string,description:string, teacher:Teacher,student:Student,startTime:Date,endTime:Date):Appointment{
         //TODO Get teacher,student from db
-        const attendees:IUser[] = [teacher,student];
-        let appointment = new Appointment(1,title,description,attendees,startTime,endTime);
+        let appointment = new Appointment(title,description,teacher,student,startTime,endTime);
         //TODO Send faux email to student teacher,
         //TODO create GuidanceTalk in database
 
@@ -19,9 +18,9 @@ export class GuidanceTalkService {
         return appointment;
     }
 
-    finishGuidanceTalk(guidanceTalkId:string,user:IUser,title:string,description:string){
+    finishGuidanceTalk(guidanceTalkId:string,user:BaseUser,title:string,description:string){
         //TODO get guidance talk from database
-        let notes = new Note(1,user,title,description);
+        let notes = new Note(user,title,description);
         //TODO add notes to guidance talk.
 
     }
