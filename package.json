@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@nestjs/typeorm": "^9.0.1",
+    "amqplib": "^0.10.3",
+    "mysql": "^2.18.1",
+    "rxjs": "^7.8.1",
+    "typeorm": "^0.3.16"
+  }
+}
