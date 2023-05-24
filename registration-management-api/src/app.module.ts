@@ -2,9 +2,26 @@ import { Module } from '@nestjs/common';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { StudentController } from './student/student.controller';
 import { StudentService } from './student/student.service';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { Student } from './student/student.entity';
 
 @Module({
   imports: [
+    TypeOrmModule.forRoot({
+      type: 'mssql',
+      host: 'sqlserver',
+      port: 1433,
+      database: 'AvantysEducationRegistration',
+      username: 'sa',
+      password: 'MelvinIsEenBot34',
+      options: {
+        trustServerCertificate: true,
+      },
+      entities: [Student],
+      synchronize: true,
+      logging: false,
+    }),
+    TypeOrmModule.forFeature([Student]),
     ClientsModule.register([
       {
         name: 'STUDENT_SERVICE',

@@ -1,6 +1,14 @@
-import { Body, Controller, Param, Post } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Param,
+  Post,
+  UsePipes,
+  ValidationPipe,
+} from '@nestjs/common';
 import { EventPattern } from '@nestjs/microservices';
 import { StudentService } from './student.service'; // import the StudentsService
+import { Student } from './student.entity'; // import the Student entity
 
 @Controller('student')
 export class StudentController {
@@ -13,10 +21,19 @@ export class StudentController {
     console.log(data);
   }
 
+  // @Post()
+  // // @UsePipes(new ValidationPipe({ transform: true }))
+  // newStudent(@Body() name: string) {
+  //   const student = new Student(name);
+  //   return this.studentService.createStudent(student);
+  // }
+
   @Post()
-  newStudent(@Body() name: string) {
-    return this.studentService.createStudent(name);
+  newStudent(@Body() studentDto: { name: string }) {
+    const student = new Student(studentDto.name);
+    return this.studentService.createStudent(student);
   }
+
 
   @Post('accept/:studentId')
   async acceptRegistration(@Param('studentId') studentId: string) {

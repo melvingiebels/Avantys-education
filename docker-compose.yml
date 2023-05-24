@@ -13,17 +13,16 @@ services:
     env_file:
       - .env
 
-  # sqlserver:
-  #   image: mcr.microsoft.com/azure-sql-edge
-  #   container_name: sqlserver-avantys
-  #   volumes:
-  #     - sqlserverdata:/var/opt/mssql
-  #   ports:
-  #     - "1434:1433"
-  #   environment:
-  #     - ACCEPT_EULA=Y
-  #     - MSSQL_PID=Developer
-  #     - SA_PASSWORD=8jkGh47hnDw89Haq8LN2
+  sqlserver:
+      image: mcr.microsoft.com/mssql/server:2022-latest
+      container_name: sqlserver
+      volumes:
+        - sqlserverdata:/var/opt/mssql
+      environment:
+        SA_PASSWORD: "MelvinIsEenBot34"
+        ACCEPT_EULA: "Y"
+      ports:
+        - 1436:1433
 
   registrationmanagementapi:
     image: avantys-education/registrationmanagementapi:1.0
@@ -34,7 +33,6 @@ services:
       - "3000:3000"
 
 volumes:
-  # sqlserverdata:
-  #   external: true
+  sqlserverdata:
   rabbitmqdata:
     external: true

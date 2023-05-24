@@ -1,10 +1,10 @@
 {
-    "type": "mysql",
+    "type": "mssql",
     "host": "localhost",
-    "port": 3306,
-    "username": "user",
-    "password": "password",
-    "database": "registration",
-    "entities": ["dist/**/*.entity{.ts,.js}"],
-    "synchronize": true
+    "port": 1433,
+    "database": "AvantysEducationRegistration",
+    "entities": ["dist/**/*.model{.ts,.js}"],
+    "trustedConnection":true,
+    "synchronize": true,
+    "logging": false
 }
