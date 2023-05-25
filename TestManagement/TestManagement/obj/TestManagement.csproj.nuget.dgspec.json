@@ -4,14 +4,14 @@
     "D:\\source\\Avantys-education\\TestManagement\\TestManagement\\TestManagement.csproj": {}
   },
   "projects": {
-    "D:\\source\\Avantys-education\\TestManagement\\CQS\\CQS.csproj": {
+    "D:\\source\\Avantys-education\\TestManagement\\TestManagement.CQS\\TestManagement.CQS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\source\\Avantys-education\\TestManagement\\CQS\\CQS.csproj",
-        "projectName": "CQS",
-        "projectPath": "D:\\source\\Avantys-education\\TestManagement\\CQS\\CQS.csproj",
+        "projectUniqueName": "D:\\source\\Avantys-education\\TestManagement\\TestManagement.CQS\\TestManagement.CQS.csproj",
+        "projectName": "TestManagement.CQS",
+        "projectPath": "D:\\source\\Avantys-education\\TestManagement\\TestManagement.CQS\\TestManagement.CQS.csproj",
         "packagesPath": "C:\\Users\\dekei\\.nuget\\packages\\",
-        "outputPath": "D:\\source\\Avantys-education\\TestManagement\\CQS\\obj\\",
+        "outputPath": "D:\\source\\Avantys-education\\TestManagement\\TestManagement.CQS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -63,14 +63,14 @@
         }
       }
     },
-    "D:\\source\\Avantys-education\\TestManagement\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\source\\Avantys-education\\TestManagement\\TestManagement.Infrastructure\\TestManagement.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\source\\Avantys-education\\TestManagement\\Infrastructure\\Infrastructure.csproj",
-        "projectName": "Infrastructure",
-        "projectPath": "D:\\source\\Avantys-education\\TestManagement\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\source\\Avantys-education\\TestManagement\\TestManagement.Infrastructure\\TestManagement.Infrastructure.csproj",
+        "projectName": "TestManagement.Infrastructure",
+        "projectPath": "D:\\source\\Avantys-education\\TestManagement\\TestManagement.Infrastructure\\TestManagement.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\dekei\\.nuget\\packages\\",
-        "outputPath": "D:\\source\\Avantys-education\\TestManagement\\Infrastructure\\obj\\",
+        "outputPath": "D:\\source\\Avantys-education\\TestManagement\\TestManagement.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -91,8 +91,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\source\\Avantys-education\\TestManagement\\CQS\\CQS.csproj": {
-                "projectPath": "D:\\source\\Avantys-education\\TestManagement\\CQS\\CQS.csproj"
+              "D:\\source\\Avantys-education\\TestManagement\\TestManagement.CQS\\TestManagement.CQS.csproj": {
+                "projectPath": "D:\\source\\Avantys-education\\TestManagement\\TestManagement.CQS\\TestManagement.CQS.csproj"
               }
             }
           }
@@ -165,11 +165,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\source\\Avantys-education\\TestManagement\\CQS\\CQS.csproj": {
-                "projectPath": "D:\\source\\Avantys-education\\TestManagement\\CQS\\CQS.csproj"
+              "D:\\source\\Avantys-education\\TestManagement\\TestManagement.CQS\\TestManagement.CQS.csproj": {
+                "projectPath": "D:\\source\\Avantys-education\\TestManagement\\TestManagement.CQS\\TestManagement.CQS.csproj"
               },
-              "D:\\source\\Avantys-education\\TestManagement\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "D:\\source\\Avantys-education\\TestManagement\\Infrastructure\\Infrastructure.csproj"
+              "D:\\source\\Avantys-education\\TestManagement\\TestManagement.Infrastructure\\TestManagement.Infrastructure.csproj": {
+                "projectPath": "D:\\source\\Avantys-education\\TestManagement\\TestManagement.Infrastructure\\TestManagement.Infrastructure.csproj"
               }
             }
           }

@@ -22,8 +22,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\CQS\CQS.csproj"/>
-        <ProjectReference Include="..\Infrastructure\Infrastructure.csproj"/>
+        <ProjectReference Include="..\TestManagement.CQS\TestManagement.CQS.csproj"/>
+        <ProjectReference Include="..\TestManagement.Infrastructure\TestManagement.Infrastructure.csproj"/>
     </ItemGroup>
 
 </Project>

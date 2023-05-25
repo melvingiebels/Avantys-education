@@ -1,23 +1,23 @@
-﻿using CQS.Command;
-using CQS.Command.Question;
-using CQS.Command.Student;
-using CQS.Command.Test;
-using CQS.Queries;
-using CQS.Queries.McQuestion;
-using CQS.Queries.OpenQuestion;
-using CQS.Queries.Question;
-using CQS.Queries.Student;
-using CQS.Queries.Test;
-using Infrastructure.CommandHandlers;
-using Infrastructure.CommandHandlers.Question;
-using Infrastructure.CommandHandlers.Student;
-using Infrastructure.CommandHandlers.Test;
-using Infrastructure.Context;
-using Infrastructure.QueriesHandlers.McQuestion;
-using Infrastructure.QueriesHandlers.OpenQuestion;
-using Infrastructure.QueriesHandlers.Question;
-using Infrastructure.QueriesHandlers.Student;
-using Infrastructure.QueriesHandlers.Test;
+﻿using TestManagement.CQS.Command;
+using TestManagement.CQS.Command.Question;
+using TestManagement.CQS.Command.Student;
+using TestManagement.CQS.Command.Test;
+using TestManagement.CQS.Queries;
+using TestManagement.CQS.Queries.McQuestion;
+using TestManagement.CQS.Queries.OpenQuestion;
+using TestManagement.CQS.Queries.Question;
+using TestManagement.CQS.Queries.Student;
+using TestManagement.CQS.Queries.Test;
+using TestManagement.Infrastructure.CommandHandlers;
+using TestManagement.Infrastructure.CommandHandlers.Question;
+using TestManagement.Infrastructure.CommandHandlers.Student;
+using TestManagement.Infrastructure.CommandHandlers.Test;
+using TestManagement.Infrastructure.Context;
+using TestManagement.Infrastructure.QueriesHandlers.McQuestion;
+using TestManagement.Infrastructure.QueriesHandlers.OpenQuestion;
+using TestManagement.Infrastructure.QueriesHandlers.Question;
+using TestManagement.Infrastructure.QueriesHandlers.Student;
+using TestManagement.Infrastructure.QueriesHandlers.Test;
 using Ninject.Modules;
 
 namespace TestManagement.IoC
@@ -26,7 +26,7 @@ namespace TestManagement.IoC
     {
         public override void Load()
         {
-            // Infrastructure
+            // TestManagement.Infrastructure
             Bind<IQueryFactory>().ToMethod(t => new QueryFactory(x => Container.Current.Resolve(x))).InTransientScope();
             Bind<ICommandsFactory>()
                 .ToMethod(t => new CommandFactory(x => (object[])Container.Current.ResolveAll(x)))

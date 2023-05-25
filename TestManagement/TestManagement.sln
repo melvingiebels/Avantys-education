@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQS", "CQS\CQS.csproj", "{78F7E5B5-5FEE-4B34-B18D-87497AC3BEC6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestManagement.CQS", "TestManagement.CQS\TestManagement.CQS.csproj", "{78F7E5B5-5FEE-4B34-B18D-87497AC3BEC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{724B7DAD-2127-4DAC-9499-C22739476399}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestManagement.Infrastructure", "TestManagement.Infrastructure\TestManagement.Infrastructure.csproj", "{724B7DAD-2127-4DAC-9499-C22739476399}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestManagement", "TestManagement\TestManagement.csproj", "{B7109309-BE4C-4FC5-9F5C-250D5B3716A8}"
 EndProject

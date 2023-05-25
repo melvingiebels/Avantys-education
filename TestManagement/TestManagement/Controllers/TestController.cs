@@ -1,9 +1,9 @@
-﻿using CQS.Command;
-using CQS.Command.Test;
-using CQS.Domain;
-using CQS.Queries;
-using CQS.Queries.Test;
-using Infrastructure.Context;
+﻿using TestManagement.CQS.Command;
+using TestManagement.CQS.Command.Test;
+using TestManagement.CQS.Domain;
+using TestManagement.CQS.Queries;
+using TestManagement.CQS.Queries.Test;
+using TestManagement.Infrastructure.Context;
 using Microsoft.AspNetCore.Mvc;
 using TestManagement.IoC;
 
@@ -13,15 +13,11 @@ namespace TestManagement.Controllers;
 [Route("[controller]")]
 public class TestController
 {
-    private readonly ILogger<TestController> _logger;
-    private readonly TestManagementDbContext _dbContext;
     private readonly IQueryFactory _queryFactory;
     private readonly ICommandsFactory _commandsFactory;
 
-    public TestController(ILogger<TestController> logger, TestManagementDbContext dbContext)
+    public TestController()
     {
-        _dbContext = dbContext;
-        _logger = logger;
         _queryFactory = Container.Current.Resolve<IQueryFactory>();
         _commandsFactory = Container.Current.Resolve<ICommandsFactory>();
     }
