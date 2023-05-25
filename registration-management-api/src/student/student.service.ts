@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@nestjs/common';
 import { ClientProxy } from '@nestjs/microservices';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Student } from './student.entity';
+import { Student } from '../domain/student.entity';
 
 @Injectable()
 export class StudentService {

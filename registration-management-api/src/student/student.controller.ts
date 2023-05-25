@@ -8,7 +8,7 @@ import {
 } from '@nestjs/common';
 import { EventPattern } from '@nestjs/microservices';
 import { StudentService } from './student.service'; // import the StudentsService
-import { Student } from './student.entity'; // import the Student entity
+import { Student } from '../domain/student.entity'; // import the Student entity
 
 @Controller('student')
 export class StudentController {
@@ -29,11 +29,10 @@ export class StudentController {
   // }
 
   @Post()
-  newStudent(@Body() studentDto: { name: string }) {
-    const student = new Student(studentDto.name);
+  newStudent(@Body() studentDto: Student) {
+    const student = new Student({ ...studentDto });
     return this.studentService.createStudent(student);
   }
-
 
   @Post('accept/:studentId')
   async acceptRegistration(@Param('studentId') studentId: string) {

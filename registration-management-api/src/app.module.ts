@@ -3,7 +3,11 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
 import { StudentController } from './student/student.controller';
 import { StudentService } from './student/student.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Student } from './student/student.entity';
+import { Student } from './domain/student.entity';
+import { Teacher } from './domain/teacher.entity';
+import { StudyRegistration } from './domain/studyRegistration.entity';
+import { StudyProgram } from './domain/studyProgram.entity';
+import { Appointment } from './domain/appointment.enity';
 
 @Module({
   imports: [
@@ -17,7 +21,13 @@ import { Student } from './student/student.entity';
       options: {
         trustServerCertificate: true,
       },
-      entities: [Student],
+      entities: [
+        Student,
+        Teacher,
+        StudyRegistration,
+        StudyProgram,
+        Appointment,
+      ],
       synchronize: true,
       logging: false,
     }),
