@@ -1,0 +1,15 @@
+D:\source\Avantys-education\TestManagement\CQS\bin\Debug\net7.0\CQS.exe
+D:\source\Avantys-education\TestManagement\CQS\bin\Debug\net7.0\CQS.deps.json
+D:\source\Avantys-education\TestManagement\CQS\bin\Debug\net7.0\CQS.runtimeconfig.json
+D:\source\Avantys-education\TestManagement\CQS\bin\Debug\net7.0\CQS.dll
+D:\source\Avantys-education\TestManagement\CQS\bin\Debug\net7.0\CQS.pdb
+D:\source\Avantys-education\TestManagement\CQS\obj\Debug\net7.0\CQS.csproj.AssemblyReference.cache
+D:\source\Avantys-education\TestManagement\CQS\obj\Debug\net7.0\CQS.GeneratedMSBuildEditorConfig.editorconfig
+D:\source\Avantys-education\TestManagement\CQS\obj\Debug\net7.0\CQS.AssemblyInfoInputs.cache
+D:\source\Avantys-education\TestManagement\CQS\obj\Debug\net7.0\CQS.AssemblyInfo.cs
+D:\source\Avantys-education\TestManagement\CQS\obj\Debug\net7.0\CQS.csproj.CoreCompileInputs.cache
+D:\source\Avantys-education\TestManagement\CQS\obj\Debug\net7.0\CQS.dll
+D:\source\Avantys-education\TestManagement\CQS\obj\Debug\net7.0\refint\CQS.dll
+D:\source\Avantys-education\TestManagement\CQS\obj\Debug\net7.0\CQS.pdb
+D:\source\Avantys-education\TestManagement\CQS\obj\Debug\net7.0\CQS.genruntimeconfig.cache
+D:\source\Avantys-education\TestManagement\CQS\obj\Debug\net7.0\ref\CQS.dll
