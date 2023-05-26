@@ -1,36 +1,60 @@
 import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { AppointmentDto } from 'src/domain/DTO/appointment.dto';
 import { Appointment } from 'src/domain/appointment.model';
+import { GuidanceTalk } from 'src/domain/guidanceTalk.model';
 import { Note } from 'src/domain/note.model';
 import { Student } from 'src/domain/student.model';
 import { Teacher } from 'src/domain/teacher.model';
 import { BaseUser } from 'src/domain/user.abstract';
+import { Repository } from 'typeorm';
 
 @Injectable()
 export class GuidanceTalkService {
 
-    scheduleGuidanceTalkAppointment(title:string,description:string, teacher:Teacher,student:Student,startTime:Date,endTime:Date):Appointment{
+    constructor(@InjectRepository(Note) private noteRepository: Repository<Note>,
+                @InjectRepository(GuidanceTalk)private guidanceTalkRepository:Repository<GuidanceTalk>,
+                @InjectRepository(Appointment)private appointmentRepository:Repository<Appointment>,
+                @InjectRepository(Teacher)private teacherRepository:Repository<Teacher>,
+                @InjectRepository(Student)private studentRepository:Repository<Student>){
+
+    }
+
+    async scheduleGuidanceTalkAppointment(appointment:AppointmentDto):Promise<Appointment>{
         //TODO Get teacher,student from db
-        let appointment = new Appointment(title,description,teacher,student,startTime,endTime);
+        console.log(appointment);
+        let student = await this.studentRepository.findOne({where:{id:appointment.student}});
+        let teacher = await this.teacherRepository.findOne({where:{id:appointment.teacher}});
+        console.log("Found: ");
+        let startTime = new Date(appointment.startTime);
+        let endTime = new Date(appointment.endTime);
+        let appoint = new Appointment(appointment.title,appointment.description,teacher,student,startTime,endTime);
+
+        console.log(typeof(appoint.startTime),typeof(appoint.endTime))
+        console.log(appoint)
         //TODO Send faux email to student teacher,
-        //TODO create GuidanceTalk in database
-
-
-        return appointment;
+        return await this.appointmentRepository.save(appoint);
     }
 
-    finishGuidanceTalk(guidanceTalkId:string,user:BaseUser,title:string,description:string){
-        //TODO get guidance talk from database
-        let notes = new Note(user,title,description);
-        //TODO add notes to guidance talk.
+    async finishGuidanceTalk(appointmentId:number,note:Note):Promise<GuidanceTalk>{
 
+        let appointment = await this.appointmentRepository.findOne({where:{id:appointmentId},relations:['teacher','student']})
+        await this.noteRepository.save(note);
+        
+        let guidanceTalk = new GuidanceTalk(appointment,note)
+        console.log('=========================');
+        console.log(guidanceTalk);
+        console.log(typeof(guidanceTalk));
+        return await this.guidanceTalkRepository.save(guidanceTalk);
     }
 
-    getPreviousGuidanceTalkNotes(guidanceTalkId:string):string{
-        //TODO get guidance talk fromDatabase
+    async getPreviousGuidanceTalkNotes(guidanceTalkId:number):Promise<GuidanceTalk>{
+        let guidanceTalk = this.guidanceTalkRepository.findOne({where:{
+            id:guidanceTalkId
+        }});
 
-        //TODO send back notes
 
-        return "generic notes";
+        return await guidanceTalk;
     }
 
 }
