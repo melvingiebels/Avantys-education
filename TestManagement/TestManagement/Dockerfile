@@ -5,7 +5,9 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["TestManagement/TestManagement.csproj", "TestManagement/"]
+COPY ["TestManagement.csproj", "TestManagement/"]
+COPY ["TestManagement.CQS/TestManagement.CQS.csproj", "TestManagement.CQS/"]
+COPY ["TestManagement.Infrastructure/TestManagement.Infrastructure.csproj", "TestManagement.Infrastructure/"]
 RUN dotnet restore "TestManagement/TestManagement.csproj"
 COPY . .
 WORKDIR "/src/TestManagement"

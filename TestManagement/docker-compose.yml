@@ -1,0 +1,7 @@
+﻿services:
+  testmanagement:
+    image: testmanagement
+    build:
+      context: .
+      dockerfile: TestManagement/Dockerfile
+
