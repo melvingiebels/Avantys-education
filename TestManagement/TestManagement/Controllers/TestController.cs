@@ -3,7 +3,6 @@ using TestManagement.CQS.Command.Test;
 using TestManagement.CQS.Domain;
 using TestManagement.CQS.Queries;
 using TestManagement.CQS.Queries.Test;
-using TestManagement.Infrastructure.Context;
 using Microsoft.AspNetCore.Mvc;
 using TestManagement.IoC;
 
