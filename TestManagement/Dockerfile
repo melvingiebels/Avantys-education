@@ -8,6 +8,7 @@ WORKDIR /src
 COPY ["TestManagement/TestManagement.csproj", "TestManagement/"]
 COPY ["TestManagement.CQS/TestManagement.CQS.csproj", "TestManagement.CQS/"]
 COPY ["TestManagement.Infrastructure/TestManagement.Infrastructure.csproj", "TestManagement.Infrastructure/"]
+
 RUN dotnet restore "TestManagement/TestManagement.csproj"
 COPY . .
 WORKDIR "/src/TestManagement"

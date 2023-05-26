@@ -10,7 +10,7 @@ public class GetStudents : EFQueryBase<TestManagementDbContext>, IGetStudents
     {
     }
 
-    public IEnumerable<CQS.Domain.Student> Excecute(Guid studentId)
+    public IEnumerable<CQS.Domain.Student> Excecute()
     {
         return DbContext.Students.ToList();
     }
