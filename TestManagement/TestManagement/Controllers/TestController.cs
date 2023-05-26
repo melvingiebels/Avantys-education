@@ -4,7 +4,6 @@ using TestManagement.CQS.Domain;
 using TestManagement.CQS.Queries;
 using TestManagement.CQS.Queries.Test;
 using Microsoft.AspNetCore.Mvc;
-using TestManagement.IoC;
 
 namespace TestManagement.Controllers;
 
@@ -15,10 +14,10 @@ public class TestController
     private readonly IQueryFactory _queryFactory;
     private readonly ICommandsFactory _commandsFactory;
 
-    public TestController()
+    public TestController(IQueryFactory queryFactory, ICommandsFactory commandsFactory)
     {
-        _queryFactory = Container.Current.Resolve<IQueryFactory>();
-        _commandsFactory = Container.Current.Resolve<ICommandsFactory>();
+        _queryFactory = queryFactory;
+        _commandsFactory = commandsFactory;
     }
 
     [HttpGet]

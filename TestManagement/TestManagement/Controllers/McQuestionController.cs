@@ -4,8 +4,6 @@ using TestManagement.CQS.Command.Question;
 using TestManagement.CQS.Domain.Questions;
 using TestManagement.CQS.Queries;
 using TestManagement.CQS.Queries.McQuestion;
-using TestManagement.CQS.Queries.Question;
-using TestManagement.IoC;
 
 namespace TestManagement.Controllers;
 
@@ -16,10 +14,10 @@ public class McQuestionController
     private readonly IQueryFactory _queryFactory;
     private readonly ICommandsFactory _commandsFactory;
 
-    public McQuestionController()
+    public McQuestionController(IQueryFactory queryFactory, ICommandsFactory commandsFactory)
     {
-        _queryFactory = Container.Current.Resolve<IQueryFactory>();
-        _commandsFactory = Container.Current.Resolve<ICommandsFactory>();
+        _queryFactory = queryFactory;
+        _commandsFactory = commandsFactory;
     }
 
     [HttpGet]
@@ -27,14 +25,14 @@ public class McQuestionController
     {
         return _queryFactory.ResolveQuery<IGetMcQuestions>()!.Excecute().ToList();
     }
-    
+
     [HttpGet("{mcQuestionId}")]
     public McQuestion GetById(Guid mcQuestionId)
     {
         return _queryFactory.ResolveQuery<IGetMcQuestionById>()!.Excecute(mcQuestionId)!;
     }
-    
-    
+
+
     [HttpPost]
     public void CreateMcQuestion([FromBody] McQuestion mcQuestion)
     {
@@ -43,7 +41,7 @@ public class McQuestionController
     }
 
     [HttpPut]
-    public void UpdateQuestion([FromBody]McQuestion question)
+    public void UpdateQuestion([FromBody] McQuestion question)
     {
         var updateQuestionToTestCommand = new UpdateQuestionCommand(question);
         _commandsFactory.ExecuteQuery(updateQuestionToTestCommand);
