@@ -1,6 +1,6 @@
 ﻿namespace TestManagement.CQS.Queries.McQuestion;
 
-public interface IGetMcQuestions
+public interface IGetMcQuestions:IQuery
 {
     IEnumerable<Domain.Questions.McQuestion> Excecute();
 }

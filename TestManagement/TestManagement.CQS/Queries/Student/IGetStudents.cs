@@ -2,5 +2,5 @@
 
 public interface IGetStudents : IQuery
 {
-    IEnumerable<Domain.Student> Excecute(Guid studentId);
+    IEnumerable<Domain.Student> Excecute();
 }
