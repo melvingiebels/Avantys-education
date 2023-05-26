@@ -18,9 +18,7 @@ export class Teacher {
   @Column()
   phone: string;
 
-  constructor(name: string, email: string, phone: string) {
-    this.name = name;
-    this.email = email;
-    this.phone = phone;
+  constructor(studentDto: Partial<Teacher>) {
+    Object.assign(this, studentDto);
   }
 }

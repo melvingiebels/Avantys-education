@@ -20,8 +20,10 @@ export class StudentService {
 
   async acceptRegistration(studentId: string) {
     // Perform the acceptance logic here
-
+    await this.studentRepository.update(studentId, { accceptanceStatus: true });
     // Then emit the event
     this.client.emit('registration_accepted', { studentId });
+
+    return 'Registration accepted';
   }
 }

@@ -35,7 +35,7 @@ export class Student {
   dateOfBirth: Date;
 
   @Column()
-  registrationStatus: string;
+  accceptanceStatus: boolean;
 
   constructor(studentDto: Partial<Student>) {
     Object.assign(this, studentDto);

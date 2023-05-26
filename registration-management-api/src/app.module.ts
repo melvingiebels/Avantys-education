@@ -8,6 +8,8 @@ import { Teacher } from './domain/teacher.entity';
 import { StudyRegistration } from './domain/studyRegistration.entity';
 import { StudyProgram } from './domain/studyProgram.entity';
 import { Appointment } from './domain/appointment.enity';
+import { TeacherService } from './teacher/teacher.service';
+import { TeacherController } from './teacher/teacher.controller';
 
 @Module({
   imports: [
@@ -46,7 +48,7 @@ import { Appointment } from './domain/appointment.enity';
       },
     ]),
   ],
-  controllers: [StudentController],
-  providers: [StudentService],
+  controllers: [StudentController, TeacherController],
+  providers: [StudentService, TeacherService],
 })
 export class AppModule {}
