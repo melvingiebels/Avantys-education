@@ -34,6 +34,6 @@ export class StudentController {
 
   @Post('accept/:studentId')
   async acceptRegistration(@Param('studentId') studentId: number) {
-    await this.studentService.acceptRegistration(studentId);
+    return this.studentService.acceptRegistration(studentId);
   }
 }
