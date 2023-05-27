@@ -36,6 +36,13 @@ services:
       - sqlserver
       - rabbitmq
 
+  registrationmanagementapi:
+    image: avantys-education/registrationmanagementapi:1.0
+    build: registration-management-api
+    depends_on:
+      - rabbitmq
+    ports:
+      - "3001:3001"
 
 volumes:
   sqlserverdata:

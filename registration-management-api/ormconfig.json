@@ -1,0 +1,10 @@
+{
+    "type": "mssql",
+    "host": "localhost",
+    "port": 1433,
+    "database": "AvantysEducationRegistration",
+    "entities": ["dist/**/*.model{.ts,.js}"],
+    "trustedConnection":true,
+    "synchronize": true,
+    "logging": false
+}
