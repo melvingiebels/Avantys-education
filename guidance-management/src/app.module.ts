@@ -10,6 +10,7 @@ import { Note } from './domain/note.model';
 import { GuidanceTalk } from './domain/guidanceTalk.model';
 import { Appointment } from './domain/appointment.model';
 import { BaseUser } from './domain/user.abstract';
+import { ClientsModule, Transport } from '@nestjs/microservices';
 
 
 @Module({
@@ -28,7 +29,22 @@ import { BaseUser } from './domain/user.abstract';
       synchronize: true,
       logging: false
     }),
-    TypeOrmModule.forFeature([Student,Teacher,BaseUser,Note,GuidanceTalk,Appointment])
+    TypeOrmModule.forFeature([Student,Teacher,BaseUser,Note,GuidanceTalk,Appointment]),
+    ClientsModule.register([
+      {
+        name: 'RABBITMQ_CLIENT',
+        transport: Transport.RMQ,
+        options: {
+          urls: ['amqp://localhost:5672'],
+          queue: 'avantys_queue',
+          queueOptions: {
+            durable: false,
+          },
+          
+        },
+      },
+    ]),
+
   ],
   controllers: [AppController,GuidanceTalkController],
   providers: [AppService, GuidanceTalkService],

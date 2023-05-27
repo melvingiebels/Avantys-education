@@ -2,23 +2,24 @@ import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 import { Teacher } from './domain/teacher.model';
 import { Student } from './domain/student.model';
+import { MessagePattern,MessageHandler, EventPattern, Transport } from '@nestjs/microservices';
 
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
+  //@Get()
   getHello(): string {
     return this.appService.getHello();
   }
 
-  @Post('teacher')
-  async createTeacher(@Body() teacher:Teacher): Promise<Teacher>{
-    console.log("Testing");
-    return this.appService.createTeacher(teacher);
+  @MessagePattern({cmd:'teacher.*'})
+  createTeacher(data:any){//: Promise<Teacher>{
+    console.log("Testing",data);
+    //return this.appService.createTeacher(teacher);
   }
 
-  @Post('student')
+  //@Post('student')
   async createStudent(@Body() student:Student): Promise<Student>{
     return this.appService.createStudent(student);
 
