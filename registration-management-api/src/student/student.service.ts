@@ -15,7 +15,6 @@ export class StudentService {
   async createStudent(student: Student): Promise<any> {
     await this.studentRepository.save(student);
     return this.client.emit('StudentCreated', student);
-    // return this.client.emit('StudentCreated', { student });
   }
 
   async acceptRegistration(studentId: number) {
@@ -25,6 +24,7 @@ export class StudentService {
     const updatedStudent = await this.studentRepository.findOne({
       where: { id: studentId },
     });
+
     // Then emit the event
     this.client.emit('registration_accepted', { updatedStudent });
 
