@@ -8,13 +8,13 @@ import { MessagePattern,MessageHandler, EventPattern, Transport } from '@nestjs/
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  //@Get()
+  @Get()
   getHello(): string {
     return this.appService.getHello();
   }
 
-  @MessagePattern({cmd:'teacher.*'})
-  createTeacher(data:any){//: Promise<Teacher>{
+  @EventPattern('StudentCreated')
+  createTeacher(data: Record<string, unknown>){//: Promise<Teacher>{
     console.log("Testing",data);
     //return this.appService.createTeacher(teacher);
   }

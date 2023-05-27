@@ -32,15 +32,14 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
     TypeOrmModule.forFeature([Student,Teacher,BaseUser,Note,GuidanceTalk,Appointment]),
     ClientsModule.register([
       {
-        name: 'RABBITMQ_CLIENT',
+        name: 'GUIDANCE_MANAGEMENT_SERVICE',
         transport: Transport.RMQ,
         options: {
-          urls: ['amqp://localhost:5672'],
-          queue: 'avantys_queue',
+          urls: ['amqp://admin:password@rabbitmq:5672'],
+          queue: 'GUIDANCE_QUEUE',
           queueOptions: {
             durable: false,
           },
-          
         },
       },
     ]),
