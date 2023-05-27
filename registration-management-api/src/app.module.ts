@@ -40,7 +40,7 @@ import { TeacherController } from './teacher/teacher.controller';
         transport: Transport.RMQ,
         options: {
           urls: ['amqp://admin:password@rabbitmq:5672'],
-          queue: 'student-messages',
+          queue: 'REGISTRATION_QUEUE',
           queueOptions: {
             durable: false,
           },

@@ -14,6 +14,7 @@ export class StudentService {
 
   async createStudent(student: Student): Promise<any> {
     await this.studentRepository.save(student);
+
     return this.client.emit('StudentCreated', student);
     // return this.client.emit('StudentCreated', { student });
   }

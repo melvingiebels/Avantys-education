@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Get,
   Param,
   Post,
   UsePipes,
@@ -13,6 +14,11 @@ import { Student } from '../domain/student.entity'; // import the Student entity
 @Controller('student')
 export class StudentController {
   constructor(private readonly studentService: StudentService) {} // inject the StudentService
+
+  @Get()
+  handleshit(){
+    return "hello vietnam";
+  }
 
   @EventPattern('student_applied')
   async handleStudentApplied(data: Record<string, unknown>) {
