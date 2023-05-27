@@ -7,7 +7,7 @@ import { Student } from '../domain/student.entity';
 @Injectable()
 export class StudentService {
   constructor(
-    @Inject('STUDENT_SERVICE') private client: ClientProxy,
+    @Inject('REGISTRATION_SERVICE') private client: ClientProxy,
     @InjectRepository(Student)
     private studentRepository: Repository<Student>,
   ) {}
@@ -18,12 +18,16 @@ export class StudentService {
     // return this.client.emit('StudentCreated', { student });
   }
 
-  async acceptRegistration(studentId: string) {
+  async acceptRegistration(studentId: number) {
     // Perform the acceptance logic here
     await this.studentRepository.update(studentId, { accceptanceStatus: true });
-    // Then emit the event
-    this.client.emit('registration_accepted', { studentId });
 
-    return 'Registration accepted';
+    const updatedStudent = await this.studentRepository.findOne({
+      where: { id: studentId },
+    });
+    // Then emit the event
+    this.client.emit('registration_accepted', { updatedStudent });
+
+    return updatedStudent;
   }
 }

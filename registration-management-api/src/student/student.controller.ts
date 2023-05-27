@@ -27,7 +27,7 @@ export class StudentController {
   }
 
   @Post('accept/:studentId')
-  async acceptRegistration(@Param('studentId') studentId: string) {
+  async acceptRegistration(@Param('studentId') studentId: number) {
     await this.studentService.acceptRegistration(studentId);
   }
 }

@@ -33,10 +33,10 @@ import { TeacherController } from './teacher/teacher.controller';
       synchronize: true,
       logging: false,
     }),
-    TypeOrmModule.forFeature([Student]),
+    TypeOrmModule.forFeature([Student, Teacher]),
     ClientsModule.register([
       {
-        name: 'STUDENT_SERVICE',
+        name: 'REGISTRATION_SERVICE',
         transport: Transport.RMQ,
         options: {
           urls: ['amqp://admin:password@rabbitmq:5672'],
