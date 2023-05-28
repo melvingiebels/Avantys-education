@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cd881df6-9ea3-4fed-9dbd-ea3eb1473714" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/.idea/.idea.ConsoleApp1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/.idea/.idea.ConsoleApp1/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/.idea/.idea.ConsoleApp1/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/.idea/.idea.ConsoleApp1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/ConsoleApp1.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/bin/Debug/net7.0/ConsoleApp1.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/bin/Debug/net7.0/ConsoleApp1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/bin/Debug/net7.0/ConsoleApp1.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/bin/Debug/net7.0/ConsoleApp1.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/bin/Debug/net7.0/ConsoleApp1.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/bin/Debug/net7.0/RabbitMQ.Client.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/ConsoleApp1.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/ConsoleApp1.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/ConsoleApp1.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.GlobalUsings.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.csproj.CopyComplete" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.genruntimeconfig.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/apphost.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ref/ConsoleApp1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/refint/ConsoleApp1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/project.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/project.packagespec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/rider.project.restore.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/RabbitMqTest.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/bin/Debug/net7.0/RabbitMQ.Client.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/bin/Debug/net7.0/RabbitMqTest.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/bin/Debug/net7.0/RabbitMqTest.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/bin/Debug/net7.0/RabbitMqTest.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/bin/Debug/net7.0/RabbitMqTest.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/bin/Debug/net7.0/RabbitMqTest.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/Debug/net7.0/RabbitMqTest.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/Debug/net7.0/RabbitMqTest.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/Debug/net7.0/RabbitMqTest.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/Debug/net7.0/RabbitMqTest.GlobalUsings.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/Debug/net7.0/RabbitMqTest.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/Debug/net7.0/RabbitMqTest.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/Debug/net7.0/RabbitMqTest.csproj.CopyComplete" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/Debug/net7.0/RabbitMqTest.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/Debug/net7.0/RabbitMqTest.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/Debug/net7.0/RabbitMqTest.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/Debug/net7.0/RabbitMqTest.genruntimeconfig.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/Debug/net7.0/RabbitMqTest.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/Debug/net7.0/apphost.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/Debug/net7.0/ref/RabbitMqTest.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/Debug/net7.0/refint/RabbitMqTest.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/RabbitMqTest.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/RabbitMqTest.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/RabbitMqTest.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/project.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/project.packagespec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/RabbitMqTest/obj/rider.project.restore.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/TestManagement.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2QBkHvIHlZT238ZIjDHYa8IUU6u" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\noahd\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\noahd\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\noahd\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="TestManagement/Dockerfile build" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="mcr.microsoft.comdotnetsdk7.0_build" />
+          <option name="buildCliOptions" value="--target build" />
+          <option name="buildKitEnabled" value="true" />
+          <option name="buildOnly" value="true" />
+          <option name="sourceFilePath" value="TestManagement/Dockerfile" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.TestManagement/Dockerfile build" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd881df6-9ea3-4fed-9dbd-ea3eb1473714" name="Changes" comment="" />
+      <created>1684834285572</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684834285572</updated>
+      <workItem from="1684834285572" duration="63000" />
+      <workItem from="1685102306261" duration="1754000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
