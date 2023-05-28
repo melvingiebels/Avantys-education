@@ -10,10 +10,41 @@ services:
     ports:
       - "15672:15672" # RabbitMQ management UI port
       - "5672:5672"   # RabbitMQ AMQP port
+    env_file:
+      - .env
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    volumes:
+      - sqlserverdata:/var/opt/mssql
     environment:
-      - RABBITMQ_DEFAULT_USER=admin
-      - RABBITMQ_DEFAULT_PASS=password
+      SA_PASSWORD: "MelvinIsEenBot34"
+      ACCEPT_EULA: "Y"
+    ports:
+      - 1436:1433
+
+  guidance-management-service:
+    build:
+      context: ./guidance-management
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./guidance-management:/usr/src/guidance-management
+    depends_on:
+      - sqlserver
+      - rabbitmq
+
+  registrationmanagementapi:
+    image: avantys-education/registrationmanagementapi:1.0
+    build: registration-management-api
+    depends_on:
+      - rabbitmq
+    ports:
+      - "3001:3001"
 
 volumes:
+  sqlserverdata:
   rabbitmqdata:
     external: true
