@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a6qqAIJSUHCFzro3kh8rMX0P4CT4sKSRNmM+oQMb4elAgJDGnQ890RPE9BOncsteS78hW3IY7kCskc3jcN4TIw==",
+  "dgSpecHash": "GvYvCn8fGgQ9cyHIBG2xdHPDJdSfHYlzAf8ZtTByFDTfM7SKbEZ1vkx6jRTNog7KclZ8C3so4IiihOKECXKIHQ==",
   "success": true,
-  "projectFilePath": "D:\\source\\Avantys-education\\test-management\\TestManagement.Infrastructure\\TestManagement.Infrastructure.csproj",
+  "projectFilePath": "D:\\source\\Avantys-education\\TestManagement\\TestManagement.Infrastructure\\TestManagement.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\noahd\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\noahd\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

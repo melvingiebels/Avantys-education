@@ -2946,11 +2946,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\source\\Avantys-education\\test-management\\TestManagement.Infrastructure\\TestManagement.Infrastructure.csproj",
+      "projectUniqueName": "D:\\source\\Avantys-education\\TestManagement\\TestManagement.Infrastructure\\TestManagement.Infrastructure.csproj",
       "projectName": "TestManagement.Infrastructure",
-      "projectPath": "D:\\source\\Avantys-education\\test-management\\TestManagement.Infrastructure\\TestManagement.Infrastructure.csproj",
+      "projectPath": "D:\\source\\Avantys-education\\TestManagement\\TestManagement.Infrastructure\\TestManagement.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\noahd\\.nuget\\packages\\",
-      "outputPath": "D:\\source\\Avantys-education\\test-management\\TestManagement.Infrastructure\\obj\\",
+      "outputPath": "D:\\source\\Avantys-education\\TestManagement\\TestManagement.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2972,8 +2972,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\source\\Avantys-education\\test-management\\TestManagement.CQS\\TestManagement.CQS.csproj": {
-              "projectPath": "D:\\source\\Avantys-education\\test-management\\TestManagement.CQS\\TestManagement.CQS.csproj"
+            "D:\\source\\Avantys-education\\TestManagement\\TestManagement.CQS\\TestManagement.CQS.csproj": {
+              "projectPath": "D:\\source\\Avantys-education\\TestManagement\\TestManagement.CQS\\TestManagement.CQS.csproj"
             }
           }
         }

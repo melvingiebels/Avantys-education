@@ -4,7 +4,6 @@ using TestManagement.CQS.Command.Question;
 using TestManagement.CQS.Domain.Questions;
 using TestManagement.CQS.Queries;
 using TestManagement.CQS.Queries.OpenQuestion;
-using TestManagement.IoC;
 
 namespace TestManagement.Controllers;
 
@@ -15,10 +14,10 @@ public class OpenQuestionController
     private readonly IQueryFactory _queryFactory;
     private readonly ICommandsFactory _commandsFactory;
 
-    public OpenQuestionController()
+    public OpenQuestionController(IQueryFactory queryFactory, ICommandsFactory commandsFactory)
     {
-        _queryFactory = Container.Current.Resolve<IQueryFactory>();
-        _commandsFactory = Container.Current.Resolve<ICommandsFactory>();
+        _queryFactory = queryFactory;
+        _commandsFactory = commandsFactory;
     }
 
     [HttpGet]

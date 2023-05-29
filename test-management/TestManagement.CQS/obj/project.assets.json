@@ -2924,11 +2924,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\source\\Avantys-education\\test-management\\TestManagement.CQS\\TestManagement.CQS.csproj",
+      "projectUniqueName": "D:\\source\\Avantys-education\\TestManagement\\TestManagement.CQS\\TestManagement.CQS.csproj",
       "projectName": "TestManagement.CQS",
-      "projectPath": "D:\\source\\Avantys-education\\test-management\\TestManagement.CQS\\TestManagement.CQS.csproj",
+      "projectPath": "D:\\source\\Avantys-education\\TestManagement\\TestManagement.CQS\\TestManagement.CQS.csproj",
       "packagesPath": "C:\\Users\\noahd\\.nuget\\packages\\",
-      "outputPath": "D:\\source\\Avantys-education\\test-management\\TestManagement.CQS\\obj\\",
+      "outputPath": "D:\\source\\Avantys-education\\TestManagement\\TestManagement.CQS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

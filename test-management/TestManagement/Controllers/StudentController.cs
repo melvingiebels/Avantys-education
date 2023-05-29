@@ -1,13 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TestManagement.CQS.Command;
-using TestManagement.CQS.Command.Question;
 using TestManagement.CQS.Command.Student;
 using TestManagement.CQS.Domain;
-using TestManagement.CQS.Domain.Questions;
 using TestManagement.CQS.Queries;
-using TestManagement.CQS.Queries.McQuestion;
 using TestManagement.CQS.Queries.Student;
-using TestManagement.IoC;
 
 namespace TestManagement.Controllers;
 
@@ -18,10 +14,10 @@ public class StudentController
     private readonly IQueryFactory _queryFactory;
     private readonly ICommandsFactory _commandsFactory;
 
-    public StudentController()
+    public StudentController(IQueryFactory queryFactory, ICommandsFactory commandsFactory)
     {
-        _queryFactory = Container.Current.Resolve<IQueryFactory>();
-        _commandsFactory = Container.Current.Resolve<ICommandsFactory>();
+        _queryFactory = queryFactory;
+        _commandsFactory = commandsFactory;
     }
 
     [HttpGet]
