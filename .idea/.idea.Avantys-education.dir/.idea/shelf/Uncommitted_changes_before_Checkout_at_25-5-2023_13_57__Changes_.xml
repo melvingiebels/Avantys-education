@@ -1,0 +1,44 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_25-5-2023_13_57_[Changes]" date="1685015888475" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/.idea.Avantys-education.dir/.idea/shelf/Uncommitted_changes_before_Checkout_at_25-5-2023_13_57_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 25-5-2023 13:57 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="TestManagement/TestManagement/obj/Debug/net7.0/TestManagement.assets.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Avantys-education.dir/.idea/shelf/Uncommitted_changes_before_Checkout_at_25-5-2023_13_57_[Changes]/TestManagement.assets.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="TestManagement/CQS/obj/project.nuget.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Avantys-education.dir/.idea/shelf/Uncommitted_changes_before_Checkout_at_25-5-2023_13_57_[Changes]/project.nuget.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="TestManagement/CQS/obj/Debug/net7.0/CQS.assets.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Avantys-education.dir/.idea/shelf/Uncommitted_changes_before_Checkout_at_25-5-2023_13_57_[Changes]/CQS.assets.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="TestManagement/CQS/obj/Debug/net7.0/CQS.AssemblyInfoInputs.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Avantys-education.dir/.idea/shelf/Uncommitted_changes_before_Checkout_at_25-5-2023_13_57_[Changes]/CQS.AssemblyInfoInputs.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="TestManagement/TestManagement/obj/Debug/net7.0/TestManagement.AssemblyInfoInputs.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Avantys-education.dir/.idea/shelf/Uncommitted_changes_before_Checkout_at_25-5-2023_13_57_[Changes]/TestManagement.AssemblyInfoInputs.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="TestManagement/TestManagement/obj/project.nuget.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Avantys-education.dir/.idea/shelf/Uncommitted_changes_before_Checkout_at_25-5-2023_13_57_[Changes]/project.nuget1.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="TestManagement/TestManagement/obj/Debug/net7.0/TestManagement.csproj.AssemblyReference.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Avantys-education.dir/.idea/shelf/Uncommitted_changes_before_Checkout_at_25-5-2023_13_57_[Changes]/TestManagement.csproj.AssemblyReference.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="TestManagement/CQS/obj/Debug/net7.0/CQS.csproj.AssemblyReference.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Avantys-education.dir/.idea/shelf/Uncommitted_changes_before_Checkout_at_25-5-2023_13_57_[Changes]/CQS.csproj.AssemblyReference.cache" />
+  </binary>
+</changelist>
