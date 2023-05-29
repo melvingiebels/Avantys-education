@@ -6,299 +6,28 @@
   <component name="ChangeListManager">
     <list default="true" id="cd881df6-9ea3-4fed-9dbd-ea3eb1473714" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Avantys-education.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Avantys-education.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/.idea/.idea.ConsoleApp1/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/.idea/.idea.ConsoleApp1/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/.idea/.idea.ConsoleApp1/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/.idea/.idea.ConsoleApp1/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/ConsoleApp1.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/bin/Debug/net7.0/ConsoleApp1.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/bin/Debug/net7.0/ConsoleApp1.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/bin/Debug/net7.0/ConsoleApp1.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/bin/Debug/net7.0/ConsoleApp1.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/bin/Debug/net7.0/ConsoleApp1.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/bin/Debug/net7.0/RabbitMQ.Client.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/ConsoleApp1.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/ConsoleApp1.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/ConsoleApp1.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ConsoleApp1.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/apphost.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/ref/ConsoleApp1.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/Debug/net7.0/refint/ConsoleApp1.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1/obj/rider.project.restore.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/.idea/.idea.Avantys-education/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/.idea/.idea.Avantys-education/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/.idea/.idea.Avantys-education/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/.idea/.idea.Avantys-education/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/.idea/.idea.Avantys-education/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/.idea/.idea.TestManagement/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/.idea/.idea.TestManagement/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/.idea/.idea.TestManagement/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/.idea/.idea.TestManagement/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/.idea/.idea.TestManagement/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/.idea/.idea.TestManagement/.idea/projectSettingsUpdater.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/.idea/.idea.TestManagement/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/.idea/.idea.TestManagement/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/.idea/config/applicationhost.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/.vs/Avantys-education/FileContentIndex/134d69b0-0037-423a-a348-b6fe12d83247.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/.vs/Avantys-education/FileContentIndex/adcba49a-82bb-4ee1-a146-fd9c473a4c9a.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/.vs/Avantys-education/FileContentIndex/c601376a-7004-4cef-8115-4d0891719a71.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/.vs/Avantys-education/FileContentIndex/read.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/.vs/ProjectEvaluation/testmanagement.metadata.v5.1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/.vs/ProjectEvaluation/testmanagement.projects.v5.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/.vs/TestManagement/DesignTimeBuild/.dtbcache.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/.vs/TestManagement/FileContentIndex/0df9c4b5-51bd-45f3-9e89-c7b34b9deb8f.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/.vs/TestManagement/FileContentIndex/5a43998e-f017-410a-9925-eb6d5bfaf8c1.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/.vs/TestManagement/FileContentIndex/8c41ca65-846f-413f-ace8-a017a5bea9ee.vsidx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/.vs/TestManagement/FileContentIndex/8d51bd04-cf2b-4e5f-b329-83313206428d.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/.vs/TestManagement/FileContentIndex/984f312d-3c85-4363-841c-4193888e1160.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/.vs/TestManagement/FileContentIndex/aa85bc58-8251-4dad-94ec-c976c13c0e3c.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/.vs/TestManagement/FileContentIndex/d16ab8de-1c80-45fd-af1b-8b916f51b26a.vsidx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/.vs/TestManagement/FileContentIndex/read.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/.vs/TestManagement/v17/.futdcache.v2" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/.vs/TestManagement/v17/.suo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/Avantys-education.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/Avantys-education.sln.DotSettings.user" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/Models/Class.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/Models/Enums/Block.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/Models/Enums/ClassNotation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/Models/Lecture.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/Models/LecturesSchedule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/Models/Module.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/Models/Student.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/Models/StudyProgram.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/Models/Teacher.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/Models/TeacherModules.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/StudyProgramManagement.Domain.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/bin/Debug/net7.0/StudyProgramManagement.Domain.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/bin/Debug/net7.0/StudyProgramManagement.Domain.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/bin/Debug/net7.0/StudyProgramManagement.Domain.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/bin/Debug/net7.0/StudyProgramManagement.Domain.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/bin/Debug/net7.0/StudyProgramManagement.Domain.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/Debug/net7.0/StudyProgramManagement.Domain.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/Debug/net7.0/StudyProgramManagement.Domain.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/Debug/net7.0/StudyProgramManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/Debug/net7.0/StudyProgramManagement.Domain.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/Debug/net7.0/StudyProgramManagement.Domain.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/Debug/net7.0/StudyProgramManagement.Domain.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/Debug/net7.0/StudyProgramManagement.Domain.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/Debug/net7.0/StudyProgramManagement.Domain.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/Debug/net7.0/StudyProgramManagement.Domain.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/Debug/net7.0/StudyProgramManagement.Domain.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/Debug/net7.0/StudyProgramManagement.Domain.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/Debug/net7.0/apphost.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/Debug/net7.0/ref/StudyProgramManagement.Domain.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/Debug/net7.0/refint/StudyProgramManagement.Domain.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/StudyProgramManagement.Domain.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/StudyProgramManagement.Domain.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/StudyProgramManagement.Domain.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Domain/obj/rider.project.restore.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/BusinessRules/ScheduleLectureBusinessRules.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/Context/StudyProgramManagementDbContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/Repos/ClassRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/Repos/IRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/Repos/LectureRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/Repos/LectureScheduleRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/Repos/ModuleRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/Repos/StudentRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/Repos/StudyProgramRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/Repos/TeacherModulesRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/Repos/TeacherRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/StudyProgramManagement.Infrastructure.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/Humanizer.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/Microsoft.Extensions.Caching.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/Microsoft.Extensions.Caching.Memory.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/Microsoft.Extensions.Configuration.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/Microsoft.Extensions.DependencyInjection.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/Microsoft.Extensions.Logging.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/Microsoft.Extensions.Logging.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/Microsoft.Extensions.Options.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/Microsoft.Extensions.Primitives.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/Mono.TextTemplating.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/StudyProgramManagement.Domain.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/StudyProgramManagement.Domain.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/StudyProgramManagement.Domain.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/StudyProgramManagement.Domain.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/StudyProgramManagement.Domain.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/StudyProgramManagement.Infrastructure.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/StudyProgramManagement.Infrastructure.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/StudyProgramManagement.Infrastructure.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/StudyProgramManagement.Infrastructure.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/StudyProgramManagement.Infrastructure.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/System.CodeDom.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/System.Text.Encodings.Web.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/System.Text.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/bin/Debug/net7.0/runtimes/browser/lib/net7.0/System.Text.Encodings.Web.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/Debug/net7.0/StudyProgramManagement.Infrastructure.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/Debug/net7.0/StudyProgramManagement.Infrastructure.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/Debug/net7.0/StudyProgramManagement.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/Debug/net7.0/StudyProgramManagement.Infrastructure.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/Debug/net7.0/StudyProgramManagement.Infrastructure.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/Debug/net7.0/StudyProgramManagement.Infrastructure.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/Debug/net7.0/StudyProgramManagement.Infrastructure.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/Debug/net7.0/StudyProgramManagement.Infrastructure.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/Debug/net7.0/StudyProgramManagement.Infrastructure.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/Debug/net7.0/StudyProgramManagement.Infrastructure.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/Debug/net7.0/StudyProgramManagement.Infrastructure.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/Debug/net7.0/StudyProgramManagement.Infrastructure.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/Debug/net7.0/apphost.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/Debug/net7.0/ref/StudyProgramManagement.Infrastructure.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/Debug/net7.0/refint/StudyProgramManagement.Infrastructure.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/StudyProgramManagement.Infrastructure.csproj.EntityFrameworkCore.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/StudyProgramManagement.Infrastructure.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/StudyProgramManagement.Infrastructure.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/StudyProgramManagement.Infrastructure.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement.Infrastructure/obj/rider.project.restore.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/Controllers/ClassController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/Controllers/LectureController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/Controllers/LectureScheduleController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/Controllers/ModuleController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/Controllers/StudentController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/Controllers/StudyProgramController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/Controllers/TeacherController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/Controllers/TeacherModulesController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/Migrations/20230529110655_InitialCreate.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/Migrations/20230529110655_InitialCreate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/Migrations/StudyProgramManagementDbContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/Properties/launchSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/StudyProgramManagement.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/StudyProgramManagement.csproj.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/WeatherForecast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Azure.Core.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Azure.Identity.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Humanizer.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.AspNetCore.OpenApi.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.Data.SqlClient.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.SqlServer.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.Extensions.Caching.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.Extensions.Caching.Memory.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.Extensions.Configuration.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.Extensions.DependencyInjection.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.Extensions.Logging.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.Extensions.Logging.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.Extensions.Options.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.Extensions.Primitives.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.Identity.Client.Extensions.Msal.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.Identity.Client.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.OpenApi.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.SqlServer.Server.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Microsoft.Win32.SystemEvents.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Mono.TextTemplating.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/RabbitMQ.Client.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.Domain.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.Domain.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.Domain.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.Domain.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.Domain.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.Infrastructure.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.Infrastructure.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.Infrastructure.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.Infrastructure.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.Infrastructure.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Swashbuckle.AspNetCore.Swagger.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/System.CodeDom.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/System.Configuration.ConfigurationManager.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/System.Drawing.Common.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/System.Memory.Data.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/System.Runtime.Caching.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/System.Security.Permissions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/System.Text.Encodings.Web.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/System.Text.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/System.Windows.Extensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/runtimes/browser/lib/net7.0/System.Text.Encodings.Web.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/StudyProgramManagement.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/StudyProgramManagement.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/StudyProgramManagement.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/StudyProgramManagement.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/StudyProgramManagement.MvcApplicationPartsAssemblyInfo.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/StudyProgramManagement.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/StudyProgramManagement.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/StudyProgramManagement.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/StudyProgramManagement.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/StudyProgramManagement.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/StudyProgramManagement.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/StudyProgramManagement.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/StudyProgramManagement.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/StudyProgramManagement.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/apphost.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/ref/StudyProgramManagement.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/refint/StudyProgramManagement.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/staticwebassets.build.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/staticwebassets/msbuild.build.StudyProgramManagement.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.StudyProgramManagement.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.StudyProgramManagement.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/StudyProgramManagement.csproj.EntityFrameworkCore.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/StudyProgramManagement.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/StudyProgramManagement.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/StudyProgramManagement.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/StudyProgramManagement/obj/rider.project.restore.info" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement.CQS/Command/CommandFactory.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement.CQS/Command/ICommand.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement.CQS/Command/ICommandHandler.cs" beforeDir="false" />
@@ -594,21 +323,18 @@
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement.Infrastructure/obj/project.nuget.cache" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement.Infrastructure/obj/project.packagespec.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement.Infrastructure/obj/rider.project.restore.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement.sln" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement.sln.DotSettings.user" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/Controllers/McQuestionController.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/Controllers/OpenQuestionController.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/Controllers/QuestionController.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/Controllers/StudentController.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/Controllers/TestController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/IoC/Configuration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/IoC/Container.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/Migrations/20230526111237_InitialCreate.Designer.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/Migrations/20230526111237_InitialCreate.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/Migrations/TestManagementDbContextModelSnapshot.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/Program.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/Properties/launchSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/RabbitMQ/RabbitMqListenerClient.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/RabbitMQ/RabbitMqSenderClient.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/TestManagement.csproj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/TestManagement.csproj.user" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/appsettings.Development.json" beforeDir="false" />
@@ -723,8 +449,6 @@
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/obj/project.nuget.cache" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/obj/project.packagespec.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement/obj/rider.project.restore.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq/data/.erlang.cookie" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/data/.erlang.cookie" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study-program/StudyProgram/.vs/ProjectEvaluation/studyprogram.metadata.v5.2" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/study-program/StudyProgram/.vs/ProjectEvaluation/studyprogram.projects.v5.2" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/study-program/StudyProgram/.vs/StudyProgram/FileContentIndex/02d75700-0b7b-4b20-b3cf-9f6645ace167.vsidx" beforeDir="false" />
@@ -762,6 +486,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="2QBkHvIHlZT238ZIjDHYa8IUU6u" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -770,29 +495,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;microservice/StudyProgram&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/source/Avantys-education&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "D:/source/Avantys-education",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\noahd\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\noahd\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\noahd\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\noahd\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\noahd\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\noahd\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="TestManagement/Dockerfile build" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
@@ -839,6 +564,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
