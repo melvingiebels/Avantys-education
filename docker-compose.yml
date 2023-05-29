@@ -5,8 +5,8 @@ services:
     image: rabbitmq:3-management-alpine
     container_name: rabbitmq-avantys
     volumes:
-      - ./rabbitmq/data:/var/lib/rabbitmq
-      - ./rabbitmq/logs:/var/log/rabbitmq
+      - rabbitmq-data:/var/lib/rabbitmq
+      - rabbitmq-logs:/var/log/rabbitmq
     ports:
       - "15672:15672" # RabbitMQ management UI port
       - "5672:5672"   # RabbitMQ AMQP port
@@ -40,11 +40,12 @@ services:
     image: avantys-education/registrationmanagementapi:1.0
     build: registration-management-api
     depends_on:
+      - sqlserver
       - rabbitmq
     ports:
       - "3001:3001"
 
 volumes:
   sqlserverdata:
-  rabbitmqdata:
-    external: true
+  rabbitmq-data:
+  rabbitmq-logs:
