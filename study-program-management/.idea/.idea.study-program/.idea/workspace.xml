@@ -12,7 +12,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3a42f1a-a41c-4a91-9c6d-158ba941fbae" name="Changes" comment="" />
+    <list default="true" id="b3a42f1a-a41c-4a91-9c6d-158ba941fbae" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/StudyProgramManagement/bin/Debug/net7.0/StudyProgramManagement.dll" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +44,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;CQRS__TestManagement&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
