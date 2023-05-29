@@ -29,7 +29,7 @@ services:
       context: ./guidance-management
       dockerfile: Dockerfile
     ports:
-      - 3000:3000
+      - "3000:3000"
     volumes:
       - ./guidance-management:/usr/src/guidance-management
     depends_on:
@@ -43,7 +43,25 @@ services:
       - rabbitmq
     ports:
       - "3001:3001"
-
+        
+  test-management-api:
+    build: 
+      context: ./test-management
+      dockerfile: ./Dockerfile
+    ports:
+      - "3002:3002"
+    depends_on:
+       - rabbitmq
+       
+  study-program-management-api:
+    build:
+      context: ./study-program-management
+      dockerfile: ./Dockerfile
+    ports:
+      - "3003:3003"
+    depends_on:
+      - rabbitmq
+         
 volumes:
   sqlserverdata:
   rabbitmqdata:
