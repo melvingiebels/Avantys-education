@@ -19,7 +19,7 @@ builder.Services.AddDbContext<TestManagementDbContext>(options =>
 
 builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
 {
-    builder.WithOrigins("http://localhost:3002")
+    builder.WithOrigins("http://localhost:3004")
         .AllowAnyMethod()
         .AllowAnyHeader();
 }));

@@ -45,21 +45,29 @@ services:
       - "3001:3001"
         
   test-management-api:
-    build: 
+    image: ${DOCKER_REGISTRY-}test-management
+    build:
       context: ./test-management
       dockerfile: ./Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "3002:3002"
+      - "3004:3004"
     depends_on:
-       - rabbitmq
+      - sqlserver
+      - rabbitmq
        
   study-program-management-api:
+    image: ${DOCKER_REGISTRY-}study-program-management
     build:
       context: ./study-program-management
       dockerfile: ./Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "3003:3003"
+      - "3003:3003" 
     depends_on:
+      - sqlserver
       - rabbitmq
          
 volumes:
