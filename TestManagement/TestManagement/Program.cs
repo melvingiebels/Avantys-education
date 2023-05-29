@@ -15,7 +15,6 @@ builder.Services.AddDbContext<TestManagementDbContext>(options =>
     var connectionString = builder.Configuration.GetConnectionString("SQL");
     options.UseSqlServer(connectionString,
         b => b.MigrationsAssembly("TestManagement"));
-
 });
 var app = builder.Build();
 

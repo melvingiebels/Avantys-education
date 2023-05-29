@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "reR+5aw9J951jjwRGdh27+phAgSmxpwfBV+Oy18aDXadmzYQvLvF9xj+np5NCDDTgqq9XZMDKZDma+5OZhrK4w==",
+  "dgSpecHash": "QZN8xcJuhNaufOEwaxLnL20ktU+Wsk/47NfafxPnjOJy0/btS7V95UMFatHut3XB6WJj3IF0IF5kbZvnT2cwaA==",
   "success": true,
-  "projectFilePath": "C:\\source\\Avantys-education\\TestManagement\\TestManagement.CQS\\TestManagement.CQS.csproj",
+  "projectFilePath": "D:\\source\\Avantys-education\\TestManagement\\TestManagement.CQS\\TestManagement.CQS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\noahd\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\noahd\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

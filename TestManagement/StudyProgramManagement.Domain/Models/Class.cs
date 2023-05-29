@@ -9,6 +9,10 @@ public class Class
     public Class(List<Student> students, ClassNotation classNotation)
     {
         Students = students;
-        ClassNotation = classNotation;  
+        ClassNotation = classNotation;
+    }
+
+    public Class()
+    {
     }
 }

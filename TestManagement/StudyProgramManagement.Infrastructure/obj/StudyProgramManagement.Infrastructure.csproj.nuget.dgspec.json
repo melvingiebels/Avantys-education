@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\source\\Avantys-education\\TestManagement\\StudyProgramManagement.Infrastructure\\StudyProgramManagement.Infrastructure.csproj": {}
+    "D:\\source\\Avantys-education\\TEstManagement\\StudyProgramManagement.Infrastructure\\StudyProgramManagement.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\source\\Avantys-education\\TestManagement\\StudyProgramManagement.Domain\\StudyProgramManagement.Domain.csproj": {
+    "D:\\source\\Avantys-education\\TEstManagement\\StudyProgramManagement.Domain\\StudyProgramManagement.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\source\\Avantys-education\\TestManagement\\StudyProgramManagement.Domain\\StudyProgramManagement.Domain.csproj",
+        "projectUniqueName": "D:\\source\\Avantys-education\\TEstManagement\\StudyProgramManagement.Domain\\StudyProgramManagement.Domain.csproj",
         "projectName": "StudyProgramManagement.Domain",
-        "projectPath": "C:\\source\\Avantys-education\\TestManagement\\StudyProgramManagement.Domain\\StudyProgramManagement.Domain.csproj",
+        "projectPath": "D:\\source\\Avantys-education\\TEstManagement\\StudyProgramManagement.Domain\\StudyProgramManagement.Domain.csproj",
         "packagesPath": "C:\\Users\\noahd\\.nuget\\packages\\",
-        "outputPath": "C:\\source\\Avantys-education\\TestManagement\\StudyProgramManagement.Domain\\obj\\",
+        "outputPath": "D:\\source\\Avantys-education\\TEstManagement\\StudyProgramManagement.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\noahd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,21 +60,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\source\\Avantys-education\\TestManagement\\StudyProgramManagement.Infrastructure\\StudyProgramManagement.Infrastructure.csproj": {
+    "D:\\source\\Avantys-education\\TEstManagement\\StudyProgramManagement.Infrastructure\\StudyProgramManagement.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\source\\Avantys-education\\TestManagement\\StudyProgramManagement.Infrastructure\\StudyProgramManagement.Infrastructure.csproj",
+        "projectUniqueName": "D:\\source\\Avantys-education\\TEstManagement\\StudyProgramManagement.Infrastructure\\StudyProgramManagement.Infrastructure.csproj",
         "projectName": "StudyProgramManagement.Infrastructure",
-        "projectPath": "C:\\source\\Avantys-education\\TestManagement\\StudyProgramManagement.Infrastructure\\StudyProgramManagement.Infrastructure.csproj",
+        "projectPath": "D:\\source\\Avantys-education\\TEstManagement\\StudyProgramManagement.Infrastructure\\StudyProgramManagement.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\noahd\\.nuget\\packages\\",
-        "outputPath": "C:\\source\\Avantys-education\\TestManagement\\StudyProgramManagement.Infrastructure\\obj\\",
+        "outputPath": "D:\\source\\Avantys-education\\TEstManagement\\StudyProgramManagement.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\noahd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,14 +86,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\source\\Avantys-education\\TestManagement\\StudyProgramManagement.Domain\\StudyProgramManagement.Domain.csproj": {
-                "projectPath": "C:\\source\\Avantys-education\\TestManagement\\StudyProgramManagement.Domain\\StudyProgramManagement.Domain.csproj"
+              "D:\\source\\Avantys-education\\TEstManagement\\StudyProgramManagement.Domain\\StudyProgramManagement.Domain.csproj": {
+                "projectPath": "D:\\source\\Avantys-education\\TEstManagement\\StudyProgramManagement.Domain\\StudyProgramManagement.Domain.csproj"
               }
             }
           }
@@ -100,6 +110,12 @@
           "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0-preview.4.23259.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.0-preview.4.23259.3, )"
             }
@@ -120,7 +136,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

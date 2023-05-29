@@ -5,7 +5,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["StudyProgramManagement/StudyProgramManagement.csproj", "StudyProgramManagement/"]
+COPY ["StudyProgramManagement.csproj", "StudyProgramManagement/"]
 RUN dotnet restore "StudyProgramManagement/StudyProgramManagement.csproj"
 COPY . .
 WORKDIR "/src/StudyProgramManagement"

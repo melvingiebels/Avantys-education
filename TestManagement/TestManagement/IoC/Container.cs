@@ -20,7 +20,7 @@ namespace TestManagement.IoC
         {
             lock (_current)
             {
-                _container = new StandardKernel(new Configuration());
+                _container = new StandardKernel();
             }
         }
 

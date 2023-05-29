@@ -12,4 +12,8 @@ public class TeacherModules
         ModuleId = moduleId;
         TeacherId = teacherId;
     }
+
+    public TeacherModules()
+    {
+    }
 }

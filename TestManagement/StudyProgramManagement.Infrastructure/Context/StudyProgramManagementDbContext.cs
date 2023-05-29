@@ -3,7 +3,7 @@ using StudyProgramManagement.Domain.Models;
 
 namespace StudyProgramManagement.Infrastructure.Context;
 
-public class StudyProgramManagementDbContext: DbContext
+public class StudyProgramManagementDbContext : DbContext
 {
     public DbSet<Student> Students { get; set; }
     public DbSet<Class> Classes { get; set; }
@@ -12,12 +12,12 @@ public class StudyProgramManagementDbContext: DbContext
     public DbSet<Module> Modules { get; set; }
     public DbSet<StudyProgram> StudyPrograms { get; set; }
     public DbSet<TeacherModules> TeacherModules { get; set; }
+    public DbSet<LecturesSchedule> LecturesSchedule { get; set; }
 
     public StudyProgramManagementDbContext(DbContextOptions<StudyProgramManagementDbContext> options) : base(options)
     {
-        
     }
-    
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         base.OnConfiguring(optionsBuilder);
@@ -26,11 +26,14 @@ public class StudyProgramManagementDbContext: DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Student>()
+            .HasOne<Class>()
+            .WithMany()
+            .HasForeignKey(c => c.ClassId);
 
         modelBuilder.Entity<Module>()
             .HasMany(e => e.Teachers)
             .WithMany(e => e.Modules)
             .UsingEntity<TeacherModules>();
-        
     }
 }

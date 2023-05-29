@@ -14,4 +14,8 @@ public class Teacher
         LastName = lastName;
         Modules = modules;
     }
+
+    public Teacher()
+    {
+    }
 }
