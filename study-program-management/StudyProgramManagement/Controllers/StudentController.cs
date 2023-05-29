@@ -36,6 +36,12 @@ public class StudentController : ControllerBase
     [HttpPut]
     public void Update([FromBody] Student model)
     {
-        _repository.Create(model);
+        _repository.Update(model);
+    }
+    
+    [HttpDelete("{studentId}")]
+    public void Delete([FromRoute] Guid studentId)
+    {
+        _repository.Delete(studentId);
     }
 }

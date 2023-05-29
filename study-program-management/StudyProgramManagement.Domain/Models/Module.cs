@@ -1,4 +1,6 @@
-﻿namespace StudyProgramManagement.Domain.Models;
+﻿using System.Text.Json.Serialization;
+
+namespace StudyProgramManagement.Domain.Models;
 
 public class Module
 {
@@ -6,8 +8,11 @@ public class Module
     public int ECs { get; set; }
     public string Name { get; set; }
     public Block Block { get; set; }
+    [JsonIgnore]
     public List<Lecture> Lectures { get; set; }
+    [JsonIgnore]
     public List<Teacher> Teachers { get; set; }
+    [JsonIgnore]
     public List<Class> Classes { get; set; }
 
     public Module(List<Lecture> lectures, List<Teacher> teachers, string name, Block block, List<Class> classes,

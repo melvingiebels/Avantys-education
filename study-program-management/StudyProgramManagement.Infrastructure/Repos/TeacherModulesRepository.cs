@@ -45,4 +45,10 @@ public class TeacherModulesRepository : IRepository<TeacherModules>
         _dbContext.SaveChanges();
         return model;
     }
+    public void Delete(Guid guid)
+    {
+        var teacherModuleToBeRemoved = _dbContext.TeacherModules.FirstAsync(c => c.Id == guid).Result;
+        _dbContext.TeacherModules.Remove(teacherModuleToBeRemoved);
+        _dbContext.SaveChanges();
+    }
 }

@@ -35,4 +35,10 @@ public class ModuleRepository:IRepository<Module>
         _dbContext.SaveChanges();
         return model;
     }
+    public void Delete(Guid guid)
+    {
+        var moduleToBeRemoved = _dbContext.Modules.FirstAsync(c => c.Id == guid).Result;
+        _dbContext.Modules.Remove(moduleToBeRemoved);
+        _dbContext.SaveChanges();
+    }
 }

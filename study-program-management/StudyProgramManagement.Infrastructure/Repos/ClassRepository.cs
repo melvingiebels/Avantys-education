@@ -35,4 +35,11 @@ public class ClassRepository:IRepository<Class>
         _dbContext.SaveChanges();
         return model;
     }
+
+    public void Delete(Guid guid)
+    {
+        var classToBeRemoved = _dbContext.Classes.FirstAsync(c => c.Id == guid).Result;
+        _dbContext.Classes.Remove(classToBeRemoved);
+        _dbContext.SaveChanges();
+    }
 }

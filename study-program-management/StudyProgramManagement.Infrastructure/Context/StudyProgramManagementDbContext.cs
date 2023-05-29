@@ -12,7 +12,7 @@ public class StudyProgramManagementDbContext : DbContext
     public DbSet<Module> Modules { get; set; }
     public DbSet<StudyProgram> StudyPrograms { get; set; }
     public DbSet<TeacherModules> TeacherModules { get; set; }
-    public DbSet<LecturesSchedule> LecturesSchedule { get; set; }
+    public DbSet<LecturesSchedule?> LecturesSchedule { get; set; }
 
     public StudyProgramManagementDbContext(DbContextOptions<StudyProgramManagementDbContext> options) : base(options)
     {
@@ -26,14 +26,15 @@ public class StudyProgramManagementDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Student>()
-            .HasOne<Class>()
-            .WithMany()
-            .HasForeignKey(c => c.ClassId);
-
         modelBuilder.Entity<Module>()
             .HasMany(e => e.Teachers)
             .WithMany(e => e.Modules)
             .UsingEntity<TeacherModules>();
+
+        modelBuilder.Entity<LecturesSchedule>()
+            .HasOne(ls => ls.Lecture)
+            .WithMany()
+            .HasForeignKey(c => c.Lecture);
+
     }
 }

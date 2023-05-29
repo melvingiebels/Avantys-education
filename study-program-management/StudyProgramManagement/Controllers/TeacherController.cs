@@ -38,4 +38,10 @@ public class TeacherController : ControllerBase
     {
         _repository.Update(model);
     }
+    
+    [HttpDelete("{teacherId}")]
+    public void Delete([FromRoute] Guid teacherId)
+    {
+        _repository.Delete(teacherId);
+    }
 }

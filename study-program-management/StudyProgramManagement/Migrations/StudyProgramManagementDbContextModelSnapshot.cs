@@ -115,10 +115,7 @@ namespace StudyProgramManagement.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("ClassId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("ClassId1")
+                    b.Property<Guid?>("ClassId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("FirstName")
@@ -136,7 +133,7 @@ namespace StudyProgramManagement.Migrations
 
                     b.HasIndex("ClassId");
 
-                    b.HasIndex("ClassId1");
+                    b.HasIndex("StudyProgramId");
 
                     b.ToTable("Students");
                 });
@@ -146,6 +143,14 @@ namespace StudyProgramManagement.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TotalECs")
                         .HasColumnType("int");
@@ -234,14 +239,14 @@ namespace StudyProgramManagement.Migrations
             modelBuilder.Entity("StudyProgramManagement.Domain.Models.Student", b =>
                 {
                     b.HasOne("StudyProgramManagement.Domain.Models.Class", null)
-                        .WithMany()
-                        .HasForeignKey("ClassId")
+                        .WithMany("Students")
+                        .HasForeignKey("ClassId");
+
+                    b.HasOne("StudyProgramManagement.Domain.Models.StudyProgram", null)
+                        .WithMany("Students")
+                        .HasForeignKey("StudyProgramId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("StudyProgramManagement.Domain.Models.Class", null)
-                        .WithMany("Students")
-                        .HasForeignKey("ClassId1");
                 });
 
             modelBuilder.Entity("StudyProgramManagement.Domain.Models.TeacherModules", b =>
@@ -274,6 +279,8 @@ namespace StudyProgramManagement.Migrations
             modelBuilder.Entity("StudyProgramManagement.Domain.Models.StudyProgram", b =>
                 {
                     b.Navigation("Modules");
+
+                    b.Navigation("Students");
                 });
 #pragma warning restore 612, 618
         }
