@@ -13,7 +13,7 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @EventPattern('StudentCreated')
+  @EventPattern('StudentCreatedd')
   createTeacher(data: Record<string, unknown>){//: Promise<Teacher>{
     console.log("Testing",data);
     //return this.appService.createTeacher(teacher);

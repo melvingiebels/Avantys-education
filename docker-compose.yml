@@ -45,6 +45,15 @@ services:
     ports:
       - "3001:3001"
 
+  invoicingapi:
+    image: avantys-education/invoicingapi:1.0
+    build: invoicing
+    depends_on:
+      - sqlserver
+      - rabbitmq
+    ports:
+      - "3002:3002"
+
 volumes:
   sqlserverdata:
   rabbitmq-data:
