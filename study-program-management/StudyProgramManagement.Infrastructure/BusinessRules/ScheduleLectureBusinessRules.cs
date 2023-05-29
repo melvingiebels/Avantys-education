@@ -5,14 +5,19 @@ namespace StudyProgramManagement.Infrastructure.BusinessRules;
 
 public class ScheduleLectureBusinessRules
 {
-    private static StudyProgramManagementDbContext _dbContext;
+    private readonly StudyProgramManagementDbContext _dbContext;
 
     public ScheduleLectureBusinessRules(StudyProgramManagementDbContext dbContext)
     {
         _dbContext = dbContext;
     }
 
-    public bool LectureShouldNotBeScheduledOnTheSameTimeAsAnotherLecture(LecturesSchedule? lecturesSchedule)
+    public bool IsValid(LecturesSchedule? lecturesSchedule)
+    {
+        return LectureShouldNotBeScheduledOnTheSameTimeAsAnotherLecture(lecturesSchedule) &&
+               LectureShouldNotBeScheduledIfStartTimePlusDurationIsInAnotherDay(lecturesSchedule);
+    }
+    private bool LectureShouldNotBeScheduledOnTheSameTimeAsAnotherLecture(LecturesSchedule? lecturesSchedule)
     {
         // Retrieve the lectures scheduled on the same day as the given lecture
         var lecturesOnSameDay = _dbContext.LecturesSchedule.ToList()
@@ -37,4 +42,13 @@ public class ScheduleLectureBusinessRules
 
         return true; // No overlapping lectures found, so the lecture can be scheduled
     }
+    private bool LectureShouldNotBeScheduledIfStartTimePlusDurationIsInAnotherDay(LecturesSchedule? lecturesSchedule)
+    {
+        // Calculate the end time of the lecture
+        var endTime = lecturesSchedule.DateScheduled.AddMinutes(lecturesSchedule.DurationInMinutes);
+
+        // Check if the start and end times are in the same day
+        return lecturesSchedule.DateScheduled.Date == endTime.Date;
+    }
+
 }

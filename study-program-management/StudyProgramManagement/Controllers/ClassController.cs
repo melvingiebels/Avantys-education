@@ -8,34 +8,46 @@ namespace StudyProgramManagement.Controllers;
 [Route("[controller]")]
 public class ClassController : ControllerBase
 {
-    private readonly IRepository<Class?> _repository;
+    private readonly IRepository<Class?> _classRepository;
+    private readonly IRepository<Student?> _studentRepository;
 
-    public ClassController(IRepository<Class?> repository)
+
+    public ClassController(IRepository<Class?> classRepository, IRepository<Student?> studentRepository)
     {
-        _repository = repository;
+        _classRepository = classRepository;
+        _studentRepository = studentRepository;
     }
 
     [HttpGet]
     public async Task<IEnumerable<Class?>> Get()
     {
-        return await _repository.Get();
+        return await _classRepository.Get();
     }
 
     [HttpGet("{classId}")]
     public async Task<Class?> GetById(Guid classId)
     {
-        return await _repository.GetById(classId);
+        return await _classRepository.GetById(classId);
     }
 
     [HttpPost]
     public void Create([FromBody] Class model)
     {
-        _repository.Create(model);
+        _classRepository.Create(model);
     }
 
-    [HttpPut]
-    public void Update([FromBody] Class model)
+    [HttpPut("{classId}/{studentId}")]
+    public void Update([FromRoute] Guid classId, [FromRoute] Guid studentId)
     {
-        _repository.Create(model);
+        var classToEnroll = _classRepository.GetById(classId).Result;
+        var studentToEnroll = _studentRepository.GetById(studentId).Result;
+        classToEnroll?.Students.Add(studentToEnroll!);
+        _classRepository.Update(classToEnroll);
+    }
+
+    [HttpDelete("{classId}")]
+    public void Delete([FromRoute] Guid classId)
+    {
+        _classRepository.Delete(classId);
     }
 }

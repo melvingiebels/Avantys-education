@@ -1,8 +1,11 @@
-﻿namespace StudyProgramManagement.Domain.Models;
+﻿using System.Text.Json.Serialization;
+
+namespace StudyProgramManagement.Domain.Models;
 
 public class Class
 {
     public Guid Id { get; set; }
+    [JsonIgnore]
     public List<Student> Students { get; set; }
     public ClassNotation ClassNotation { get; set; }
 

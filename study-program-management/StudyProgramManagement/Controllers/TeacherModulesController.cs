@@ -21,13 +21,13 @@ public class TeacherModulesController : ControllerBase
         return await _repository!.Get();
     }
 
-    [HttpGet("{moduleId}")]
+    [HttpGet("Module/{moduleId}")]
     public async Task<TeacherModules?> GetByModuleId(Guid moduleId)
     {
         return await _repository!.GetByModuleId(moduleId);
     }
 
-    [HttpGet("{teacherId}")]
+    [HttpGet("Teacher/{teacherId}")]
     public async Task<TeacherModules?> GetByTeacherId(Guid teacherId)
     {
         return await _repository!.GetByTeacherId(teacherId);
@@ -48,6 +48,12 @@ public class TeacherModulesController : ControllerBase
     [HttpPut]
     public void Update([FromBody] TeacherModules model)
     {
-        _repository!.Create(model);
+        _repository!.Update(model);
+    }
+    
+    [HttpDelete("{teacherModuleId}")]
+    public void Delete([FromRoute] Guid teacherModuleId)
+    {
+        _repository!.Delete(teacherModuleId);
     }
 }

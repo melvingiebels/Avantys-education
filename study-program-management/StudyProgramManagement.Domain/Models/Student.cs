@@ -6,8 +6,6 @@ public class Student
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public Guid StudyProgramId { get; set; }
-    public Guid ClassId { get; set; }
-
     public Student(string firstName, string lastName, Guid studyProgramId)
     {
         Id = new Guid();
