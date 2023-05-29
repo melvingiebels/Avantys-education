@@ -36,10 +36,22 @@ services:
       - sqlserver
       - rabbitmq
 
+  learning-resources:
+    build:
+      context: ./learning-resources
+    ports:
+      - 3002:3002
+    volumes:
+      - ./learning-resources:/usr/src/guidance-management
+    depends_on:
+      - sqlserver
+      - rabbitmq
+
   registrationmanagementapi:
     image: avantys-education/registrationmanagementapi:1.0
     build: registration-management-api
     depends_on:
+      - sqlserver
       - rabbitmq
     ports:
       - "3001:3001"

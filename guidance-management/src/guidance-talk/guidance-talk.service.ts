@@ -49,12 +49,15 @@ export class GuidanceTalkService {
     }
 
     async getPreviousGuidanceTalkNotes(guidanceTalkId:number):Promise<GuidanceTalk>{
-        let guidanceTalk = this.guidanceTalkRepository.findOne({where:{
+        console.log("getting following guidance talk: " + guidanceTalkId)
+        
+        let guidanceTalk = await this.guidanceTalkRepository.findOne({where:{
             id:guidanceTalkId
         }});
 
+        console.log(guidanceTalk)
 
-        return await guidanceTalk;
+        return guidanceTalk;
     }
 
 }
