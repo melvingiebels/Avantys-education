@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using StudyProgramManagement.Domain.Models.Enums;
 
 namespace StudyProgramManagement.Domain.Models;
 

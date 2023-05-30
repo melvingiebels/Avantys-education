@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dU+dRD062/EfbORV/JUb3rPlsxKBehoQVMaNQ/akyaztWG1NsMucQCToe8MpVeYsQw/RcvNvGlMjr/5Fn/4Ilg==",
+  "dgSpecHash": "hxt/ahjWerDircUD3IyqWoCYFxIhpEeaR4lwanZuLBz/HZCw/lZEHFKFAQjUz9GoT/D576vN4kywdvNC6oex7g==",
   "success": true,
-  "projectFilePath": "D:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement\\StudyProgramManagement.csproj",
+  "projectFilePath": "C:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement\\StudyProgramManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\noahd\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\noahd\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

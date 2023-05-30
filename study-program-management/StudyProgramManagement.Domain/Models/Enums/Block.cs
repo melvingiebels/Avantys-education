@@ -1,4 +1,4 @@
-﻿namespace StudyProgramManagement.Domain.Models;
+﻿namespace StudyProgramManagement.Domain.Models.Enums;
 
 public enum Block
 {

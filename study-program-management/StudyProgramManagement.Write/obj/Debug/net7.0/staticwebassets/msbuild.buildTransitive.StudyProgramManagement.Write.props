@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\StudyProgramManagement.Write.props" />
+</Project>
