@@ -14,16 +14,17 @@
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+        <PackageReference Include="MongoDB.Driver" Version="2.19.2" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\StudyProgramManagement.Commands\StudyProgramManagement.Commands.csproj" />
       <ProjectReference Include="..\StudyProgramManagement.Domain\StudyProgramManagement.Domain.csproj" />
+      <ProjectReference Include="..\StudyProgramManagement.Query\StudyProgramManagement.Query.csproj" />
     </ItemGroup>
 
     <ItemGroup>
       <Folder Include="Handlers\CommandHandlers\" />
-      <Folder Include="MongoDb\" />
     </ItemGroup>
 
 </Project>

@@ -1,0 +1,18 @@
+﻿using MongoDB.Driver;
+using StudyProgramManagement.Infrastructure.Core;
+using StudyProgramManagement.Infrastructure.MongoDb.Collection;
+using StudyProgramManagement.Query.Queries.Lecture;
+
+namespace StudyProgramManagement.Infrastructure.Handlers.QueryHandler.Lecture;
+
+public class GetAllLecturesHandler: MongoQueryBase<LectureCollection>, IGetAllLectures
+{
+    public GetAllLecturesHandler(LectureCollection collection) : base(collection)
+    {
+    }
+
+    public IEnumerable<Domain.Models.Lecture> Excecute()
+    {
+        return Collection.Collection.Find(p => true).ToList();
+    }
+}

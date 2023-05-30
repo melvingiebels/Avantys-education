@@ -1,0 +1,18 @@
+﻿using MongoDB.Driver;
+using StudyProgramManagement.Infrastructure.Core;
+using StudyProgramManagement.Infrastructure.MongoDb.Collection;
+using StudyProgramManagement.Query.Queries.Class;
+
+namespace StudyProgramManagement.Infrastructure.Handlers.QueryHandler.Class;
+
+public class GetAllClassesHandler: MongoQueryBase<ClassCollection>, IGetAllClasses
+{
+    public GetAllClassesHandler(ClassCollection collection) : base(collection)
+    {
+    }
+
+    public IEnumerable<Domain.Models.Class> Excecute()
+    {
+        return Collection.Collection.Find(p => true).ToList();
+    }
+}
