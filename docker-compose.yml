@@ -10,6 +10,11 @@ services:
     ports:
       - "15672:15672" # RabbitMQ management UI port
       - "5672:5672"   # RabbitMQ AMQP port
+    healthcheck:
+        test: ["CMD", "curl", "-f", "http://localhost:15672"]
+        interval: 30s
+        timeout: 10s
+        retries: 5
     env_file:
       - .env
 
@@ -36,6 +41,7 @@ services:
       - sqlserver
       - rabbitmq
 
+
   learning-resources:
     build:
       context: ./learning-resources
@@ -46,6 +52,8 @@ services:
     depends_on:
       - sqlserver
       - rabbitmq
+    env_file:
+      - .env
 
   registrationmanagementapi:
     image: avantys-education/registrationmanagementapi:1.0
