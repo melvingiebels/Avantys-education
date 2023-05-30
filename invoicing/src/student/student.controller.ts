@@ -7,12 +7,7 @@ import { EventPattern } from '@nestjs/microservices';
 export class StudentController {
   constructor(private readonly studentService: StudentService) {} // inject the StudentService
 
-  @Get()
-  helloVietnam() {
-    return 'hello vietnam';
-  }
-
-  @EventPattern('registration_accepted')
+  @EventPattern('RegistrationAccepted')
   createInvoicing(data: Record<string, unknown>) {
     console.log('Testing', data);
     const student = new Student(data);

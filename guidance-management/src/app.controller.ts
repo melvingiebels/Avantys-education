@@ -2,7 +2,12 @@ import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 import { Teacher } from './domain/teacher.model';
 import { Student } from './domain/student.model';
-import { MessagePattern,MessageHandler, EventPattern, Transport } from '@nestjs/microservices';
+import {
+  MessagePattern,
+  MessageHandler,
+  EventPattern,
+  Transport,
+} from '@nestjs/microservices';
 
 @Controller()
 export class AppController {
@@ -14,9 +19,7 @@ export class AppController {
   }
 
   //@Post('student')
-  async createStudent(@Body() student:Student): Promise<Student>{
+  async createStudent(@Body() student: Student): Promise<Student> {
     return this.appService.createStudent(student);
-
   }
-
 }

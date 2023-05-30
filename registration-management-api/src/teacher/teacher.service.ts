@@ -10,6 +10,10 @@ export class TeacherService {
     private teacherRepository: Repository<Teacher>,
   ) {}
 
+  async getAllTeachers(): Promise<Teacher[]> {
+    return this.teacherRepository.find();
+  }
+
   async createTeacher(teacher: Teacher): Promise<any> {
     await this.teacherRepository.save(teacher);
     return teacher;

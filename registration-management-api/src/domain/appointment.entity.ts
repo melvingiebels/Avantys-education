@@ -22,17 +22,13 @@ export class Appointment {
   @Column()
   location: string;
 
-  constructor(
-    teacher: Teacher,
-    student: Student,
-    date: Date,
-    time: string,
-    location: string,
-  ) {
-    this.teacher = teacher;
-    this.student = student;
-    this.date = date;
-    this.time = time;
-    this.location = location;
+  @Column()
+  studentId: number;
+
+  @Column()
+  teacherId: number;
+
+  constructor(appointmentDto: Partial<Appointment>) {
+    Object.assign(this, appointmentDto);
   }
 }

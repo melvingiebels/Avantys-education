@@ -7,15 +7,19 @@ import { Student } from '../domain/student.entity';
 @Injectable()
 export class StudentService {
   constructor(
-    @Inject('REGISTRATION_SERVICE') private client: ClientProxy,
+    @Inject('RegistrationService') private client: ClientProxy,
     @InjectRepository(Student)
     private studentRepository: Repository<Student>,
   ) {}
 
+  async getAllStudents(): Promise<Student[]> {
+    return this.studentRepository.find();
+  }
+
   async createStudent(student: Student): Promise<any> {
     await this.studentRepository.save(student);
-
-    return this.client.emit('StudentCreated', student);
+    this.client.emit('StudentCreated', student);
+    return student;
   }
 
   async acceptRegistration(studentId: number) {
@@ -28,7 +32,7 @@ export class StudentService {
 
     console.log(updatedStudent);
     // Then emit the event
-    this.client.emit('registration_accepted', updatedStudent);
+    this.client.emit('RegistrationAccepted', updatedStudent);
 
     return updatedStudent;
   }
