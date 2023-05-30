@@ -1,4 +1,5 @@
 ﻿using MongoDB.Driver;
+using StudyProgramManagement.Domain.Schemas;
 using StudyProgramManagement.Infrastructure.Core;
 using StudyProgramManagement.Infrastructure.MongoDb.Collection;
 using StudyProgramManagement.Query.Queries.Student;
@@ -11,9 +12,9 @@ public class GetStudentByIdHandler: MongoQueryBase<StudentCollection>, IGetStude
     {
     }
 
-    public async Task<Domain.Models.Student> Excecute(Guid id)
+    public async Task<StudentSchema> Excecute(Guid id)
     {
-        var filter = Builders<Domain.Models.Student>.Filter
+        var filter = Builders<StudentSchema>.Filter
             .Eq(r => r.Id, id);
         return await Collection.Collection.Find(filter).FirstOrDefaultAsync();
     }

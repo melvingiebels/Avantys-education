@@ -1,5 +1,6 @@
 ﻿using MongoDB.Driver;
 using StudyProgramManagement.Domain.Models;
+using StudyProgramManagement.Domain.Schemas;
 using StudyProgramManagement.Infrastructure.Core;
 using StudyProgramManagement.Infrastructure.MongoDb.Collection;
 using StudyProgramManagement.Query.Queries.LecturesSchedule;
@@ -12,7 +13,7 @@ public class GetAllLectureSchedulesHandler: MongoQueryBase<LectureScheduleCollec
     {
     }
 
-    public IEnumerable<LecturesSchedule> Excecute()
+    public IEnumerable<LecturesScheduleSchema> Excecute()
     {
         return Collection.Collection.Find(p => true).ToList();
     }

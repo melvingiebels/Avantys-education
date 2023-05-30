@@ -3653,19 +3653,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\noahd\\.nuget\\packages\\": {}
+    "C:\\Users\\noahd\\.nuget\\packages\\": {},
+    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement.Write\\StudyProgramManagement.Write.csproj",
+      "projectUniqueName": "D:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement.Write\\StudyProgramManagement.Write.csproj",
       "projectName": "StudyProgramManagement.Write",
-      "projectPath": "C:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement.Write\\StudyProgramManagement.Write.csproj",
+      "projectPath": "D:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement.Write\\StudyProgramManagement.Write.csproj",
       "packagesPath": "C:\\Users\\noahd\\.nuget\\packages\\",
-      "outputPath": "C:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement.Write\\obj\\",
+      "outputPath": "D:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement.Write\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\noahd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3673,17 +3678,19 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement.Commands\\StudyProgramManagement.Commands.csproj": {
-              "projectPath": "C:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement.Commands\\StudyProgramManagement.Commands.csproj"
+            "D:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement.Commands\\StudyProgramManagement.Commands.csproj": {
+              "projectPath": "D:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement.Commands\\StudyProgramManagement.Commands.csproj"
             },
-            "C:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement.Infrastructure\\StudyProgramManagement.Infrastructure.csproj": {
-              "projectPath": "C:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement.Infrastructure\\StudyProgramManagement.Infrastructure.csproj"
+            "D:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement.Infrastructure\\StudyProgramManagement.Infrastructure.csproj": {
+              "projectPath": "D:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement.Infrastructure\\StudyProgramManagement.Infrastructure.csproj"
             }
           }
         }
@@ -3730,7 +3737,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

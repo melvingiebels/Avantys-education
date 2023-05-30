@@ -1,7 +1,8 @@
-﻿namespace StudyProgramManagement.Query.Queries.Student;
+﻿using StudyProgramManagement.Domain.Schemas;
+
+namespace StudyProgramManagement.Query.Queries.Student;
 
 public interface IGetStudentById
 {
-    Task<Domain.Models.Student> Excecute(Guid id);
-
+    Task<StudentSchema> Excecute(Guid id);
 }

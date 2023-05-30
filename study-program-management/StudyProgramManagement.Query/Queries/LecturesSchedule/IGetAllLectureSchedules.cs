@@ -1,6 +1,8 @@
-﻿namespace StudyProgramManagement.Query.Queries.LecturesSchedule;
+﻿using StudyProgramManagement.Domain.Schemas;
+
+namespace StudyProgramManagement.Query.Queries.LecturesSchedule;
 
 public interface IGetAllLectureSchedules
 {
-    IEnumerable<Domain.Models.LecturesSchedule> Excecute();
+    IEnumerable<LecturesScheduleSchema> Excecute();
 }

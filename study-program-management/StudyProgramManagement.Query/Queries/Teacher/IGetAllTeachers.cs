@@ -1,6 +1,8 @@
-﻿namespace StudyProgramManagement.Query.Queries.Teacher;
+﻿using StudyProgramManagement.Domain.Schemas;
+
+namespace StudyProgramManagement.Query.Queries.Teacher;
 
 public interface IGetAllTeachers
 {
-    IEnumerable<Domain.Models.Teacher> Excecute();
+    IEnumerable<TeacherSchema> Excecute();
 }

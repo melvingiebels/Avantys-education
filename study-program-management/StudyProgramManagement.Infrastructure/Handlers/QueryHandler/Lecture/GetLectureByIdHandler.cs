@@ -1,4 +1,5 @@
 ﻿using MongoDB.Driver;
+using StudyProgramManagement.Domain.Schemas;
 using StudyProgramManagement.Infrastructure.Core;
 using StudyProgramManagement.Infrastructure.MongoDb.Collection;
 using StudyProgramManagement.Query.Queries.Lecture;
@@ -11,9 +12,9 @@ public class GetLectureByIdHandler : MongoQueryBase<LectureCollection>, IGetLect
     {
     }
 
-    public async Task<Domain.Models.Lecture> Excecute(Guid id)
+    public async Task<LectureSchema> Excecute(Guid id)
     {
-        var filter = Builders<Domain.Models.Lecture>.Filter
+        var filter = Builders<LectureSchema>.Filter
             .Eq(r => r.Id, id);
         return await Collection.Collection.Find(filter).FirstOrDefaultAsync();
     }

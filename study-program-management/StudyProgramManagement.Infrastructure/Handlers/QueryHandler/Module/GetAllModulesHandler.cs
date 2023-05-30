@@ -1,4 +1,5 @@
 ﻿using MongoDB.Driver;
+using StudyProgramManagement.Domain.Schemas;
 using StudyProgramManagement.Infrastructure.Core;
 using StudyProgramManagement.Infrastructure.MongoDb.Collection;
 using StudyProgramManagement.Query.Queries.Module;
@@ -11,7 +12,7 @@ public class GetAllModulesHandler: MongoQueryBase<ModuleCollection>, IGetAllModu
     {
     }
 
-    public IEnumerable<Domain.Models.Module> Excecute()
+    public IEnumerable<ModuleSchema> Excecute()
     {
         return Collection.Collection.Find(p => true).ToList();
     }

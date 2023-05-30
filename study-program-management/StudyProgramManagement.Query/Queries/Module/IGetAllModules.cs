@@ -1,6 +1,8 @@
-﻿namespace StudyProgramManagement.Query.Queries.Module;
+﻿using StudyProgramManagement.Domain.Schemas;
+
+namespace StudyProgramManagement.Query.Queries.Module;
 
 public interface IGetAllModules
 {
-    IEnumerable<Domain.Models.Module> Excecute();
+    IEnumerable<ModuleSchema> Excecute();
 }

@@ -10,6 +10,6 @@ public class MongoDbClient
     public MongoDbClient()
     {
         Client = new MongoClient("mongodb://localhost:27017");
-        Database = Client.GetDatabase("GeeksArrayStore");
-    }
+        Database = Client.GetDatabase("StudyProgramManagement");
+    }       
 }

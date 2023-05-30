@@ -1,6 +1,8 @@
-﻿namespace StudyProgramManagement.Query.Queries.Student;
+﻿using StudyProgramManagement.Domain.Schemas;
+
+namespace StudyProgramManagement.Query.Queries.Student;
 
 public interface IGetAllStudents
 {
-    IEnumerable<Domain.Models.Student> Excecute();
+    IEnumerable<StudentSchema> Excecute();
 }

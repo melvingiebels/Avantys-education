@@ -1,4 +1,5 @@
 ﻿using MongoDB.Driver;
+using StudyProgramManagement.Domain.Schemas;
 using StudyProgramManagement.Infrastructure.Core;
 using StudyProgramManagement.Infrastructure.MongoDb.Collection;
 using StudyProgramManagement.Query.Queries.Lecture;
@@ -11,7 +12,7 @@ public class GetAllLecturesHandler: MongoQueryBase<LectureCollection>, IGetAllLe
     {
     }
 
-    public IEnumerable<Domain.Models.Lecture> Excecute()
+    public IEnumerable<LectureSchema> Excecute()
     {
         return Collection.Collection.Find(p => true).ToList();
     }

@@ -1,0 +1,12 @@
+Index: study-program-management/.idea/.idea.study-program/.idea/.name
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/study-program-management/.idea/.idea.study-program/.idea/.name b/study-program-management/.idea/.idea.study-program/.idea/.name
+new file mode 100644
+--- /dev/null	(date 1685369762112)
++++ b/study-program-management/.idea/.idea.study-program/.idea/.name	(date 1685369762112)
+@@ -0,0 +1,1 @@
++study-program
+\ No newline at end of file

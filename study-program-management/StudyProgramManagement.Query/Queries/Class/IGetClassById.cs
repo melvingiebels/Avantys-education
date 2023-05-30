@@ -1,6 +1,8 @@
-﻿namespace StudyProgramManagement.Query.Queries.Class;
+﻿using StudyProgramManagement.Domain.Schemas;
+
+namespace StudyProgramManagement.Query.Queries.Class;
 
 public interface IGetClassById
 {
-    Task<Domain.Models.Class> Excecute(Guid id);
+    Task<ClassSchema> Excecute(Guid id);
 }

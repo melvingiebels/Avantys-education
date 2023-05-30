@@ -1,6 +1,8 @@
-﻿namespace StudyProgramManagement.Query.Queries.Teacher;
+﻿using StudyProgramManagement.Domain.Schemas;
+
+namespace StudyProgramManagement.Query.Queries.Teacher;
 
 public interface IGetTeacherById
 {
-    Task<Domain.Models.Teacher> Excecute(Guid id);
+    Task<TeacherSchema> Excecute(Guid id);
 }   

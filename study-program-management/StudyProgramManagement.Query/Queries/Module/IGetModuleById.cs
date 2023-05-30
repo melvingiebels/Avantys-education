@@ -1,6 +1,8 @@
-﻿namespace StudyProgramManagement.Query.Queries.Module;
+﻿using StudyProgramManagement.Domain.Schemas;
+
+namespace StudyProgramManagement.Query.Queries.Module;
 
 public interface IGetModuleById
 {
-    Task<Domain.Models.Module> Excecute(Guid id);
+    Task<ModuleSchema> Excecute(Guid id);
 }

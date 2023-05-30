@@ -1,6 +1,8 @@
-﻿namespace StudyProgramManagement.Query.Queries.Lecture;
+﻿using StudyProgramManagement.Domain.Schemas;
+
+namespace StudyProgramManagement.Query.Queries.Lecture;
 
 public interface IGetAllLectures
 {
-    IEnumerable<Domain.Models.Lecture> Excecute();
+    IEnumerable<LectureSchema> Excecute();
 }

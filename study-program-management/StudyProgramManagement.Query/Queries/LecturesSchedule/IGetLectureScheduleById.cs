@@ -1,6 +1,8 @@
-﻿namespace StudyProgramManagement.Query.Queries.LecturesSchedule;
+﻿using StudyProgramManagement.Domain.Schemas;
+
+namespace StudyProgramManagement.Query.Queries.LecturesSchedule;
 
 public interface IGetLectureScheduleById
 {
-    Task<Domain.Models.LecturesSchedule> Excecute(Guid id);
+    Task<LecturesScheduleSchema> Excecute(Guid id);
 }

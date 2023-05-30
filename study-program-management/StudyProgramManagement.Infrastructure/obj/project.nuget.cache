@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X5pD21oiDegFcav8l+BCKqc3P5mSUez71eH8zjMy3QW+bdqFa7MRji01bRlCOCykKjhfRZwG9YILUkv9pRZTbA==",
+  "dgSpecHash": "pIlNm/0qnCLydWFAWtcAZZkupiysxrCo+0mSKt8RpqGbT7SYSXF8uLoBp0lJFgdoa8OimNPg/0TykF77rNwhKA==",
   "success": true,
-  "projectFilePath": "C:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement.Infrastructure\\StudyProgramManagement.Infrastructure.csproj",
+  "projectFilePath": "D:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement.Infrastructure\\StudyProgramManagement.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\noahd\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\noahd\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
