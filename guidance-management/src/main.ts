@@ -3,18 +3,7 @@ import { AppModule } from './app.module';
 import { MicroserviceOptions, Transport } from '@nestjs/microservices';
 
 async function bootstrap() {
-  let app = await NestFactory.create(AppModule);
-  app.connectMicroservice<MicroserviceOptions>({
-    transport: Transport.RMQ,
-    options: {
-      urls: ['amqp://admin:password@rabbitmq:5672'],
-      queue: 'REGISTRATION_QUEUE',
-      queueOptions: {
-        durable: false,
-      },
-    },
-  });
-  await app.startAllMicroservices();
+  const app = await NestFactory.create(AppModule);
   await app.listen(3000);
 }
 bootstrap();
