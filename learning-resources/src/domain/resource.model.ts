@@ -1,5 +1,6 @@
-import { Column, Entity, ManyToOne, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToOne, OneToOne, PrimaryGeneratedColumn, JoinColumn} from "typeorm";
 import { SchoolModule } from "./schoolmodule.model";
+import { Book } from "./book.model";
 
 
 @Entity()
@@ -13,16 +14,19 @@ export class Resource {
     @Column()
     description:string;
 
-    @Column()
-    url:string;
+    @Column({nullable:true})
+    url?:string;
+
+    @OneToOne(() => Book,{nullable:true})
+    @JoinColumn()
+    book?:Book;
 
     @ManyToOne(() => SchoolModule)
     schoolModule:SchoolModule;
 
-    constructor(title:string,description:string,url:string,schoolModule:SchoolModule){
+    constructor(title:string,description:string,schoolModule:SchoolModule){
         this.title = title;
         this.description = description;
-        this.url = url;
         this.schoolModule = schoolModule
     }
 }

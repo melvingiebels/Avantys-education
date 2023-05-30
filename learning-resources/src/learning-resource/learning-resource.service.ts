@@ -7,12 +7,14 @@ import { SchoolModuleDto } from 'src/domain/DTO/schoolmodule.dto';
 import { StudyMaterial } from 'src/domain/study-material.model';
 import { Repository} from 'typeorm'
 import { ResourceDto } from 'src/domain/DTO/resource.dto';
+import { GoogleBooksService } from 'src/google-books/google-books.service';
 
 @Injectable()
 export class LearningResourceService {
     constructor(@InjectRepository(StudyMaterial) private studyMaterialRepository: Repository<StudyMaterial>,
                 @InjectRepository(Resource) private resourceRepostitory: Repository<Resource>,
                 @InjectRepository(SchoolModule) private schoolModuleRepostitory: Repository<SchoolModule>,
+                private readonly GoogleBookService:GoogleBooksService
                 ){}
 
 
@@ -51,9 +53,35 @@ export class LearningResourceService {
 
     public async createResource(resourceDto:ResourceDto){
         console.log("Creating Resources")
-        let schoolModule = await this.schoolModuleRepostitory.findOne({where:{id:resourceDto.schoolModuleId}})
-        let resource = new Resource(resourceDto.title,resourceDto.description,resourceDto.url,schoolModule);
-        return await this.resourceRepostitory.save(resource);
+        console.log(resourceDto)
+        try{
+            let schoolModule = await this.schoolModuleRepostitory.findOne({where:{id:resourceDto.schoolModuleId}})
+            let resource = new Resource(resourceDto.title,resourceDto.description,schoolModule);
+            
+            if(resourceDto.url){
+                console.log("Adding URL")
+                resource.url = resourceDto.url
+            }
+            
+            if(resourceDto.bookname){
+                console.log("Finding Book from Title")
+                let book = await this.GoogleBookService.getGoogleBookFromTitle(resourceDto.bookname);
+                console.log("====================RETURNING BOOK=====================")
+                console.log(book);
+                if(book.id != null){
+                    resource.book = book;
+                }
+            }
+            
+            console.log("Before resource save")
+            console.log(resource);
+            
+            return await this.resourceRepostitory.save(resource);
+        }catch(e){
+            console.log("Error")
+            console.log(e)
+        }
+
     }
 
 }
