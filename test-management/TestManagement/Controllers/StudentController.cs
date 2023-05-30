@@ -32,18 +32,25 @@ public class StudentController
         return _queryFactory.ResolveQuery<IGetStudentById>()!.Excecute(studentId)!;
     }
 
-
-    [HttpPost("AddTestToStudent")]
-    public void AddTestToStudentCommand([FromBody] Guid studentId, Guid testId)
+    [HttpPut]
+    public void UpdateStudent(Student student)
     {
-        var addTestToStudentCommand = new AddTestToStudentCommand(studentId, testId);
+        var addTestToStudentCommand = new UpdateStudentCommand(student);
         _commandsFactory.ExecuteQuery(addTestToStudentCommand);
     }
 
-    [HttpPost("CreateStudent")]
+    [HttpPost]
     public void CreateStudent([FromBody] Student student)
     {
         var createStudentCommand = new CreateStudentCommand(student);
         _commandsFactory.ExecuteQuery(createStudentCommand);
+    }
+
+    [HttpDelete("{studentId}")]
+    public void DeleteQuestion([FromRoute] Guid studentId)
+    {
+        var studentToBeDeleted = _queryFactory.ResolveQuery<IGetStudentById>()!.Excecute(studentId)!;
+        var updateQuestionToTestCommand = new DeleteStudentCommand(studentToBeDeleted);
+        _commandsFactory.ExecuteQuery(updateQuestionToTestCommand);
     }
 }

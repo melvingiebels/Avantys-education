@@ -12,7 +12,119 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97cbd9b2-2ea3-4753-bc5b-173189e171d6" name="Changes" comment="" />
+    <list default="true" id="97cbd9b2-2ea3-4753-bc5b-173189e171d6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/TestManagement.CQS/Command/Question/DeleteQuestionCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestManagement.CQS/Command/Student/DeleteStudentCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestManagement.CQS/Command/Student/UpdateStudentCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestManagement.CQS/Command/StudentTest/RemoveStudentFromTestCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestManagement.CQS/Command/StudentTest/UpdateStudentTestCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestManagement.CQS/Queries/StudentTest/IGetAllGradedTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestManagement.CQS/Queries/StudentTest/IGetStudentTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestManagement.CQS/Queries/StudentTest/IGetStudentTestsById.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestManagement.CQS/Queries/StudentTest/IGetStudentsByTestId.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestManagement.CQS/Queries/StudentTest/IGetTestsByStudentId.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/CommandHandlers/Question/DeleteQuestionCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/CommandHandlers/Student/DeleteStudentCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/CommandHandlers/Student/UpdateStudentCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/CommandHandlers/StudentTest/RemoveStudentFromTestCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/CommandHandlers/StudentTest/UpdateStudentTestCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/QueriesHandlers/StudentTests/GetAllGradedTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/QueriesHandlers/StudentTests/GetStudentTestById.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/QueriesHandlers/StudentTests/GetStudentTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/QueriesHandlers/StudentTests/GetStudentsByTestId.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/QueriesHandlers/StudentTests/GetTestsByStudentId.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestManagement/Controllers/StudentTestController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.idea.Avantys-education.dir/.idea/shelf/Uncommitted_changes_before_Checkout_at_25-5-2023_13_57__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.Avantys-education.dir/.idea/shelf/Uncommitted_changes_before_Checkout_at_25-5-2023_13_57__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.idea.Avantys-education.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.Avantys-education.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.test-management/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.test-management/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/Command/CommandFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/Command/CommandFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/Command/Student/AddTestToStudentCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/Command/StudentTest/AddTestToStudentCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/Domain/Questions/McQuestion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/Domain/Questions/McQuestion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/Domain/Questions/Question.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/Domain/Questions/Question.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/Domain/Student.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/Domain/Student.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/Domain/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/Domain/Test.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/Queries/Test/IGetAllGradedTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/TestManagement.CQS.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/TestManagement.CQS.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/bin/Debug/net7.0/TestManagement.CQS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/bin/Debug/net7.0/TestManagement.CQS.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/bin/Debug/net7.0/TestManagement.CQS.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/bin/Debug/net7.0/TestManagement.CQS.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/obj/Debug/net7.0/TestManagement.CQS.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/obj/Debug/net7.0/TestManagement.CQS.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/obj/Debug/net7.0/TestManagement.CQS.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/obj/Debug/net7.0/TestManagement.CQS.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/obj/Debug/net7.0/TestManagement.CQS.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/obj/Debug/net7.0/TestManagement.CQS.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/obj/Debug/net7.0/TestManagement.CQS.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/obj/Debug/net7.0/TestManagement.CQS.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/obj/Debug/net7.0/TestManagement.CQS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/obj/Debug/net7.0/TestManagement.CQS.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/obj/Debug/net7.0/TestManagement.CQS.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/obj/Debug/net7.0/TestManagement.CQS.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/obj/Debug/net7.0/TestManagement.CQS.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/obj/Debug/net7.0/TestManagement.CQS.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/obj/Debug/net7.0/ref/TestManagement.CQS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/obj/Debug/net7.0/ref/TestManagement.CQS.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/obj/Debug/net7.0/refint/TestManagement.CQS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/obj/Debug/net7.0/refint/TestManagement.CQS.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/obj/TestManagement.CQS.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/obj/TestManagement.CQS.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/obj/TestManagement.CQS.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/obj/TestManagement.CQS.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.CQS/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.CQS/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/CommandHandlers/Student/AddTestToStudentCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/CommandHandlers/StudentTest/AddTestToStudentCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/QueriesHandlers/Test/GetAllGradedTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/Repo/IReadRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/Repo/IWriteRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/Repo/Read/McQuestionReadRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/Repo/Read/OpenQuestionReadRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/Repo/Read/QuestionReadRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/Repo/Read/TestReadRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/Repo/Write/McQuestionWriteRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/Repo/Write/OpenQuestionWriteRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/Repo/Write/TestWriteRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/TestManagement.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/TestManagement.Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/bin/Debug/net7.0/TestManagement.CQS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/bin/Debug/net7.0/TestManagement.CQS.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/bin/Debug/net7.0/TestManagement.CQS.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/bin/Debug/net7.0/TestManagement.CQS.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/bin/Debug/net7.0/TestManagement.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/bin/Debug/net7.0/TestManagement.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/bin/Debug/net7.0/TestManagement.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/bin/Debug/net7.0/TestManagement.Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/Debug/net7.0/TestManagement.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/Debug/net7.0/TestManagement.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/Debug/net7.0/TestManagement.Infrastructure.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/Debug/net7.0/TestManagement.Infrastructure.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/Debug/net7.0/TestManagement.Infrastructure.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/Debug/net7.0/TestManagement.Infrastructure.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/Debug/net7.0/TestManagement.Infrastructure.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/Debug/net7.0/TestManagement.Infrastructure.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/Debug/net7.0/TestManagement.Infrastructure.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/Debug/net7.0/TestManagement.Infrastructure.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/Debug/net7.0/TestManagement.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/Debug/net7.0/TestManagement.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/Debug/net7.0/TestManagement.Infrastructure.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/Debug/net7.0/TestManagement.Infrastructure.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/Debug/net7.0/TestManagement.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/Debug/net7.0/TestManagement.Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/Debug/net7.0/ref/TestManagement.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/Debug/net7.0/ref/TestManagement.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/Debug/net7.0/refint/TestManagement.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/Debug/net7.0/refint/TestManagement.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/TestManagement.Infrastructure.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/TestManagement.Infrastructure.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/TestManagement.Infrastructure.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/TestManagement.Infrastructure.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement.Infrastructure/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/Controllers/McQuestionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/Controllers/McQuestionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/Controllers/OpenQuestionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/Controllers/OpenQuestionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/Controllers/QuestionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/Controllers/QuestionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/Controllers/StudentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/Controllers/StudentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/Controllers/TestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/Controllers/TestController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/TestManagement.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/TestManagement.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/bin/Debug/net7.0/TestManagement.CQS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/bin/Debug/net7.0/TestManagement.CQS.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/bin/Debug/net7.0/TestManagement.CQS.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/bin/Debug/net7.0/TestManagement.CQS.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/bin/Debug/net7.0/TestManagement.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/bin/Debug/net7.0/TestManagement.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/bin/Debug/net7.0/TestManagement.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/bin/Debug/net7.0/TestManagement.Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/bin/Debug/net7.0/TestManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/bin/Debug/net7.0/TestManagement.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/bin/Debug/net7.0/TestManagement.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/bin/Debug/net7.0/TestManagement.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/bin/Debug/net7.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/bin/Debug/net7.0/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/obj/Debug/net7.0/TestManagement.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/obj/Debug/net7.0/TestManagement.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/obj/Debug/net7.0/TestManagement.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/obj/Debug/net7.0/TestManagement.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/obj/Debug/net7.0/TestManagement.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/obj/Debug/net7.0/TestManagement.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/obj/Debug/net7.0/TestManagement.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/obj/Debug/net7.0/TestManagement.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/obj/Debug/net7.0/TestManagement.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/obj/Debug/net7.0/TestManagement.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/obj/Debug/net7.0/TestManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/obj/Debug/net7.0/TestManagement.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/obj/Debug/net7.0/TestManagement.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/obj/Debug/net7.0/TestManagement.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/obj/Debug/net7.0/TestManagement.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/obj/Debug/net7.0/TestManagement.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/obj/Debug/net7.0/ref/TestManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/obj/Debug/net7.0/ref/TestManagement.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/obj/Debug/net7.0/refint/TestManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/obj/Debug/net7.0/refint/TestManagement.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/obj/TestManagement.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/obj/TestManagement.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/obj/TestManagement.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/obj/TestManagement.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestManagement/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/TestManagement/obj/rider.project.restore.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,8 +147,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/eaf53ade803ac5b1d88b7222b58be5318268b6f95e420e21446447cf184e4a/ConnectionFactory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fc536bf76bb27537bde426819210b5e5a2ebcd594ca72f7b85fad40e9c63d5a/ControllerFactoryProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1aee7810d6346893bb74bb0837c272b11a0f53fa2e6561f89136dd192da3af9/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/621526284d3e4868b98948aff942206525763e57e194a27623b66c384466/ServiceProviderServiceExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/64d54c9380e9feafc4516c6538f7205ed34690deab5738a284de992657bbefc/CallSiteFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7b3b6985aad11c5d633d75b545f5f5f4fc7e50918ad1cb9f6b615682f5bfb76d/SingleQueryingEnumerable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a0cb50bd29af8ab8654a24572d7e6cbc0f39c58f4d26745cdb2106a5bcdb81/RuntimeType.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a9b35bc5d5da43a49af8d74dac7ab37ccc1bb654cb7dfe8f9a21501181ed9b/CastHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestManagement.CQS/Command/Question/CreateQuestionCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestManagement.CQS/Command/Test/CreateTestCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestManagement.CQS/Command/Test/DeleteTestCommand.cs" root0="FORCE_HIGHLIGHTING" />
@@ -60,6 +176,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "microservice/TestManagement",
     "last_opened_file_path": "D:/source/Avantys-education/test-management/test-management.sln",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",

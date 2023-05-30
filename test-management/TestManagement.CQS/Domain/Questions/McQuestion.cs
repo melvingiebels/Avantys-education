@@ -14,5 +14,5 @@ public class McQuestion : Question
     {
     }
 
-    [NotMapped] [JsonIgnore] public string[] Options { get; set; }
+    [NotMapped] [JsonIgnore] public string[]? Options { get; set; }
 }

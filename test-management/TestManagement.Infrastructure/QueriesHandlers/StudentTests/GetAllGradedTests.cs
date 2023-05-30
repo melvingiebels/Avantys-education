@@ -1,9 +1,9 @@
-﻿using TestManagement.CQS.Queries;
-using TestManagement.CQS.Queries.Test;
+﻿using TestManagement.CQS.Domain;
+using TestManagement.CQS.Queries.StudentTest;
 using TestManagement.Infrastructure.Context;
 using TestManagement.Infrastructure.Core;
 
-namespace TestManagement.Infrastructure.QueriesHandlers.Test;
+namespace TestManagement.Infrastructure.QueriesHandlers.StudentTests;
 
 public class GetAllGradedTests : EFQueryBase<TestManagementDbContext>, IGetAllGradedTests
 {
@@ -11,10 +11,10 @@ public class GetAllGradedTests : EFQueryBase<TestManagementDbContext>, IGetAllGr
     {
     }
 
-    public IEnumerable<CQS.Domain.Test> Excecute()
+    public IEnumerable<StudentsTests> Excecute()
     {
-        var gTest = new List<CQS.Domain.Test>();
-        DbContext.Tests.ToList().ForEach(t =>
+        var gTest = new List<StudentsTests>();
+        DbContext.StudentsTests.ToList().ForEach(t =>
         {
             if (t.Grade != 0)
                 gTest.Add(t);

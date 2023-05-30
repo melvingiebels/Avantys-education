@@ -1,4 +1,7 @@
-﻿namespace TestManagement.CQS.Domain;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using Newtonsoft.Json;
+
+namespace TestManagement.CQS.Domain;
 
 public class Student
 {
@@ -10,7 +13,7 @@ public class Student
         CourseId = courseId;
     }
 
-    public IEnumerable<Test> Tests { get; set; }
+    [JsonIgnore] [NotMapped] public IEnumerable<Test>? Tests { get; set; }
     public Guid Id { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
