@@ -1,21 +1,33 @@
 import { StudentService } from './student.service'; // import the StudentsService
 import { Student } from '../domain/student.entity'; // import the Student entity
-import { Body, Controller, Get, Post } from '@nestjs/common';
-import { EventPattern } from '@nestjs/microservices';
+import { Body, Controller, Param, Get, Post, Put, Inject } from '@nestjs/common';
+import { ClientProxy, EventPattern } from '@nestjs/microservices';
 
 @Controller('student')
 export class StudentController {
-  constructor(private readonly studentService: StudentService) {} // inject the StudentService
+  constructor(private readonly studentService: StudentService, @Inject('INVOICING_SERVICE') private client: ClientProxy) { } // inject the StudentService
 
-  @Get()
-  helloVietnam() {
-    return 'hello vietnam';
+  @Get('/:studentId')
+  getStudentBalance(@Param('id') studentId: number) {
+    return this.studentService.calculateTotalBalance(studentId);
   }
 
   @EventPattern('registration_accepted')
-  createInvoicing(data: Record<string, unknown>) {
-    console.log('Testing', data);
+  createStudent(data: Record<string, unknown>) {
     const student = new Student(data);
-    return this.studentService.createInvoicing(student);
+    return this.studentService.createStudent(student);
   }
+
+  @Put('/:studentId')
+  setStudentAcceptance(@Param('id') studentId: number, @Body() acceptance: boolean) {
+    // if false, send an event to registrationmanagement
+    if (!acceptance) {
+      this.client.emit('StudentPaymentDeclined', studentId);
+    } else{
+      this.client.emit('StudentPaymentAccepted', studentId)
+    }
+
+    return this.studentService.setStudentAcceptance(studentId, acceptance)
+  }
+
 }

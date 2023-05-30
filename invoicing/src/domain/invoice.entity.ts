@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToOne, ManyToOne } from 'typeorm';
+import { Student } from './student.entity';
 
 @Entity()
 export class Invoice {
@@ -6,7 +7,13 @@ export class Invoice {
   id: number;
 
   @Column()
-  name: string;
+  eventDescription: string;
+
+  @Column()
+  invoiceAmount: number;
+
+  @ManyToOne(() => Student, (student) => student.invoices)
+  student: Student
 
   constructor(invoiceDto: Partial<Invoice>) {
     Object.assign(this, invoiceDto);

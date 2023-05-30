@@ -28,7 +28,7 @@ export class GuidanceTalkController {
   }
 
   @Get()
-  public async getGuidanceTalk(@Param('id') id:number):Promise<GuidanceTalk>{
+  public async getGuidanceTalk( ):Promise<GuidanceTalk>{
     console.log(id);
     return this.guidanceTalkService.getPreviousGuidanceTalkNotes(id)
   }
