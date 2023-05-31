@@ -9,8 +9,7 @@ public class QueryFactory : IQueryFactory
         _resolveCallback = resolveCallback;
     }
 
-    public T? ResolveQuery<T>()
-        where T : class, IQuery
+    public T? ResolveQuery<T>() where T : class, IQuery
     {
         return _resolveCallback(typeof(T)) as T;
     }

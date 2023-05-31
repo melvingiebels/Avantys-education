@@ -1,5 +1,3 @@
-using MongoDB.Driver;
-using StudyProgramManagement.Domain.Schemas;
 using StudyProgramManagement.Infrastructure.Handlers.Class;
 using StudyProgramManagement.Infrastructure.Handlers.Lecture;
 using StudyProgramManagement.Infrastructure.Handlers.LectureSchedule;
@@ -23,8 +21,10 @@ using StudyProgramManagement.Query.Queries.TeacherModules;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+var listener = new RabbitMqListenerClient(new MongoDbClient(), "STUDY_PROGRAM");
+listener.StartListening();
 
+// Add services to the container.
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -69,7 +69,6 @@ builder.Services.AddTransient<IGetTeacherById, GetTeacherByIdHandler>();
 // Teacher Modules
 builder.Services.AddTransient<IGetAllTeacherModules, GetAllTeacherModulesHandler>();
 builder.Services.AddTransient<IGetTeacherModuleById, GetTeacherModulesByIdHandler>();
-
 
 builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
 {

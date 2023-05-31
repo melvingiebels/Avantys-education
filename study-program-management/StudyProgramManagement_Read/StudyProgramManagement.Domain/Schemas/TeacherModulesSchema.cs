@@ -1,18 +1,23 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace StudyProgramManagement.Domain.Schemas;
 
-public class TeacherModulesSchema
+[Serializable, BsonIgnoreExtraElements]
+public class TeacherModulesSchema: Schema
 {
+    [BsonId, BsonElement("_id")]
     public Guid Id { get; set; }
-    public Guid ModuleId { get; set; }
-    public Guid TeacherId { get; set; }
+    [BsonElement("module")]
+    public ModuleSchema Module { get; set; }
+    [BsonElement("teacher")]
+    public TeacherSchema Teacher { get; set; }
 
-    public TeacherModulesSchema(Guid moduleId, Guid teacherId)
+    public TeacherModulesSchema(ModuleSchema module, TeacherSchema teacher)
     {
         Id = new Guid();
-        ModuleId = moduleId;
-        TeacherId = teacherId;
+        Module = module;
+        Teacher = teacher;
     }
 
     public TeacherModulesSchema()

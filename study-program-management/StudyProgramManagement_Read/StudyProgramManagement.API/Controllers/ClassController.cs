@@ -15,9 +15,15 @@ public class ClassController : ControllerBase
     {
         _queryFactory = queryFactory;
     }
-    [HttpGet("GetAllClasses")]
+    [HttpGet]
     public List<ClassSchema> Get()
     {
         return _queryFactory.ResolveQuery<IGetAllClasses>()!.Excecute().ToList();
+    }
+    
+    [HttpGet("{classId}")]
+    public async Task<ClassSchema> GetById(Guid classId)
+    {
+        return await _queryFactory.ResolveQuery<IGetClassById>()!.Excecute(classId);
     }
 }

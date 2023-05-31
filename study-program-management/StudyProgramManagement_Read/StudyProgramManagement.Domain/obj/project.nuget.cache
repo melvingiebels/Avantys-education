@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "PkMzR1JW8eOzF59saU7JgfsJh12OH+Oz2AH8N1DJ4z5NQqnmj5Wx9efbvNqkz10XqsLR+/XYQaFmFlCbqoq9nA==",
+  "dgSpecHash": "WzT0Ant8tROLH/1N03ckbN6Z0k++PnkarKHb/TFKYOuEhk1hVkGHUiJmpmtL2LBg6ts+pZxDZxYt/iZPvyO7rQ==",
   "success": true,
-  "projectFilePath": "C:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement_Read\\StudyProgramManagement.Domain\\StudyProgramManagement.Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement_Read\\StudyProgramManagement.Domain\\StudyProgramManagement.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\noahd\\.nuget\\packages\\mongodb.bson\\2.19.2\\mongodb.bson.2.19.2.nupkg.sha512",
+    "C:\\Users\\noahd\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

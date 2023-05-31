@@ -2,7 +2,7 @@
 
 namespace StudyProgramManagement.Query.Queries.TeacherModules;
 
-public interface IGetAllTeacherModules
+public interface IGetAllTeacherModules: IQuery
 {
     IEnumerable<TeacherModulesSchema> Excecute();
 }

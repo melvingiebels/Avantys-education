@@ -44,18 +44,6 @@ services:
     ports:
       - "3001:3001"
         
-  test-management-api:
-    image: ${DOCKER_REGISTRY-}test-management
-    build:
-      context: ./test-management
-      dockerfile: ./Dockerfile
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "3004:3004"
-    depends_on:
-      - sqlserver
-      - rabbitmq
        
   study-program-management-read-api:
     image: ${DOCKER_REGISTRY-}study-program-management-read
@@ -87,14 +75,12 @@ services:
     image: mongo:latest
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: rootpassword
+      MONGO_INITDB_ROOT_PASSWORD: password
     ports:
       - 27017:27017
     volumes:
-      - mongodb_data:/data/db
-
-  
-         
+      - mongodb_data:/data/db 
+       
 volumes:
   mongodb_data:
   sqlserverdata:

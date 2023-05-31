@@ -2,7 +2,7 @@
 
 namespace StudyProgramManagement.Query.Queries.TeacherModules;
 
-public interface IGetTeacherModuleById
+public interface IGetTeacherModuleById: IQuery
 {
     Task<TeacherModulesSchema> Excecute(Guid id);
 }

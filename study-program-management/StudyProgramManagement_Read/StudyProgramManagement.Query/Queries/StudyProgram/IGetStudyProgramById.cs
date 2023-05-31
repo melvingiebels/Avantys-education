@@ -2,7 +2,7 @@
 
 namespace StudyProgramManagement.Query.Queries.StudyProgram;
 
-public interface IGetStudyProgramById
+public interface IGetStudyProgramById: IQuery
 {
     Task<StudyProgramSchema> Excecute(Guid id);
 }

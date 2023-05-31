@@ -2,7 +2,7 @@
 
 namespace StudyProgramManagement.Query.Queries.Student;
 
-public interface IGetAllStudents
+public interface IGetAllStudents: IQuery
 {
     IEnumerable<StudentSchema> Excecute();
 }

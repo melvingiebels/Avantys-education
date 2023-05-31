@@ -15,6 +15,6 @@ public class GetAllClassesHandler: MongoQueryBase<ClassCollection>, IGetAllClass
 
     public IEnumerable<ClassSchema> Excecute()
     {
-        return Collection.Collection.Find(p => true).ToList();
+        return Collection.Collection.Find(_ => true).ToList();
     }
-}
+}   

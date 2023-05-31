@@ -2,7 +2,7 @@
 
 namespace StudyProgramManagement.Query.Queries.Teacher;
 
-public interface IGetAllTeachers
+public interface IGetAllTeachers: IQuery
 {
     IEnumerable<TeacherSchema> Excecute();
 }

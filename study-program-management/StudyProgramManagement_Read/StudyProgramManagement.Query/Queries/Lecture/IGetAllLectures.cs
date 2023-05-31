@@ -2,7 +2,7 @@
 
 namespace StudyProgramManagement.Query.Queries.Lecture;
 
-public interface IGetAllLectures
+public interface IGetAllLectures: IQuery
 {
     IEnumerable<LectureSchema> Excecute();
 }

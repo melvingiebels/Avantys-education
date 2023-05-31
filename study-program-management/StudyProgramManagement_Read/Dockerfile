@@ -11,6 +11,7 @@ COPY ["StudyProgramManagement.API/StudyProgramManagement.API.csproj", "StudyProg
 COPY ["StudyProgramManagement.Infrastructure/StudyProgramManagement.Infrastructure.csproj", "StudyProgramManagement.Infrastructure/"]
 COPY ["StudyProgramManagement.Query/StudyProgramManagement.Query.csproj", "StudyProgramManagement.Query/"]
 COPY ["StudyProgramManagement.Domain/StudyProgramManagement.Domain.csproj", "StudyProgramManagement.Domain/"]
+
 RUN dotnet restore "StudyProgramManagement.API/StudyProgramManagement.API.csproj"
 COPY . .
 WORKDIR "/src/StudyProgramManagement.API"

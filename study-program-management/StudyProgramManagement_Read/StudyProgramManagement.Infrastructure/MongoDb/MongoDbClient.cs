@@ -9,7 +9,7 @@ public class MongoDbClient: MongoClient
     
     public MongoDbClient()
     {
-        Client = new MongoClient("mongodb://root:example@mongo:27017/");
+        Client = new MongoClient("mongodb://root:rootpassword@localhost:27017");
         Database = Client.GetDatabase("StudyProgramManagement");
     }       
 }
