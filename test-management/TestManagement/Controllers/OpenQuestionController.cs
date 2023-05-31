@@ -3,6 +3,7 @@ using TestManagement.CQS.Command;
 using TestManagement.CQS.Command.Question;
 using TestManagement.CQS.Domain.Questions;
 using TestManagement.CQS.Queries;
+using TestManagement.CQS.Queries.McQuestion;
 using TestManagement.CQS.Queries.OpenQuestion;
 
 namespace TestManagement.Controllers;
@@ -45,6 +46,14 @@ public class OpenQuestionController
     public void UpdateOpenQuestion([FromBody] OpenQuestion question)
     {
         var updateQuestionToTestCommand = new UpdateQuestionCommand(question);
+        _commandsFactory.ExecuteQuery(updateQuestionToTestCommand);
+    }
+
+    [HttpDelete("{openQuestionId}")]
+    public void DeleteQuestion([FromRoute] Guid mcQuestionId)
+    {
+        var questionToBeDeleted = _queryFactory.ResolveQuery<IGetOpenQuestionById>()!.Excecute(mcQuestionId)!;
+        var updateQuestionToTestCommand = new DeleteQuestionCommand(questionToBeDeleted);
         _commandsFactory.ExecuteQuery(updateQuestionToTestCommand);
     }
 }

@@ -4,6 +4,7 @@ using TestManagement.CQS.Command.Question;
 using TestManagement.CQS.Domain.Questions;
 using TestManagement.CQS.Queries;
 using TestManagement.CQS.Queries.McQuestion;
+using TestManagement.Infrastructure.CommandHandlers.Question;
 
 namespace TestManagement.Controllers;
 
@@ -44,6 +45,14 @@ public class McQuestionController
     public void UpdateQuestion([FromBody] McQuestion question)
     {
         var updateQuestionToTestCommand = new UpdateQuestionCommand(question);
+        _commandsFactory.ExecuteQuery(updateQuestionToTestCommand);
+    }
+
+    [HttpDelete("{mcQuestionId}")]
+    public void DeleteQuestion([FromRoute] Guid mcQuestionId)
+    {
+        var questionToBeDeleted = _queryFactory.ResolveQuery<IGetMcQuestionById>()!.Excecute(mcQuestionId)!;
+        var updateQuestionToTestCommand = new DeleteQuestionCommand(questionToBeDeleted);
         _commandsFactory.ExecuteQuery(updateQuestionToTestCommand);
     }
 }

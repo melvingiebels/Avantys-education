@@ -33,6 +33,13 @@ public class QuestionController
         return _queryFactory.ResolveQuery<IGetQuestionById>()!.Excecute(openQuestionId)!;
     }
 
+    [HttpDelete("{questionId}")]
+    public void DeleteQuestion([FromRoute] Guid questionId)
+    {
+        var questionToBeDeleted = _queryFactory.ResolveQuery<IGetQuestionById>()!.Excecute(questionId)!;
+        var updateQuestionToTestCommand = new DeleteQuestionCommand(questionToBeDeleted);
+        _commandsFactory.ExecuteQuery(updateQuestionToTestCommand);
+    }
 
     [HttpPost]
     public void CreateQuestion([FromBody] Question question)

@@ -32,11 +32,6 @@ public class TestController
         return _queryFactory.ResolveQuery<IGetTestById>()!.Excecute(testId);
     }
 
-    [HttpGet("graded")]
-    public IEnumerable<Test> GetAllGradedTests()
-    {
-        return _queryFactory.ResolveQuery<IGetAllGradedTests>()!.Excecute();
-    }
 
     [HttpPost]
     public void CreateTest([FromBody] Test test)

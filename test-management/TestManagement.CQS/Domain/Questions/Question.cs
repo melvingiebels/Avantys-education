@@ -18,9 +18,7 @@ public abstract class Question
     }
 
     [Key] public Guid Id { get; set; }
-
-    [JsonIgnore] [NotMapped] public List<Test> Tests { get; set; }
-
+    [JsonIgnore] [NotMapped] public List<Test>? Tests { get; set; }
     public string Statement { get; set; }
     public string Answer { get; set; }
 }

@@ -8,6 +8,7 @@ using TestManagement.CQS.Queries.McQuestion;
 using TestManagement.CQS.Queries.OpenQuestion;
 using TestManagement.CQS.Queries.Question;
 using TestManagement.CQS.Queries.Student;
+using TestManagement.CQS.Queries.StudentTest;
 using TestManagement.CQS.Queries.Test;
 using TestManagement.Infrastructure.CommandHandlers.Question;
 using TestManagement.Infrastructure.CommandHandlers.Student;
@@ -17,6 +18,7 @@ using TestManagement.Infrastructure.QueriesHandlers.McQuestion;
 using TestManagement.Infrastructure.QueriesHandlers.OpenQuestion;
 using TestManagement.Infrastructure.QueriesHandlers.Question;
 using TestManagement.Infrastructure.QueriesHandlers.Student;
+using TestManagement.Infrastructure.QueriesHandlers.StudentTests;
 using TestManagement.Infrastructure.QueriesHandlers.Test;
 using TestManagement.RabbitMQ;
 
@@ -62,7 +64,7 @@ builder.Services.AddTransient<ICommandHandler<ReviewTestCommand>, ReviewTestComm
 
 // Infrastructure
 builder.Services.AddTransient<IQueryFactory>(t => new QueryFactory(t.GetRequiredService));
-builder.Services.AddTransient<ICommandsFactory>(_ => new CommandFactory(x => Array.Empty<object>()));
+builder.Services.AddTransient<ICommandsFactory, CommandFactory>();
 
 builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
 {

@@ -8,9 +8,13 @@ import { SchoolModule } from './domain/schoolmodule.model';
 import { StudyMaterial } from './domain/study-material.model';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { LearningResourceController } from './learning-resource/learning-resource.controller';
+import { GoogleBooksService } from './google-books/google-books.service';
+import { HttpModule } from '@nestjs/axios';
+import { Book } from './domain/book.model';
 
 @Module({
   imports: [    
+    HttpModule,
     TypeOrmModule.forRoot({
       type: "mssql",
       host: "sqlserver",
@@ -21,11 +25,11 @@ import { LearningResourceController } from './learning-resource/learning-resourc
       options: {
         trustServerCertificate: true
       },
-      entities: [Resource,SchoolModule,StudyMaterial],
+      entities: [Resource,SchoolModule,StudyMaterial,Book],
       synchronize: true,
       logging: false
     }),
-    TypeOrmModule.forFeature([Resource,SchoolModule,StudyMaterial]),
+    TypeOrmModule.forFeature([Resource,SchoolModule,StudyMaterial,Book]),
     ClientsModule.register([
       {
         name: 'LEARNING_RESOURCES_SERVICE',
@@ -38,9 +42,24 @@ import { LearningResourceController } from './learning-resource/learning-resourc
           },
         },
       },
+   
     ]),
+    ClientsModule.register([
+      {
+        name: 'TESTING_SERVICE',
+        transport: Transport.RMQ,
+        options: {
+          urls: ['amqp://admin:password@rabbitmq:5672'],
+          queue: 'TESTING_QUEUE',
+          queueOptions: {
+            durable: false,
+          },
+        },
+      },
+   
+    ])
   ],
   controllers: [AppController,LearningResourceController],
-  providers: [AppService, LearningResourceService],
+  providers: [AppService, LearningResourceService, GoogleBooksService],
 })
 export class AppModule {}

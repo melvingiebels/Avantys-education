@@ -3520,24 +3520,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\noahd\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\noahd\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\source\\Avantys-education\\TestManagement\\TestManagement\\TestManagement.csproj",
+      "projectUniqueName": "C:\\source\\Avantys-education\\test-management\\TestManagement\\TestManagement.csproj",
       "projectName": "TestManagement",
-      "projectPath": "D:\\source\\Avantys-education\\TestManagement\\TestManagement\\TestManagement.csproj",
+      "projectPath": "C:\\source\\Avantys-education\\test-management\\TestManagement\\TestManagement.csproj",
       "packagesPath": "C:\\Users\\noahd\\.nuget\\packages\\",
-      "outputPath": "D:\\source\\Avantys-education\\TestManagement\\TestManagement\\obj\\",
+      "outputPath": "C:\\source\\Avantys-education\\test-management\\TestManagement\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\noahd\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3545,19 +3540,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\source\\Avantys-education\\TestManagement\\TestManagement.CQS\\TestManagement.CQS.csproj": {
-              "projectPath": "D:\\source\\Avantys-education\\TestManagement\\TestManagement.CQS\\TestManagement.CQS.csproj"
+            "C:\\source\\Avantys-education\\test-management\\TestManagement.CQS\\TestManagement.CQS.csproj": {
+              "projectPath": "C:\\source\\Avantys-education\\test-management\\TestManagement.CQS\\TestManagement.CQS.csproj"
             },
-            "D:\\source\\Avantys-education\\TestManagement\\TestManagement.Infrastructure\\TestManagement.Infrastructure.csproj": {
-              "projectPath": "D:\\source\\Avantys-education\\TestManagement\\TestManagement.Infrastructure\\TestManagement.Infrastructure.csproj"
+            "C:\\source\\Avantys-education\\test-management\\TestManagement.Infrastructure\\TestManagement.Infrastructure.csproj": {
+              "projectPath": "C:\\source\\Avantys-education\\test-management\\TestManagement.Infrastructure\\TestManagement.Infrastructure.csproj"
             }
           }
         }
@@ -3622,7 +3615,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
