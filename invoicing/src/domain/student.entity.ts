@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
+import { Invoice } from './invoice.entity';
 
 @Entity()
 export class Student {
@@ -18,7 +19,10 @@ export class Student {
   dateOfBirth: Date;
 
   @Column()
-  accceptanceStatus: boolean;
+  authorizedPayments: boolean;
+
+  @OneToMany(() => Invoice, (invoice) => invoice.student)
+  invoices: Invoice[]
 
   constructor(studentDto: Partial<Student>) {
     Object.assign(this, studentDto);

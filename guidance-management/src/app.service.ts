@@ -14,20 +14,22 @@ export class AppService {
   ) {
     this.testRabbitMQConnection();
   }
+  
 
-  getHello(): string {
-    return 'Hello World!';
-  }
-  async createTeacher(teacher: Teacher): Promise<Teacher> {
-    return this.teacherRepository.save(teacher);
+  async createStudent(student:Student):Promise<Student>{
+    return await this.studentRepository.save(student);
   }
 
-  async createStudent(student: Student): Promise<Student> {
-    return this.studentRepository.save(student);
+  async createTeacher(teacher:Teacher):Promise<Teacher>{
+    return await this.teacherRepository.save(teacher);
   }
 
-  async testRabbitMQConnection() {
-    try {
+  async deleteTeacher(teacher:Teacher){
+    await this.teacherRepository.delete(teacher);
+  }
+
+  async testRabbitMQConnection(){
+    try{
       const connection = await connect('amqp://localhost:5672');
       console.log('connection successful: ', connection);
 
