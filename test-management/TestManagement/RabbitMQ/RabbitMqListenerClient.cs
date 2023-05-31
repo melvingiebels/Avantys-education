@@ -19,9 +19,9 @@ public class RabbitMqListenerClient
             Uri = new Uri(configuration.GetConnectionString("RabbitMQ")!),
             ClientProvidedName = "TestManagement"
         };
-        _exchangeName = configSection.GetSection("ExchangeName").Value;
+        //_exchangeName = configSection.GetSection("ExchangeName").Value;
         _queueName = configSection.GetSection("QueueName").Value;
-        _routingKey = configSection.GetSection("RoutingKey").Value;
+        //_routingKey = configSection.GetSection("RoutingKey").Value;
     }
 
     public void Listen()

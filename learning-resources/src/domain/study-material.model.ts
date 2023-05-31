@@ -8,7 +8,7 @@ export class StudyMaterial {
     StudyId:number;
     @Column()
     title:string;
-    @OneToMany(() => SchoolModule,schoolModule => schoolModule.studyMaterial)
+    @OneToMany(() => SchoolModule,schoolModule => schoolModule.studyMaterial,{nullable:true})
     modules:SchoolModule[];
 
     
@@ -17,7 +17,7 @@ export class StudyMaterial {
         this.title = title;
     }
 
-    public addModule(schoolModule:SchoolModule){
+    public addModule?(schoolModule:SchoolModule){
         this.modules.push(schoolModule);
     }
 }

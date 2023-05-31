@@ -17,11 +17,11 @@ export class Resource {
     @Column({nullable:true})
     url?:string;
 
-    @OneToOne(() => Book,{nullable:true})
+    @OneToOne(() => Book,{nullable:true,onDelete:'SET NULL'})
     @JoinColumn()
     book?:Book;
 
-    @ManyToOne(() => SchoolModule)
+    @ManyToOne(() => SchoolModule,{nullable:true,onDelete:"CASCADE",onUpdate:'CASCADE'})
     schoolModule:SchoolModule;
 
     constructor(title:string,description:string,schoolModule:SchoolModule){

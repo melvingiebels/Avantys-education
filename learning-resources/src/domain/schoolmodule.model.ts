@@ -13,7 +13,7 @@ export class SchoolModule {
     @OneToMany(() => Resource, resource => resource.schoolModule)
     resources:Resource[];
 
-    @ManyToOne(() => StudyMaterial )
+    @ManyToOne(() => StudyMaterial, {onDelete:"CASCADE",onUpdate:'CASCADE'})
     studyMaterial:StudyMaterial;
 
 

@@ -35,6 +35,17 @@ export class LearningResourceService {
         return await this.studyMaterialRepository.save(studyMaterial);
     }
 
+    public async updateStudy(studyMaterialDto:StudyMaterialDto):Promise<StudyMaterial>{
+        console.log("Updating a study!!")
+        let study = await this.studyMaterialRepository.findOne({where:{StudyId:studyMaterialDto.studyId}})
+        study.title = studyMaterialDto.title;
+        return await this.studyMaterialRepository.save(study);
+    }
+    public async deleteStudy(studyMaterialDto:StudyMaterialDto){
+        console.log("Deleting a study!!")
+        await this.studyMaterialRepository.delete(studyMaterialDto.studyId);
+    }
+
     public async getResourcesFromModule(id:number):Promise<SchoolModule>{
         console.log("Getting every resource from module: " + id)
         return await this.schoolModuleRepostitory.findOne({
@@ -50,10 +61,21 @@ export class LearningResourceService {
         return await this.schoolModuleRepostitory.save(schoolModule);
     }
 
+    public async updateModule(schoolModuleDto:SchoolModuleDto):Promise<SchoolModule>{
+        console.log("Updating a Module")
+        let schoolModule = await this.schoolModuleRepostitory.findOne({where:{id:schoolModuleDto.id},relations:['studyMaterial']})        
+        schoolModule.title = schoolModuleDto.title;
+        return await this.schoolModuleRepostitory.save(schoolModule);
+    }
+    public async deleteModule(schoolModuleDto:SchoolModuleDto){
+        console.log("Deleting a Module")
+        await this.schoolModuleRepostitory.delete(schoolModuleDto.id);
+    }
 
     public async createResource(resourceDto:ResourceDto){
         console.log("Creating Resources")
         console.log(resourceDto)
+        
         try{
             let schoolModule = await this.schoolModuleRepostitory.findOne({where:{id:resourceDto.schoolModuleId}})
             let resource = new Resource(resourceDto.title,resourceDto.description,schoolModule);
@@ -70,6 +92,7 @@ export class LearningResourceService {
                 console.log(book);
                 if(book.id != null){
                     resource.book = book;
+                    this.GoogleBookService.sendBookMessage(schoolModule.id,book)
                 }
             }
             

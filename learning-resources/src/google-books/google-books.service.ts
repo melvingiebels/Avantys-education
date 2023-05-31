@@ -1,15 +1,18 @@
 import { HttpService } from '@nestjs/axios';
 import { Repository,Like} from 'typeorm'
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import axios, { AxiosError } from 'axios';
 import { catchError } from 'rxjs';
 import { Book } from 'src/domain/book.model';
+import { ClientProxy } from '@nestjs/microservices';
 
 @Injectable()
 export class GoogleBooksService {
     constructor(private readonly httpService: HttpService,
-        @InjectRepository(Book) private bookRepostitory: Repository<Book>) {}
+        @InjectRepository(Book) private bookRepostitory: Repository<Book>,
+        @Inject('TESTING_SERVICE') private client: ClientProxy,
+        ) {}
     private url:string =  process.env.GOOGLE_BOOKS_API_URL;
     private apiKey:string = process.env.GOOGLE_BOOKS_API_KEY;
 
@@ -30,6 +33,11 @@ export class GoogleBooksService {
             let book:Book;
             for(const item of jsonBook.items){
                 let desc = item.volumeInfo.description.substring(0, 250)
+                let exists = await this.bookRepostitory.findOne({where:{id:item.id}});
+                if(exists){
+                    return exists
+                }
+
                 book = {
                     id:item.id,
                     title:item.volumeInfo.title,
@@ -62,6 +70,10 @@ export class GoogleBooksService {
             return new Book();
         }
         
+    }
+
+    public async sendBookMessage(moduleId:number,book:Book){
+        this.client.emit('BookCreated',{moduleId,book})
     }
 
 }
