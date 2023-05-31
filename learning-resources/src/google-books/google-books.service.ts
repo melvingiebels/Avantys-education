@@ -11,7 +11,6 @@ import { ClientProxy } from '@nestjs/microservices';
 export class GoogleBooksService {
     constructor(private readonly httpService: HttpService,
         @InjectRepository(Book) private bookRepostitory: Repository<Book>,
-        @Inject('TESTING_SERVICE') private client: ClientProxy,
         ) {}
     private url:string =  process.env.GOOGLE_BOOKS_API_URL;
     private apiKey:string = process.env.GOOGLE_BOOKS_API_KEY;
@@ -70,10 +69,6 @@ export class GoogleBooksService {
             return new Book();
         }
         
-    }
-
-    public async sendBookMessage(moduleId:number,book:Book){
-        this.client.emit('BookCreated',{moduleId,book})
     }
 
 }

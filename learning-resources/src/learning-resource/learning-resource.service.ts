@@ -92,10 +92,8 @@ export class LearningResourceService {
                 console.log(book);
                 if(book.id != null){
                     resource.book = book;
-                    this.GoogleBookService.sendBookMessage(schoolModule.id,book)
                 }
             }
-            
             console.log("Before resource save")
             console.log(resource);
             
