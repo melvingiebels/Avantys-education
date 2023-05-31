@@ -2,7 +2,12 @@ import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 import { Teacher } from './domain/teacher.model';
 import { Student } from './domain/student.model';
-import { MessagePattern,MessageHandler, EventPattern, Transport } from '@nestjs/microservices';
+import {
+  MessagePattern,
+  MessageHandler,
+  EventPattern,
+  Transport,
+} from '@nestjs/microservices';
 
 @Controller()
 export class AppController {
@@ -13,7 +18,6 @@ export class AppController {
     console.log("Creating",student);
     return this.appService.createStudent(student);
   }
-
 
   @EventPattern('TeacherCreated')
   createTeacher(teacher: Teacher){
@@ -32,5 +36,4 @@ export class AppController {
     console.log('deleting',teacher)
     this.appService.deleteTeacher(teacher);
   }
-
 }
