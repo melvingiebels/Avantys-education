@@ -57,33 +57,46 @@ services:
       - sqlserver
       - rabbitmq
        
-  study-program-management-api:
-    image: ${DOCKER_REGISTRY-}study-program-management
+  study-program-management-read-api:
+    image: ${DOCKER_REGISTRY-}study-program-management-read
     build:
-      context: ./study-program-management
+      context: ./study-program-management/StudyProgramManagement_Read
       dockerfile: ./Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "3003:3003" 
+      - "3006:3006" 
+    depends_on:
+      - mongodb
+      - rabbitmq
+
+  study-program-management-write-api:
+    image: ${DOCKER_REGISTRY-}study-program-management-write
+    build:
+      context: ./study-program-management/StudyProgramManagement_Write
+      dockerfile: ./Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "3005:3005" 
     depends_on:
       - sqlserver
       - rabbitmq
 
   mongodb:
-    image: mongo-express
-    restart: always
-    ports:
-      - 8081:8081
+    image: mongo:latest
     environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: root
-      ME_CONFIG_MONGODB_ADMINPASSWORD: example
-      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: rootpassword
+    ports:
+      - 27017:27017
     volumes:
-      - mongodbdata:/var/opt/mongodb
+      - mongodb_data:/data/db
+
+  
          
 volumes:
-  mongodbdata:
+  mongodb_data:
   sqlserverdata:
   rabbitmqdata:
     external: true

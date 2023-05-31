@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using StudyProgramManagement.RabbitMq;
 using TestManagement.Infrastructure.Context;
-using TestManagement.RabbitMQ;
 
 var builder = WebApplication.CreateBuilder(args);
 
