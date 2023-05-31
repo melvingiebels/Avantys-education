@@ -13,13 +13,10 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @EventPattern('StudentCreated')
-  createStudent(data: Record<string, unknown>){//: Promise<Teacher>{
-    console.log("Testing",data);
+  //@Post('student')
+  async createStudent(@Body() student:Student): Promise<Student>{
+    return this.appService.createStudent(student);
 
-
-    //return this.appService.createTeacher(teacher);
   }
-
 
 }

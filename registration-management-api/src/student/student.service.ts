@@ -26,8 +26,9 @@ export class StudentService {
       where: { id: studentId },
     });
 
+    console.log(updatedStudent);
     // Then emit the event
-    this.client.emit('registration_accepted', { updatedStudent });
+    this.client.emit('registration_accepted', updatedStudent);
 
     return updatedStudent;
   }
