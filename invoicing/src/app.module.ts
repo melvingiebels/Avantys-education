@@ -27,11 +27,11 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
     TypeOrmModule.forFeature([Student, Invoice]),
     ClientsModule.register([
       {
-        name: 'INVOICING_SERVICE',
+        name: 'REGISTRATION_SERVICE',
         transport: Transport.RMQ,
         options: {
           urls: ['amqp://admin:password@rabbitmq:5672'],
-          queue: 'INVOICING_QUEUE',
+          queue: 'REGISTRATION_QUEUE',
           queueOptions: {
             durable: false,
           },
