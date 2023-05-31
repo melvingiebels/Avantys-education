@@ -14,10 +14,15 @@ export class StudyRegistration {
   @ManyToOne(
     () => StudyProgram,
     (studyProgram) => studyProgram.studyRegistrations,
+    {
+      onDelete: 'CASCADE',
+    },
   )
   studyProgram: StudyProgram;
 
-  @ManyToOne(() => Teacher, (teacher) => teacher.studyRegistrations)
+  @ManyToOne(() => Teacher, (teacher) => teacher.studyRegistrations, {
+    onDelete: 'SET NULL',
+  })
   teacher: Teacher;
 
   @Column()

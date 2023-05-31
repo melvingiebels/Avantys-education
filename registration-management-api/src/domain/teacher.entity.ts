@@ -17,7 +17,9 @@ export class Teacher {
   @OneToMany(() => Appointment, (appointment) => appointment.teacher)
   appointments: Appointment[];
 
-  @ManyToOne(() => StudyProgram, (studyProgram) => studyProgram.teachers)
+  @ManyToOne(() => StudyProgram, (studyProgram) => studyProgram.teachers, {
+    onDelete: 'SET NULL',
+  })
   studyProgram: StudyProgram;
 
   @OneToMany(

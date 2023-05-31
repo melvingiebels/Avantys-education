@@ -18,4 +18,14 @@ export class TeacherService {
     await this.teacherRepository.save(teacher);
     return teacher;
   }
+
+  async updateTeacher(teacherId: number, teacher: Teacher): Promise<any> {
+    await this.teacherRepository.update(teacherId, teacher);
+    return teacher;
+  }
+
+  async deleteTeacher(teacherId: number): Promise<any> {
+    await this.teacherRepository.delete({ id: teacherId });
+    return 'Teacher deleted';
+  }
 }

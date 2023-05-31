@@ -47,4 +47,8 @@ export class StudyRegistrationService {
 
     return 'Student Enrollment accepted';
   }
+
+  async deleteStudyRegistration(studentId: number): Promise<void> {
+    await this.studyRegistrationRepository.delete({ studentId: studentId });
+  }
 }

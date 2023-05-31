@@ -13,7 +13,9 @@ export class Appointment {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @ManyToOne(() => Teacher, (teacher) => teacher.appointments)
+  @ManyToOne(() => Teacher, (teacher) => teacher.appointments, {
+    onDelete: 'SET NULL',
+  })
   teacher: Teacher;
 
   @ManyToOne(() => Student, (student) => student.appointments)
@@ -28,10 +30,14 @@ export class Appointment {
   @Column()
   location: string;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   studentId: number;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   teacherId: number;
 
   constructor(appointmentDto: Partial<Appointment>) {
