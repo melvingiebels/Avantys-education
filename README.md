@@ -1,2 +1,0 @@
-# Avantys-education
-School project
