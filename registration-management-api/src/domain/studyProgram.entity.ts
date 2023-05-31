@@ -1,5 +1,12 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  OneToMany,
+  ManyToOne,
+} from 'typeorm';
 import { StudyRegistration } from './studyRegistration.entity';
+import { Teacher } from './teacher.entity';
 
 @Entity()
 export class StudyProgram {
@@ -11,6 +18,9 @@ export class StudyProgram {
     (studyRegistration) => studyRegistration.studyProgram,
   )
   studyRegistrations: StudyRegistration[];
+
+  @OneToMany(() => Teacher, (teacher) => teacher.studyProgram)
+  teachers: Teacher[];
 
   @Column()
   programName: string;
@@ -24,15 +34,7 @@ export class StudyProgram {
   @Column()
   admissionRequirements: string;
 
-  constructor(
-    programName: string,
-    description: string,
-    duration: string,
-    admissionRequirements: string,
-  ) {
-    this.programName = programName;
-    this.description = description;
-    this.duration = duration;
-    this.admissionRequirements = admissionRequirements;
+  constructor(studyProgramDto: Partial<StudyProgram>) {
+    Object.assign(this, studyProgramDto);
   }
 }
