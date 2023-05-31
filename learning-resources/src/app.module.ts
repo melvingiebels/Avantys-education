@@ -30,34 +30,6 @@ import { Book } from './domain/book.model';
       logging: false
     }),
     TypeOrmModule.forFeature([Resource,SchoolModule,StudyMaterial,Book]),
-    ClientsModule.register([
-      {
-        name: 'LEARNING_RESOURCES_SERVICE',
-        transport: Transport.RMQ,
-        options: {
-          urls: ['amqp://admin:password@rabbitmq:5672'],
-          queue: 'LEARNING_RESOURCES_QUEUE',
-          queueOptions: {
-            durable: false,
-          },
-        },
-      },
-   
-    ]),
-    ClientsModule.register([
-      {
-        name: 'TESTING_SERVICE',
-        transport: Transport.RMQ,
-        options: {
-          urls: ['amqp://admin:password@rabbitmq:5672'],
-          queue: 'TESTING_QUEUE',
-          queueOptions: {
-            durable: false,
-          },
-        },
-      },
-   
-    ])
   ],
   controllers: [AppController,LearningResourceController],
   providers: [AppService, LearningResourceService, GoogleBooksService],
