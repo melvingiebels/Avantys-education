@@ -14,20 +14,19 @@ export class AppService {
               ){
               this.testRabbitMQConnection();
   }
-
-  getHello(): string {
-    return 'Hello World!';
-  }
-  async createTeacher(teacher:Teacher):Promise<Teacher>{
-    
-
-    return this.teacherRepository.save(teacher);
-  }
+  
 
   async createStudent(student:Student):Promise<Student>{
-    return this.studentRepository.save(student);
+    return await this.studentRepository.save(student);
   }
 
+  async createTeacher(teacher:Teacher):Promise<Teacher>{
+    return await this.teacherRepository.save(teacher);
+  }
+
+  async deleteTeacher(teacher:Teacher){
+    await this.teacherRepository.delete(teacher);
+  }
 
   async testRabbitMQConnection(){
     try{
