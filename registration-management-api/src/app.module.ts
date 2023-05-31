@@ -51,22 +51,44 @@ config();
     ]),
     ClientsModule.register([
       {
-        name: 'RegistrationService',
+        name: 'INVOICING_SERVICE',
         transport: Transport.RMQ,
         options: {
           urls: [process.env.RABBITMQ_URL],
-          queue: 'RegistrationQueue',
+          queue: 'INVOICING_QUEUE',
           queueOptions: {
             durable: false,
           },
         },
       },
       {
-        name: 'AcceptanceService',
+        name: 'STUDY_PROGRAM_SERVICE',
         transport: Transport.RMQ,
         options: {
           urls: [process.env.RABBITMQ_URL],
-          queue: 'AcceptanceService',
+          queue: 'STUDY_PROGRAM_QUEUE',
+          queueOptions: {
+            durable: false,
+          },
+        },
+      },
+      {
+        name: 'TEST_SERVICE',
+        transport: Transport.RMQ,
+        options: {
+          urls: [process.env.RABBITMQ_URL],
+          queue: 'TEST_QUEUE',
+          queueOptions: {
+            durable: false,
+          },
+        },
+      },
+      {
+        name: 'GUIDANCE_SERVICE',
+        transport: Transport.RMQ,
+        options: {
+          urls: [process.env.RABBITMQ_URL],
+          queue: 'GUIDANCE_QUEUE',
           queueOptions: {
             durable: false,
           },

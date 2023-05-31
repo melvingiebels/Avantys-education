@@ -7,7 +7,7 @@ import { Student } from '../domain/student.entity';
 @Injectable()
 export class StudentService {
   constructor(
-    @Inject('RegistrationService') private client: ClientProxy,
+    @Inject('INVOICING_SERVICE') private client: ClientProxy,
     @InjectRepository(Student)
     private studentRepository: Repository<Student>,
   ) {}
@@ -18,7 +18,6 @@ export class StudentService {
 
   async createStudent(student: Student): Promise<any> {
     await this.studentRepository.save(student);
-    this.client.emit('StudentCreated', student);
     return student;
   }
 

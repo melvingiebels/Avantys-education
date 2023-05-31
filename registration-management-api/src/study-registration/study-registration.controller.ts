@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { StudyRegistrationService } from './study-registration.service';
 import { StudyRegistration } from '../domain/studyRegistration.entity';
 
@@ -23,5 +23,10 @@ export class StudyRegistrationController {
     return this.studyRegistrationService.createStudyRegistration(
       studyRegistration,
     );
+  }
+
+  @Post('enroll/:studentId')
+  async acceptRegistration(@Param('studentId') studentId: number) {
+    return this.studyRegistrationService.acceptEnrollment(studentId);
   }
 }

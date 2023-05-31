@@ -24,7 +24,7 @@ export class StudyRegistration {
   registrationDate: Date;
 
   @Column()
-  status: string;
+  enrollmentStatus: boolean;
 
   @Column({
     nullable: true,
