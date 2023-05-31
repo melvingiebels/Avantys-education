@@ -13,6 +13,10 @@ import { TeacherController } from './teacher/teacher.controller';
 import { config } from 'dotenv';
 import { AppointmentService } from './appointment/appointment.service';
 import { AppointmentController } from './appointment/appointment.controller';
+import { StudyProgramController } from './study-program/study-program.controller';
+import { StudyProgramService } from './study-program/study-program.service';
+import { StudyRegistrationService } from './study-registration/study-registration.service';
+import { StudyRegistrationController } from './study-registration/study-registration.controller';
 
 // Specify the path to your .env file
 config();
@@ -38,7 +42,13 @@ config();
       synchronize: true,
       logging: false,
     }),
-    TypeOrmModule.forFeature([Student, Teacher, Appointment]),
+    TypeOrmModule.forFeature([
+      Student,
+      Teacher,
+      Appointment,
+      StudyProgram,
+      StudyRegistration,
+    ]),
     ClientsModule.register([
       {
         name: 'RegistrationService',
@@ -56,7 +66,7 @@ config();
         transport: Transport.RMQ,
         options: {
           urls: [process.env.RABBITMQ_URL],
-          queue: 'AcceptanceQueue',
+          queue: 'AcceptanceService',
           queueOptions: {
             durable: false,
           },
@@ -64,7 +74,19 @@ config();
       },
     ]),
   ],
-  controllers: [StudentController, TeacherController, AppointmentController],
-  providers: [StudentService, TeacherService, AppointmentService],
+  controllers: [
+    StudentController,
+    TeacherController,
+    AppointmentController,
+    StudyProgramController,
+    StudyRegistrationController,
+  ],
+  providers: [
+    StudentService,
+    TeacherService,
+    AppointmentService,
+    StudyProgramService,
+    StudyRegistrationService,
+  ],
 })
 export class AppModule {}

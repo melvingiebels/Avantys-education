@@ -3,6 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Appointment } from '../domain/appointment.entity';
 import { Student } from 'src/domain/student.entity';
+import { Teacher } from 'src/domain/teacher.entity';
 
 @Injectable()
 export class AppointmentService {
@@ -11,6 +12,8 @@ export class AppointmentService {
     private appointmentRepository: Repository<Appointment>,
     @InjectRepository(Student)
     private studentRepository: Repository<Student>,
+    @InjectRepository(Teacher)
+    private teacherRepository: Repository<Teacher>,
   ) {}
 
   async getAllAppointments(): Promise<Appointment[]> {
@@ -21,8 +24,18 @@ export class AppointmentService {
     const student = await this.studentRepository.findOne({
       where: { id: appointment.studentId },
     });
-    appointment.student = student;
+    const teacher = await this.teacherRepository.findOne({
+      where: { id: appointment.teacherId },
+    });
 
-    return this.appointmentRepository.save(appointment);
+    if (student && teacher) {
+      const savedAppointment = await this.appointmentRepository.save(
+        appointment,
+      );
+
+      return savedAppointment;
+    } else {
+      return null;
+    }
   }
 }

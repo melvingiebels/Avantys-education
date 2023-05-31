@@ -1,5 +1,13 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  OneToMany,
+  ManyToOne,
+} from 'typeorm';
 import { Appointment } from './appointment.entity';
+import { StudyProgram } from './studyProgram.entity';
+import { StudyRegistration } from './studyRegistration.entity';
 
 @Entity()
 export class Teacher {
@@ -9,6 +17,15 @@ export class Teacher {
   @OneToMany(() => Appointment, (appointment) => appointment.teacher)
   appointments: Appointment[];
 
+  @ManyToOne(() => StudyProgram, (studyProgram) => studyProgram.teachers)
+  studyProgram: StudyProgram;
+
+  @OneToMany(
+    () => StudyRegistration,
+    (studyRegistration) => studyRegistration.teacher,
+  )
+  studyRegistrations: StudyRegistration[];
+
   @Column()
   name: string;
 
@@ -17,6 +34,11 @@ export class Teacher {
 
   @Column()
   phone: string;
+
+  @Column({
+    nullable: true,
+  })
+  studyProgramId: number;
 
   constructor(studentDto: Partial<Teacher>) {
     Object.assign(this, studentDto);
