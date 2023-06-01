@@ -19,15 +19,17 @@ export class StudentController {
   }
 
   @Put('/:studentId')
-  setStudentAcceptance(@Param('id') studentId: number, @Body() acceptance: boolean) {
+  setStudentAcceptance(@Param('id') studentId: number, @Param() acceptance: number) {
+    let boolToSend = false;
     // if false, send an event to registrationmanagement
-    if (!acceptance) {
+    if (acceptance == 0) {
       this.client.emit('StudentPaymentDeclined', studentId);
     } else{
+      boolToSend = true;
       this.client.emit('StudentPaymentAccepted', studentId)
     }
 
-    return this.studentService.setStudentAcceptance(studentId, acceptance)
+    return this.studentService.setStudentAcceptance(studentId, boolToSend)
   }
 
 }
