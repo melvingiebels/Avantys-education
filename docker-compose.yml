@@ -9,12 +9,12 @@ services:
       - rabbitmq-logs:/var/log/rabbitmq
     ports:
       - "15672:15672" # RabbitMQ management UI port
-      - "5672:5672"   # RabbitMQ AMQP port
+      - "5672:5672" # RabbitMQ AMQP port
     healthcheck:
-        test: ["CMD", "curl", "-f", "http://localhost:15672"]
-        interval: 30s
-        timeout: 10s
-        retries: 5
+      test: [ "CMD", "curl", "-f", "http://localhost:15672" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
     env_file:
       - .env
 
@@ -41,7 +41,6 @@ services:
       - sqlserver
       - rabbitmq
 
-
   learning-resources:
     build:
       context: ./learning-resources
@@ -55,18 +54,15 @@ services:
     env_file:
       - .env
 
-  registration-management-api:
-    image: ${DOCKER_REGISTRY-}study-program-management-read
-    build: 
-      context: ./test-management
-      dockerfile: ./Dockerfile
+  registrationmanagementapi:
+    image: avantys-education/registrationmanagementapi:1.0
+    build: registration-management-api
     depends_on:
       - sqlserver
       - rabbitmq
     ports:
       - "3001:3001"
-        
-       
+    
   study-program-management-read-api:
     image: ${DOCKER_REGISTRY-}study-program-management-read
     build:
@@ -103,6 +99,21 @@ services:
     volumes:
       - mongodb_data:/data/db 
             
+       
+
+  test-management-api:
+    image: ${DOCKER_REGISTRY-}test-management
+    build:
+      context: ./test-management
+      dockerfile: ./Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "3004:3004"
+    depends_on:
+      - sqlserver
+      - rabbitmq
+
   invoicingapi:
     image: avantys-education/invoicingapi:1.0
     build: invoicing
