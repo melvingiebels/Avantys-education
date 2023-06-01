@@ -9,12 +9,12 @@ services:
       - rabbitmq-logs:/var/log/rabbitmq
     ports:
       - "15672:15672" # RabbitMQ management UI port
-      - "5672:5672"   # RabbitMQ AMQP port
+      - "5672:5672" # RabbitMQ AMQP port
     healthcheck:
-        test: ["CMD", "curl", "-f", "http://localhost:15672"]
-        interval: 30s
-        timeout: 10s
-        retries: 5
+      test: [ "CMD", "curl", "-f", "http://localhost:15672" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
     env_file:
       - .env
 
@@ -40,7 +40,6 @@ services:
     depends_on:
       - sqlserver
       - rabbitmq
-
 
   learning-resources:
     build:
@@ -91,6 +90,30 @@ services:
   #     - rabbitmq
 
 
+  # study-program-management-read-api:
+  #   image: ${DOCKER_REGISTRY-}study-program-management-read
+  #   build:
+  #     context: ./study-program-management/StudyProgramManagement_Read
+  #     dockerfile: ./Dockerfile
+  #   environment:
+  #     - ASPNETCORE_ENVIRONMENT=Development
+  #   ports:
+  #     - "3006:3006"
+  #   depends_on:
+  #     - mongodb
+  #     - rabbitmq
+  # study-program-management-write-api:
+  #   image: ${DOCKER_REGISTRY-}study-program-management-write
+  #   build:
+  #     context: ./study-program-management/StudyProgramManagement_Write
+  #     dockerfile: ./Dockerfile
+  #   environment:
+  #     - ASPNETCORE_ENVIRONMENT=Development
+  #   ports:
+  #     - "3005:3005"
+  #   depends_on:
+  #     - sqlserver
+  #     - rabbitmq
   invoicingapi:
     image: avantys-education/invoicingapi:1.0
     build: invoicing
@@ -99,8 +122,17 @@ services:
       - rabbitmq
     ports:
       - "3005:3005"
-
+  # mongodb:
+  #     image: mongo:latest
+  #     environment:
+  #       MONGO_INITDB_ROOT_USERNAME: root
+  #       MONGO_INITDB_ROOT_PASSWORD: password
+  #     ports:
+  #       - 27017:27017
+  #     volumes:
+  #       - mongodb_data:/data/db
 volumes:
   sqlserverdata:
   rabbitmq-data:
   rabbitmq-logs:
+  mongodb_data:

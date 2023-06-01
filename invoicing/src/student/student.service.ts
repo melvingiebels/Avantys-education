@@ -44,6 +44,7 @@ export class StudentService {
 
     console.log(student);
 
+    // Todo - remove student.id from the student object
     student.authorizedPayments = acceptance;
 
     // if false, send an event to registrationmanagement
@@ -57,3 +58,38 @@ export class StudentService {
     return await this.studentRepository.update(studentId, student);
   }
 }
+
+// Console logs:
+// Acceptance is:  { acceptance: true }
+
+// Student {
+
+//   id: 6,
+
+//   name: 'Luuk Doe',
+
+//   email: 'johnydoe@example.com',
+
+//   address: '123 Main St',
+
+//   dateOfBirth: 1990-01-01T00:00:00.000Z,
+
+//   authorizedPayments: false
+
+// }
+
+// Student {
+
+//   id: 6,
+
+//   name: 'Luuk Doe',
+
+//   email: 'johnydoe@example.com',
+
+//   address: '123 Main St',
+
+//   dateOfBirth: 1990-01-01T00:00:00.000Z,
+
+//   authorizedPayments: { acceptance: true }
+
+// }
