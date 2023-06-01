@@ -1,34 +1,33 @@
-﻿namespace TestManagement.CQS.Command;
+﻿using Microsoft.Extensions.DependencyInjection;
 
-public class CommandFactory : ICommandsFactory
+namespace TestManagement.CQS.Command
 {
-    private readonly Func<Type, object[]> _resolveCallback;
-
-    public CommandFactory(Func<Type, object[]> resolveCallback)
+    public class CommandFactory : ICommandsFactory
     {
-        _resolveCallback = resolveCallback;
-    }
+        private readonly IServiceProvider _serviceProvider;
 
-    public void ExecuteQuery<T>(T command)
-        where T : ICommand
-    {
-        // Initialize context
-        IEnumerable<ICommandHandler<T>> commandHandlers =
-            _resolveCallback(typeof(ICommandHandler<T>))
-                .OfType<ICommandHandler<T>>();
-
-        if ((commandHandlers != null) && commandHandlers.Any())
+        public CommandFactory(IServiceProvider serviceProvider)
         {
-            foreach (ICommandHandler<T> commandHandler in commandHandlers)
-            {
-                // Execute command
-                commandHandler.Execute(command);
+            _serviceProvider = serviceProvider;
+        }
 
-                // Dispose context
-                commandHandler.Dispose();
+        public void ExecuteQuery<T>(T command)
+            where T : ICommand
+        {
+            var commandHandlers = _serviceProvider.GetServices<ICommandHandler<T>>();
+
+            if (commandHandlers != null && commandHandlers.Any())
+            {
+                foreach (ICommandHandler<T> commandHandler in commandHandlers)
+                {
+                    commandHandler.Execute(command);
+                    commandHandler.Dispose();
+                }
+            }
+            else
+            {
+                throw new ArgumentException("Unknown command \"" + typeof(T).FullName + "\"");
             }
         }
-        else
-            throw new ArgumentException("Unknown command \"" + typeof(T).FullName + "\"");
     }
 }

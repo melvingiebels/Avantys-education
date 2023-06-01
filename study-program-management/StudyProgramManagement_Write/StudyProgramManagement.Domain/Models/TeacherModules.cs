@@ -1,4 +1,6 @@
-﻿namespace StudyProgramManagement.Domain.Models;
+﻿using System;
+
+namespace StudyProgramManagement.Domain.Models;
 
 public class TeacherModules : Model
 {

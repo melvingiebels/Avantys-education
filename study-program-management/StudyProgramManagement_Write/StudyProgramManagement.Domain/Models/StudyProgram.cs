@@ -1,4 +1,7 @@
-﻿namespace StudyProgramManagement.Domain.Models;
+﻿using System;
+using System.Collections.Generic;
+
+namespace StudyProgramManagement.Domain.Models;
 
 public class StudyProgram : Model
 {

@@ -27,7 +27,7 @@ export class GuidanceTalkController {
     return await this.guidanceTalkService.finishGuidanceTalk(appointmentId,note);
   }
 
-  @Get()
+  @Get(':id')
   public async getGuidanceTalk(@Param('id') id:number):Promise<GuidanceTalk>{
     console.log(id);
     return this.guidanceTalkService.getPreviousGuidanceTalkNotes(id)

@@ -1,4 +1,7 @@
-﻿namespace StudyProgramManagement.Commands;
+﻿using System;
+using System.Linq;
+
+namespace StudyProgramManagement.Commands;
 
 public class CommandFactory : ICommandsFactory
 {

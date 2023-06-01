@@ -1,4 +1,6 @@
-﻿namespace StudyProgramManagement.Commands.Commands.Teacher;
+﻿using System;
+
+namespace StudyProgramManagement.Commands.Commands.Teacher;
 
 public class RemoveTeacherCommand : RemoveCommand, ICommand
 {

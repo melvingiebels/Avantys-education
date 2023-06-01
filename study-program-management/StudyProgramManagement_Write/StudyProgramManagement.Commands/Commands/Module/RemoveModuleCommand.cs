@@ -1,4 +1,6 @@
-﻿namespace StudyProgramManagement.Commands.Commands.Module;
+﻿using System;
+
+namespace StudyProgramManagement.Commands.Commands.Module;
 
 public class RemoveModuleCommand : RemoveCommand, ICommand
 {

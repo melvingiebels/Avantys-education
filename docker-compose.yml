@@ -5,11 +5,16 @@ services:
     image: rabbitmq:3-management-alpine
     container_name: rabbitmq-avantys
     volumes:
-      - ./rabbitmq/data:/var/lib/rabbitmq
-      - ./rabbitmq/logs:/var/log/rabbitmq
+      - rabbitmq-data:/var/lib/rabbitmq
+      - rabbitmq-logs:/var/log/rabbitmq
     ports:
       - "15672:15672" # RabbitMQ management UI port
       - "5672:5672"   # RabbitMQ AMQP port
+    healthcheck:
+        test: ["CMD", "curl", "-f", "http://localhost:15672"]
+        interval: 30s
+        timeout: 10s
+        retries: 5
     env_file:
       - .env
 
@@ -36,10 +41,25 @@ services:
       - sqlserver
       - rabbitmq
 
+
+  learning-resources:
+    build:
+      context: ./learning-resources
+    ports:
+      - 3002:3002
+    volumes:
+      - ./learning-resources:/usr/src/guidance-management
+    depends_on:
+      - sqlserver
+      - rabbitmq
+    env_file:
+      - .env
+
   registrationmanagementapi:
     image: avantys-education/registrationmanagementapi:1.0
     build: registration-management-api
     depends_on:
+      - sqlserver
       - rabbitmq
     ports:
       - "3001:3001"
@@ -70,6 +90,7 @@ services:
     depends_on:
       - sqlserver
       - rabbitmq
+<<<<<<< HEAD
 
   mongodb:
     image: mongo:latest
@@ -81,8 +102,21 @@ services:
     volumes:
       - mongodb_data:/data/db 
        
+=======
+         
+
+  invoicingapi:
+    image: avantys-education/invoicingapi:1.0
+    build: invoicing
+    depends_on:
+      - sqlserver
+      - rabbitmq
+    ports:
+      - "3002:3002"
+
+>>>>>>> dev
 volumes:
   mongodb_data:
   sqlserverdata:
-  rabbitmqdata:
-    external: true
+  rabbitmq-data:
+  rabbitmq-logs:

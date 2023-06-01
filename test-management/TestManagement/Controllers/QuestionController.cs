@@ -3,9 +3,7 @@ using TestManagement.CQS.Command;
 using TestManagement.CQS.Command.Question;
 using TestManagement.CQS.Domain.Questions;
 using TestManagement.CQS.Queries;
-using TestManagement.CQS.Queries.OpenQuestion;
 using TestManagement.CQS.Queries.Question;
-using TestManagement.IoC;
 
 namespace TestManagement.Controllers;
 
@@ -17,10 +15,10 @@ public class QuestionController
     private readonly ICommandsFactory _commandsFactory;
 
 
-    public QuestionController()
+    public QuestionController(IQueryFactory queryFactory, ICommandsFactory commandsFactory)
     {
-        _queryFactory = Container.Current.Resolve<IQueryFactory>();
-        _commandsFactory = Container.Current.Resolve<ICommandsFactory>();
+        _queryFactory = queryFactory;
+        _commandsFactory = commandsFactory;
     }
 
     [HttpGet]
@@ -35,6 +33,13 @@ public class QuestionController
         return _queryFactory.ResolveQuery<IGetQuestionById>()!.Excecute(openQuestionId)!;
     }
 
+    [HttpDelete("{questionId}")]
+    public void DeleteQuestion([FromRoute] Guid questionId)
+    {
+        var questionToBeDeleted = _queryFactory.ResolveQuery<IGetQuestionById>()!.Excecute(questionId)!;
+        var updateQuestionToTestCommand = new DeleteQuestionCommand(questionToBeDeleted);
+        _commandsFactory.ExecuteQuery(updateQuestionToTestCommand);
+    }
 
     [HttpPost]
     public void CreateQuestion([FromBody] Question question)

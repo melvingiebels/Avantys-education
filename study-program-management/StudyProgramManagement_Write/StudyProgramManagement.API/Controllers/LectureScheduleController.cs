@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using Microsoft.AspNetCore.Mvc;
 using StudyProgramManagement.Commands.Commands.LectureSchedule;
 using StudyProgramManagement.Domain.Models;
 

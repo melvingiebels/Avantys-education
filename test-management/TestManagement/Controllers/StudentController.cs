@@ -1,13 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TestManagement.CQS.Command;
-using TestManagement.CQS.Command.Question;
 using TestManagement.CQS.Command.Student;
 using TestManagement.CQS.Domain;
-using TestManagement.CQS.Domain.Questions;
 using TestManagement.CQS.Queries;
-using TestManagement.CQS.Queries.McQuestion;
 using TestManagement.CQS.Queries.Student;
-using TestManagement.IoC;
 
 namespace TestManagement.Controllers;
 
@@ -18,10 +14,10 @@ public class StudentController
     private readonly IQueryFactory _queryFactory;
     private readonly ICommandsFactory _commandsFactory;
 
-    public StudentController()
+    public StudentController(IQueryFactory queryFactory, ICommandsFactory commandsFactory)
     {
-        _queryFactory = Container.Current.Resolve<IQueryFactory>();
-        _commandsFactory = Container.Current.Resolve<ICommandsFactory>();
+        _queryFactory = queryFactory;
+        _commandsFactory = commandsFactory;
     }
 
     [HttpGet]
@@ -36,18 +32,25 @@ public class StudentController
         return _queryFactory.ResolveQuery<IGetStudentById>()!.Excecute(studentId)!;
     }
 
-
-    [HttpPost("AddTestToStudent")]
-    public void AddTestToStudentCommand([FromBody] Guid studentId, Guid testId)
+    [HttpPut]
+    public void UpdateStudent(Student student)
     {
-        var addTestToStudentCommand = new AddTestToStudentCommand(studentId, testId);
+        var addTestToStudentCommand = new UpdateStudentCommand(student);
         _commandsFactory.ExecuteQuery(addTestToStudentCommand);
     }
 
-    [HttpPost("CreateStudent")]
+    [HttpPost]
     public void CreateStudent([FromBody] Student student)
     {
         var createStudentCommand = new CreateStudentCommand(student);
         _commandsFactory.ExecuteQuery(createStudentCommand);
+    }
+
+    [HttpDelete("{studentId}")]
+    public void DeleteQuestion([FromRoute] Guid studentId)
+    {
+        var studentToBeDeleted = _queryFactory.ResolveQuery<IGetStudentById>()!.Excecute(studentId)!;
+        var updateQuestionToTestCommand = new DeleteStudentCommand(studentToBeDeleted);
+        _commandsFactory.ExecuteQuery(updateQuestionToTestCommand);
     }
 }

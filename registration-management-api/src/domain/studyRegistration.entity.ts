@@ -1,5 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
 import { Student } from './student.entity';
+import { Teacher } from './teacher.entity';
 import { StudyProgram } from './studyProgram.entity';
 
 @Entity()
@@ -13,24 +14,39 @@ export class StudyRegistration {
   @ManyToOne(
     () => StudyProgram,
     (studyProgram) => studyProgram.studyRegistrations,
+    {
+      onDelete: 'CASCADE',
+    },
   )
   studyProgram: StudyProgram;
+
+  @ManyToOne(() => Teacher, (teacher) => teacher.studyRegistrations, {
+    onDelete: 'SET NULL',
+  })
+  teacher: Teacher;
 
   @Column()
   registrationDate: Date;
 
   @Column()
-  status: string;
+  enrollmentStatus: boolean;
 
-  constructor(
-    student: Student,
-    studyProgram: StudyProgram,
-    registrationDate: Date,
-    status: string,
-  ) {
-    this.student = student;
-    this.studyProgram = studyProgram;
-    this.registrationDate = registrationDate;
-    this.status = status;
+  @Column({
+    nullable: true,
+  })
+  studentId: number;
+
+  @Column({
+    nullable: true,
+  })
+  teacherId: number;
+
+  @Column({
+    nullable: true,
+  })
+  studyProgramId: number;
+
+  constructor(studyReigstrationtDto: Partial<StudyRegistration>) {
+    Object.assign(this, studyReigstrationtDto);
   }
 }

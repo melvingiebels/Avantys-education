@@ -20,8 +20,6 @@ public class Test
 
     [Key] public Guid Id { get; set; }
     [JsonIgnore] public List<Question>? Questions { get; set; }
-    [JsonIgnore] [NotMapped] public List<Student> Students { get; set; }
-
+    [JsonIgnore] [NotMapped] public List<Student>? Students { get; set; }
     public string Module { get; set; }
-    public double? Grade { get; set; }
 }

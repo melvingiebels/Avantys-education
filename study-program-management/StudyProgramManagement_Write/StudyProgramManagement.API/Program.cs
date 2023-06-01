@@ -1,4 +1,8 @@
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using StudyProgramManagement.Commands;
 using StudyProgramManagement.Commands.Commands.Class;
 using StudyProgramManagement.Commands.Commands.Lecture;
@@ -29,7 +33,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddTransient<ICommandsFactory>(t => t.GetRequiredService());
 // Commands
 builder.Services.AddTransient<EnrollmentAcceptedHandler>();
 // Class

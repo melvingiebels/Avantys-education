@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using Microsoft.AspNetCore.Mvc;
 using StudyProgramManagement.Commands.Commands.StudyProgram;
 using StudyProgramManagement.Domain.Models;
 
