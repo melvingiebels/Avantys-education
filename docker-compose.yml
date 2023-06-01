@@ -62,58 +62,57 @@ services:
       - rabbitmq
     ports:
       - "3001:3001"
+    
+  study-program-management-read-api:
+    image: ${DOCKER_REGISTRY-}study-program-management-read
+    build:
+      context: ./study-program-management/StudyProgramManagement_Read
+      dockerfile: ./Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "3006:3006" 
+    depends_on:
+      - mongodb
+      - rabbitmq
 
-  # test-management-api:
-  #   image: ${DOCKER_REGISTRY-}test-management
-  #   build:
-  #     context: ./test-management
-  #     dockerfile: ./Dockerfile
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #   ports:
-  #     - "3004:3004"
-  #   depends_on:
-  #     - sqlserver
-  #     - rabbitmq
+  study-program-management-write-api:
+    image: ${DOCKER_REGISTRY-}study-program-management-write
+    build:
+      context: ./study-program-management/StudyProgramManagement_Write
+      dockerfile: ./Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "3005:3005" 
+    depends_on:
+      - sqlserver
+      - rabbitmq
 
-  # study-program-management-api:
-  #   image: ${DOCKER_REGISTRY-}study-program-management
-  #   build:
-  #     context: ./study-program-management
-  #     dockerfile: ./Dockerfile
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #   ports:
-  #     - "3003:3003"
-  #   depends_on:
-  #     - sqlserver
-  #     - rabbitmq
+  mongodb:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data:/data/db 
+       
 
+  test-management-api:
+    image: ${DOCKER_REGISTRY-}test-management
+    build:
+      context: ./test-management
+      dockerfile: ./Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "3004:3004"
+    depends_on:
+      - sqlserver
+      - rabbitmq
 
-  # study-program-management-read-api:
-  #   image: ${DOCKER_REGISTRY-}study-program-management-read
-  #   build:
-  #     context: ./study-program-management/StudyProgramManagement_Read
-  #     dockerfile: ./Dockerfile
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #   ports:
-  #     - "3006:3006"
-  #   depends_on:
-  #     - mongodb
-  #     - rabbitmq
-  # study-program-management-write-api:
-  #   image: ${DOCKER_REGISTRY-}study-program-management-write
-  #   build:
-  #     context: ./study-program-management/StudyProgramManagement_Write
-  #     dockerfile: ./Dockerfile
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #   ports:
-  #     - "3005:3005"
-  #   depends_on:
-  #     - sqlserver
-  #     - rabbitmq
   invoicingapi:
     image: avantys-education/invoicingapi:1.0
     build: invoicing
@@ -121,17 +120,10 @@ services:
       - sqlserver
       - rabbitmq
     ports:
-      - "3005:3005"
-  # mongodb:
-  #     image: mongo:latest
-  #     environment:
-  #       MONGO_INITDB_ROOT_USERNAME: root
-  #       MONGO_INITDB_ROOT_PASSWORD: password
-  #     ports:
-  #       - 27017:27017
-  #     volumes:
-  #       - mongodb_data:/data/db
+      - "3002:3002"
+
 volumes:
+  mongodb_data:
   sqlserverdata:
   rabbitmq-data:
   rabbitmq-logs:

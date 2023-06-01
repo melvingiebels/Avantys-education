@@ -1,5 +1,5 @@
 ﻿namespace TestManagement.CQS.Command;
 
-public class ICommand
+public interface ICommand
 {
 }

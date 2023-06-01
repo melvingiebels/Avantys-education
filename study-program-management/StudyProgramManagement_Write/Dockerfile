@@ -3,6 +3,8 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
+ENV ASPNETCORE_URLS=http://+:3005
+
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["StudyProgramManagement.API/StudyProgramManagement.API.csproj", "StudyProgramManagement.API/"]
