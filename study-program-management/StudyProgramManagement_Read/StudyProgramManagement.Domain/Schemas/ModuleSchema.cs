@@ -7,8 +7,6 @@ namespace StudyProgramManagement.Domain.Schemas;
 [Serializable, BsonIgnoreExtraElements]
 public class ModuleSchema: Schema
 {
-    [BsonId, BsonElement("_id")]
-    public Guid Id { get; set; }
     [BsonElement("ecs"), BsonRepresentation(BsonType.Int32)]
     public int ECs { get; set; }
     [BsonElement("name"), BsonRepresentation(BsonType.String)]
@@ -22,8 +20,8 @@ public class ModuleSchema: Schema
     [BsonElement("classes"), BsonRepresentation(BsonType.String)]
     public List<ClassSchema> Classes { get; set; }
 
-    public ModuleSchema(List<LectureSchema> lectures, List<TeacherSchema> teachers, string name, Block block, List<ClassSchema> classes,
-        int eCs)
+    public ModuleSchema(Guid id, List<LectureSchema> lectures, List<TeacherSchema> teachers, string name, Block block, List<ClassSchema> classes,
+        int eCs): base(id)
     {
         Id = new Guid();
         Lectures = lectures;
@@ -32,9 +30,5 @@ public class ModuleSchema: Schema
         Block = block;
         Classes = classes;
         ECs = eCs;
-    }
-
-    public ModuleSchema()
-    {
     }
 }

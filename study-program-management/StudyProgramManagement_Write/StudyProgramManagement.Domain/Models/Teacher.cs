@@ -6,7 +6,7 @@ namespace StudyProgramManagement.Domain.Models;
 
 public class Teacher : Model
 {
-    public Teacher(string firstName, string lastName, List<Module> modules)
+    public Teacher(string firstName, string lastName, List<Module>? modules)
     {
         Id = new Guid();
         FirstName = firstName;
@@ -22,5 +22,5 @@ public class Teacher : Model
     public string FirstName { get; set; }
     public string LastName { get; set; }
 
-    [JsonIgnore] public List<Module> Modules { get; set; }
+    [JsonIgnore] public List<Module>? Modules { get; set; }
 }

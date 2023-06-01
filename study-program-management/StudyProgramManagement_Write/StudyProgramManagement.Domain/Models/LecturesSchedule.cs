@@ -5,7 +5,7 @@ namespace StudyProgramManagement.Domain.Models;
 
 public class LecturesSchedule : Model
 {
-    public LecturesSchedule(Lecture lecture)
+    public LecturesSchedule(Lecture? lecture)
     {
         Lecture = lecture;
     }
@@ -20,5 +20,5 @@ public class LecturesSchedule : Model
 
     public virtual Guid LectureId { get; set; }
 
-    [JsonIgnore] public virtual Lecture Lecture { get; set; }
+    [JsonIgnore] public virtual Lecture? Lecture { get; set; }
 }

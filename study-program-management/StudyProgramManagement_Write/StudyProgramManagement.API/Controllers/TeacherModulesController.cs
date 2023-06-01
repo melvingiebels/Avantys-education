@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
 using StudyProgramManagement.Commands.Commands.TeacherModules;
+using StudyProgramManagement.Commands.RabbitMq;
+using StudyProgramManagement.Commands.RabbitMq.Clients;
 using StudyProgramManagement.Domain.Models;
 
 namespace StudyProgramManagement.Commands.Controllers;
@@ -10,10 +12,11 @@ namespace StudyProgramManagement.Commands.Controllers;
 public class TeacherModulesController : ControllerBase
 {
     private readonly ICommandsFactory _commandsFactory;
-
+    private readonly RabbitMqSenderClient _senderClient;
     public TeacherModulesController(ICommandsFactory commandsFactory)
     {
         _commandsFactory = commandsFactory;
+        _senderClient = new RabbitMqSenderClient(new List<string>());
     }
 
     [HttpPost]
@@ -21,6 +24,7 @@ public class TeacherModulesController : ControllerBase
     {
         var command = new CreateTeacherModulesCommand(model);
         _commandsFactory.ExecuteQuery(command);
+        _senderClient.SendMessage(new Message("TeacherModuleCreated", model));
     }
 
     [HttpPut]
@@ -28,6 +32,7 @@ public class TeacherModulesController : ControllerBase
     {
         var command = new UpdateTeacherModulesCommand(model);
         _commandsFactory.ExecuteQuery(command);
+        _senderClient.SendMessage(new Message("TeacherModuleUpdated", model));
     }
 
     [HttpDelete("{teacherId}")]
@@ -35,5 +40,6 @@ public class TeacherModulesController : ControllerBase
     {
         var command = new RemoveTeacherModulesCommand(modelId);
         _commandsFactory.ExecuteQuery(command);
+        _senderClient.SendMessage(new Message("TeacherModuleDeleted", modelId));
     }
 }

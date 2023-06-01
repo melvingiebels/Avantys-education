@@ -7,7 +7,7 @@ namespace StudyProgramManagement.Domain.Models;
 
 public class Module : Model
 {
-    public Module(List<Lecture> lectures, List<Teacher> teachers, string name, Block block, List<Class> classes,
+    public Module(List<Lecture> lectures, List<Teacher> teachers, string name, string block, List<Class> classes,
         int eCs)
     {
         Id = new Guid();
@@ -26,11 +26,11 @@ public class Module : Model
     public Guid Id { get; set; }
     public int ECs { get; set; }
     public string Name { get; set; }
-    public Block Block { get; set; }
+    public string Block { get; set; }
 
-    [JsonIgnore] public List<Lecture> Lectures { get; set; }
+    [JsonIgnore] public List<Lecture>? Lectures { get; set; }
 
-    [JsonIgnore] public List<Teacher> Teachers { get; set; }
+    [JsonIgnore] public List<Teacher>? Teachers { get; set; }
 
-    [JsonIgnore] public List<Class> Classes { get; set; }
+    [JsonIgnore] public List<Class>? Classes { get; set; }
 }

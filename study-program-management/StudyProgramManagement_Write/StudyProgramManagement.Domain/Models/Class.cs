@@ -19,7 +19,7 @@ public class Class : Model
 
     public Guid Id { get; set; }
 
-    [JsonIgnore] public List<Student> Students { get; set; }
+    [JsonIgnore] public List<Student>? Students { get; set; }
 
     public ClassNotation ClassNotation { get; set; }
 }

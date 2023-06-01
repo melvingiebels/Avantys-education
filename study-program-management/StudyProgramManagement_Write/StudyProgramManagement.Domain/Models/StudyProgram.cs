@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace StudyProgramManagement.Domain.Models;
 
@@ -23,6 +24,8 @@ public class StudyProgram : Model
     public string Name { get; set; }
     public string Code { get; set; }
     public int TotalECs { get; set; }
-    public List<Module> Modules { get; set; }
-    public List<Student> Students { get; set; }
+    [JsonIgnore]
+    public List<Module>? Modules { get; set; }
+    [JsonIgnore]
+    public List<Student>? Students { get; set; }
 }

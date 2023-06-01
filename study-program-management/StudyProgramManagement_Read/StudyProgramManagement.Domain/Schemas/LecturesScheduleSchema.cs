@@ -6,17 +6,11 @@ namespace StudyProgramManagement.Domain.Schemas;
 [Serializable, BsonIgnoreExtraElements]
 public class LecturesScheduleSchema: Schema
 {
-    public LecturesScheduleSchema(LectureSchema lecture)
+    public LecturesScheduleSchema(Guid id, LectureSchema lecture): base(id)
     {
         Lecture = lecture;
     }
 
-    public LecturesScheduleSchema()
-    {
-    }
-    
-    [BsonId, BsonElement("_id")]
-    public Guid Id { get; set; }
     [BsonElement("date_scheduled"), BsonRepresentation(BsonType.DateTime)]
     public DateTime DateScheduled { get; set; }
     [BsonElement("duration_in_minutes"), BsonRepresentation(BsonType.Int32)]

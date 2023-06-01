@@ -833,6 +833,7 @@
       },
       "StudyProgramManagement.Commands/1.0.0": {
         "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0-preview.4.23259.5",
           "StudyProgramManagement.Domain": "1.0.0"
         },
         "runtime": {

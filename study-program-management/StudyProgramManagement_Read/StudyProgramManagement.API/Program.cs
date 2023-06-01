@@ -18,10 +18,11 @@ using StudyProgramManagement.Query.Queries.Student;
 using StudyProgramManagement.Query.Queries.StudyProgram;
 using StudyProgramManagement.Query.Queries.Teacher;
 using StudyProgramManagement.Query.Queries.TeacherModules;
+using StudyProgramManagement.Read.RabbitMq;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var listener = new RabbitMqListenerClient(new MongoDbClient(), "STUDY_PROGRAM");
+var listener = new RabbitMqListenerClient(new MongoDbClient(), "STUDY_PROGRAM_READ");
 listener.StartListening();
 
 // Add services to the container.

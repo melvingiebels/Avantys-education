@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StudyProgramManagement.Infrastructure.Context;
 
@@ -11,9 +12,11 @@ using StudyProgramManagement.Infrastructure.Context;
 namespace StudyProgramManagement.Commands.Migrations
 {
     [DbContext(typeof(StudyProgramManagementDbContext))]
-    partial class StudyProgramManagementDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230601213416_ChangedLectureFromScheduleToOptional")]
+    partial class ChangedLectureFromScheduleToOptional
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StudyProgramManagement.Infrastructure.Context;
 
@@ -11,9 +12,11 @@ using StudyProgramManagement.Infrastructure.Context;
 namespace StudyProgramManagement.Commands.Migrations
 {
     [DbContext(typeof(StudyProgramManagementDbContext))]
-    partial class StudyProgramManagementDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230601110703_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,7 +50,7 @@ namespace StudyProgramManagement.Commands.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("ModuleId")
+                    b.Property<Guid>("ModuleId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Topic")
@@ -89,9 +92,8 @@ namespace StudyProgramManagement.Commands.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Block")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Block")
+                        .HasColumnType("int");
 
                     b.Property<int>("ECs")
                         .HasColumnType("int");
@@ -212,7 +214,9 @@ namespace StudyProgramManagement.Commands.Migrations
                 {
                     b.HasOne("StudyProgramManagement.Domain.Models.Module", "Module")
                         .WithMany("Lectures")
-                        .HasForeignKey("ModuleId");
+                        .HasForeignKey("ModuleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Module");
                 });

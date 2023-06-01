@@ -13,6 +13,7 @@ using StudyProgramManagement.Commands.Commands.StudyProgram;
 using StudyProgramManagement.Commands.Commands.Teacher;
 using StudyProgramManagement.Commands.Commands.TeacherModules;
 using StudyProgramManagement.Commands.RabbitMq;
+using StudyProgramManagement.Commands.RabbitMq.Clients;
 using StudyProgramManagement.Commands.RabbitMq.Handlers;
 using StudyProgramManagement.Infrastructure.Context;
 using StudyProgramManagement.Infrastructure.Handlers.Class;
@@ -35,6 +36,8 @@ builder.Services.AddSwaggerGen();
 
 // Commands
 builder.Services.AddTransient<EnrollmentAcceptedHandler>();
+builder.Services.AddTransient<ICommandsFactory, CommandFactory>();
+
 // Class
 builder.Services.AddTransient<ICommandHandler<CreateClassCommand>, CreateClassCommandHandler>();
 builder.Services.AddTransient<ICommandHandler<RemoveClassCommand>, RemoveClassCommandHandler>();
@@ -83,6 +86,8 @@ builder.Services.AddDbContext<StudyProgramManagementDbContext>(options =>
         b => b.MigrationsAssembly("StudyProgramManagement.API"));
 });
 
+builder.Services.AddScoped<RabbitMqListenerClient>();
+
 builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
 {
     builder.WithOrigins("http://localhost:3003")
@@ -91,14 +96,12 @@ builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
 }));
 
 var app = builder.Build();
+
 using (var scope = app.Services.CreateScope())
 {
-    // Resolve the StudyProgramManagementDbContext from the service provider
-    var dbContext = scope.ServiceProvider.GetRequiredService<StudyProgramManagementDbContext>();
-
-    // Start the RabbitMqListenerClient
-    var listener = new RabbitMqListenerClient(dbContext);
-    listener.StartListening();
+    var rabbitMqListener = scope.ServiceProvider.GetRequiredService<RabbitMqListenerClient>();
+ // Start listening
+    rabbitMqListener.StartListening();
 }
 
 // Configure the HTTP request pipeline.

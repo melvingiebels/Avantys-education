@@ -12,8 +12,8 @@ using StudyProgramManagement.Infrastructure.Context;
 namespace StudyProgramManagement.Commands.Migrations
 {
     [DbContext(typeof(StudyProgramManagementDbContext))]
-    [Migration("20230601103354_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230601213848_ChangedModuleFromTEacherToOptional")]
+    partial class ChangedModuleFromTEacherToOptional
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,7 +50,7 @@ namespace StudyProgramManagement.Commands.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("ModuleId")
+                    b.Property<Guid?>("ModuleId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Topic")
@@ -92,8 +92,9 @@ namespace StudyProgramManagement.Commands.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("Block")
-                        .HasColumnType("int");
+                    b.Property<string>("Block")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ECs")
                         .HasColumnType("int");
@@ -214,9 +215,7 @@ namespace StudyProgramManagement.Commands.Migrations
                 {
                     b.HasOne("StudyProgramManagement.Domain.Models.Module", "Module")
                         .WithMany("Lectures")
-                        .HasForeignKey("ModuleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ModuleId");
 
                     b.Navigation("Module");
                 });

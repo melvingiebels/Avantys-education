@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
 using StudyProgramManagement.Commands.Commands.Lecture;
+using StudyProgramManagement.Commands.RabbitMq;
+using StudyProgramManagement.Commands.RabbitMq.Clients;
 using StudyProgramManagement.Domain.Models;
 
 namespace StudyProgramManagement.Commands.Controllers;
@@ -10,10 +12,11 @@ namespace StudyProgramManagement.Commands.Controllers;
 public class LectureController : ControllerBase
 {
     private readonly ICommandsFactory _commandsFactory;
-
+    private readonly RabbitMqSenderClient _senderClient;
     public LectureController(ICommandsFactory commandsFactory)
     {
         _commandsFactory = commandsFactory;
+        _senderClient = new RabbitMqSenderClient(new List<string>());
     }
 
     [HttpPost]
@@ -21,6 +24,7 @@ public class LectureController : ControllerBase
     {
         var command = new CreateLectureCommand(model);
         _commandsFactory.ExecuteQuery(command);
+        _senderClient.SendMessage(new Message("LectureCreated", model));
     }
 
     [HttpPut]
@@ -28,6 +32,7 @@ public class LectureController : ControllerBase
     {
         var command = new UpdateLectureCommand(model);
         _commandsFactory.ExecuteQuery(command);
+        _senderClient.SendMessage(new Message("LectureUpdated", model));
     }
 
     [HttpDelete("{lectureId}")]
@@ -35,5 +40,6 @@ public class LectureController : ControllerBase
     {
         var command = new RemoveLectureCommand(modelId);
         _commandsFactory.ExecuteQuery(command);
+        _senderClient.SendMessage(new Message("LectureDeleted", modelId));
     }
 }

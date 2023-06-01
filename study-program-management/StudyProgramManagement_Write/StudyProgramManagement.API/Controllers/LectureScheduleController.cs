@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
 using StudyProgramManagement.Commands.Commands.LectureSchedule;
+using StudyProgramManagement.Commands.RabbitMq;
+using StudyProgramManagement.Commands.RabbitMq.Clients;
 using StudyProgramManagement.Domain.Models;
 
 namespace StudyProgramManagement.Commands.Controllers;
@@ -10,10 +12,11 @@ namespace StudyProgramManagement.Commands.Controllers;
 public class LectureScheduleController : ControllerBase
 {
     private readonly ICommandsFactory _commandsFactory;
-
+    private readonly RabbitMqSenderClient _senderClient;
     public LectureScheduleController(ICommandsFactory commandsFactory)
     {
         _commandsFactory = commandsFactory;
+        _senderClient = new RabbitMqSenderClient(new List<string>());
     }
 
     [HttpPost]
@@ -21,6 +24,7 @@ public class LectureScheduleController : ControllerBase
     {
         var command = new CreateLectureScheduleCommand(model);
         _commandsFactory.ExecuteQuery(command);
+        _senderClient.SendMessage(new Message("LectureScheduledCreated", model));
     }
 
     [HttpPut]
@@ -28,6 +32,7 @@ public class LectureScheduleController : ControllerBase
     {
         var command = new UpdateLectureScheduleCommand(model);
         _commandsFactory.ExecuteQuery(command);
+        _senderClient.SendMessage(new Message("LectureScheduledUpdated", model));
     }
 
     [HttpDelete("{lectureScheduleId}")]
@@ -35,6 +40,7 @@ public class LectureScheduleController : ControllerBase
     {
         var command = new RemoveLectureScheduleCommand(modelId);
         _commandsFactory.ExecuteQuery(command);
+        _senderClient.SendMessage(new Message("LectureScheduledDeleted", modelId));
     }
 }
 

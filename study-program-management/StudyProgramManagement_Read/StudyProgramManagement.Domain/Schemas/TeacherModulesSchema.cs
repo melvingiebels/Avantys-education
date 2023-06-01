@@ -6,21 +6,15 @@ namespace StudyProgramManagement.Domain.Schemas;
 [Serializable, BsonIgnoreExtraElements]
 public class TeacherModulesSchema: Schema
 {
-    [BsonId, BsonElement("_id")]
-    public Guid Id { get; set; }
     [BsonElement("module")]
     public ModuleSchema Module { get; set; }
     [BsonElement("teacher")]
     public TeacherSchema Teacher { get; set; }
 
-    public TeacherModulesSchema(ModuleSchema module, TeacherSchema teacher)
+    public TeacherModulesSchema(Guid id, ModuleSchema module, TeacherSchema teacher): base(id)
     {
         Id = new Guid();
         Module = module;
         Teacher = teacher;
-    }
-
-    public TeacherModulesSchema()
-    {
     }
 }
