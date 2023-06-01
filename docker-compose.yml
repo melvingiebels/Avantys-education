@@ -63,33 +63,33 @@ services:
       - rabbitmq
     ports:
       - "3001:3001"
-        
-  test-management-api:
-    image: ${DOCKER_REGISTRY-}test-management
-    build:
-      context: ./test-management
-      dockerfile: ./Dockerfile
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "3004:3004"
-    depends_on:
-      - sqlserver
-      - rabbitmq
-       
-  study-program-management-api:
-    image: ${DOCKER_REGISTRY-}study-program-management
-    build:
-      context: ./study-program-management
-      dockerfile: ./Dockerfile
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "3003:3003" 
-    depends_on:
-      - sqlserver
-      - rabbitmq
-         
+
+  # test-management-api:
+  #   image: ${DOCKER_REGISTRY-}test-management
+  #   build:
+  #     context: ./test-management
+  #     dockerfile: ./Dockerfile
+  #   environment:
+  #     - ASPNETCORE_ENVIRONMENT=Development
+  #   ports:
+  #     - "3004:3004"
+  #   depends_on:
+  #     - sqlserver
+  #     - rabbitmq
+
+  # study-program-management-api:
+  #   image: ${DOCKER_REGISTRY-}study-program-management
+  #   build:
+  #     context: ./study-program-management
+  #     dockerfile: ./Dockerfile
+  #   environment:
+  #     - ASPNETCORE_ENVIRONMENT=Development
+  #   ports:
+  #     - "3003:3003"
+  #   depends_on:
+  #     - sqlserver
+  #     - rabbitmq
+
 
   invoicingapi:
     image: avantys-education/invoicingapi:1.0
@@ -98,7 +98,7 @@ services:
       - sqlserver
       - rabbitmq
     ports:
-      - "3002:3002"
+      - "3005:3005"
 
 volumes:
   sqlserverdata:
