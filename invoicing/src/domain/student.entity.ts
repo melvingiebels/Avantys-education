@@ -18,11 +18,13 @@ export class Student {
   @Column()
   dateOfBirth: Date;
 
-  @Column()
+  @Column({
+    default: false,
+  })
   authorizedPayments: boolean;
 
   @OneToMany(() => Invoice, (invoice) => invoice.student)
-  invoices: Invoice[]
+  invoices: Invoice[];
 
   constructor(studentDto: Partial<Student>) {
     Object.assign(this, studentDto);
