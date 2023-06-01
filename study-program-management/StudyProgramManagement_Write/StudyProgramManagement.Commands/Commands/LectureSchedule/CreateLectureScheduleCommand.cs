@@ -1,8 +1,10 @@
-﻿namespace StudyProgramManagement.Commands.Commands.LectureSchedule;
+﻿using StudyProgramManagement.Domain.Models;
 
-public class CreateLectureScheduleCommand: CreateCommand<Domain.Models.LecturesSchedule>, ICommand
+namespace StudyProgramManagement.Commands.Commands.LectureSchedule;
+
+public class CreateLectureScheduleCommand : CreateCommand<LecturesSchedule>, ICommand
 {
-    public CreateLectureScheduleCommand(Domain.Models.LecturesSchedule model) : base(model)
+    public CreateLectureScheduleCommand(LecturesSchedule model) : base(model)
     {
     }
 }

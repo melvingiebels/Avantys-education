@@ -1,11 +1,10 @@
-﻿using StudyProgramManagement.Commands.Commands;
-using StudyProgramManagement.Commands.Commands.Module;
+﻿using StudyProgramManagement.Commands.Commands.Module;
 using StudyProgramManagement.Infrastructure.Context;
 using StudyProgramManagement.Infrastructure.Core;
 
-namespace StudyProgramManagement.Infrastructure.Handlers.CommandHandlers.Module;
+namespace StudyProgramManagement.Infrastructure.Handlers.Module;
 
-public class RemoveModuleCommandHandler: EFCommandHandlerBase<RemoveModuleCommand, StudyProgramManagementDbContext>
+public class RemoveModuleCommandHandler : EFCommandHandlerBase<RemoveModuleCommand, StudyProgramManagementDbContext>
 {
     public RemoveModuleCommandHandler(StudyProgramManagementDbContext dbContext) : base(dbContext)
     {

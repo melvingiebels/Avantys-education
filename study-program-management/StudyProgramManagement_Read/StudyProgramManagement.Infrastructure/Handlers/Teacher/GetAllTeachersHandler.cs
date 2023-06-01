@@ -14,6 +14,6 @@ public class GetAllTeachersHandler: MongoQueryBase<TeacherCollection>, IGetAllTe
 
     public IEnumerable<TeacherSchema> Excecute()
     {
-        return Collection.Collection.Find(p => true).ToList();
+        return Collection.MongoClient.Database.GetCollection<TeacherSchema>("TeacherSchema").Find(_ => true).ToList();
     }
 }

@@ -7,8 +7,8 @@ namespace StudyProgramManagement.Infrastructure.Repos;
 
 public class LectureScheduleRepository : IRepository<LecturesSchedule>
 {
-    private readonly StudyProgramManagementDbContext _dbContext;
     private readonly ScheduleLectureBusinessRules _businessRules;
+    private readonly StudyProgramManagementDbContext _dbContext;
 
     public LectureScheduleRepository(StudyProgramManagementDbContext dbContext)
     {
@@ -26,16 +26,6 @@ public class LectureScheduleRepository : IRepository<LecturesSchedule>
         return _dbContext.LecturesSchedule.FirstAsync(c => c.Id == guid)!;
     }
 
-    public Task<LecturesSchedule?> GetByLectureId(Guid lectureId)
-    {
-        return _dbContext.LecturesSchedule.FirstAsync(c => c.Lecture.Id == lectureId)!;
-    }
-    
-    public Task<List<LecturesSchedule?>> GetByModuleId(Guid moduleId)
-    {
-        return _dbContext.LecturesSchedule.Where(c => c.Lecture.Module.Id == moduleId).ToListAsync()!;
-    }
-
     public void Create(LecturesSchedule? model)
     {
         if (_businessRules.IsValid(model)) return;
@@ -50,10 +40,21 @@ public class LectureScheduleRepository : IRepository<LecturesSchedule>
         _dbContext.SaveChanges();
         return model;
     }
+
     public void Delete(Guid guid)
     {
         var lectureScheduleToBeRemoved = _dbContext.LecturesSchedule.FirstAsync(c => c.Id == guid).Result;
         _dbContext.LecturesSchedule.Remove(lectureScheduleToBeRemoved);
         _dbContext.SaveChanges();
+    }
+
+    public Task<LecturesSchedule?> GetByLectureId(Guid lectureId)
+    {
+        return _dbContext.LecturesSchedule.FirstAsync(c => c.Lecture.Id == lectureId)!;
+    }
+
+    public Task<List<LecturesSchedule?>> GetByModuleId(Guid moduleId)
+    {
+        return _dbContext.LecturesSchedule.Where(c => c.Lecture.Module.Id == moduleId).ToListAsync()!;
     }
 }

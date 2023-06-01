@@ -6,7 +6,7 @@ namespace StudyProgramManagement.Commands.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class ClassController: ControllerBase
+public class ClassController : ControllerBase
 {
     private readonly ICommandsFactory _commandsFactory;
 
@@ -14,20 +14,21 @@ public class ClassController: ControllerBase
     {
         _commandsFactory = commandsFactory;
     }
-    
+
     [HttpPost]
     public void Create([FromBody] Class model)
     {
         var command = new CreateClassCommand(model);
         _commandsFactory.ExecuteQuery(command);
     }
+
     [HttpPut]
     public void Update([FromBody] Class model)
     {
         var command = new UpdateClassCommand(model);
         _commandsFactory.ExecuteQuery(command);
     }
-    
+
     [HttpDelete("{classId}")]
     public void Delete([FromBody] Guid modelId)
     {

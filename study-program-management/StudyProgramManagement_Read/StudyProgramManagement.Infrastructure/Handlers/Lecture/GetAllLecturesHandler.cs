@@ -14,6 +14,6 @@ public class GetAllLecturesHandler: MongoQueryBase<LectureCollection>, IGetAllLe
 
     public IEnumerable<LectureSchema> Excecute()
     {
-        return Collection.Collection.Find(p => true).ToList();
+        return Collection.MongoClient.Database.GetCollection<LectureSchema>("LectureSchema").Find(_ => true).ToList();
     }
 }

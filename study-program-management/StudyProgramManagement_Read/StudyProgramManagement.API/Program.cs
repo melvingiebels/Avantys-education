@@ -32,7 +32,7 @@ builder.Services.AddSwaggerGen();
 
 // Infrastructure
 builder.Services.AddTransient<IQueryFactory>(t => new QueryFactory(t.GetRequiredService));
-builder.Services.AddSingleton<MongoDbClient>();
+builder.Services.AddSingleton<MongoDbClient>(_ => new MongoDbClient());
 
 // Collections
 builder.Services.AddSingleton<ClassCollection>();
@@ -72,7 +72,7 @@ builder.Services.AddTransient<IGetTeacherModuleById, GetTeacherModulesByIdHandle
 
 builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
 {
-    builder.WithOrigins("http://localhost:3003")
+    builder.WithOrigins("http://localhost:44377")
         .AllowAnyMethod()
         .AllowAnyHeader();
 }));

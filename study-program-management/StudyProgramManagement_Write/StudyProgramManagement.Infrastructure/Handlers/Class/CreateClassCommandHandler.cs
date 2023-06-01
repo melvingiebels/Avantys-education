@@ -2,7 +2,7 @@
 using StudyProgramManagement.Infrastructure.Context;
 using StudyProgramManagement.Infrastructure.Core;
 
-namespace StudyProgramManagement.Infrastructure.Handlers.CommandHandlers.Class;
+namespace StudyProgramManagement.Infrastructure.Handlers.Class;
 
 public class CreateClassCommandHandler : EFCommandHandlerBase<CreateClassCommand, StudyProgramManagementDbContext>
 {

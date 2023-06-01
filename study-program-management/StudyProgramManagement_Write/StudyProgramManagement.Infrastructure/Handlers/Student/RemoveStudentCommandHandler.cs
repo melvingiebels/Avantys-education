@@ -1,11 +1,10 @@
-﻿using StudyProgramManagement.Commands.Commands;
-using StudyProgramManagement.Commands.Commands.Student;
+﻿using StudyProgramManagement.Commands.Commands.Student;
 using StudyProgramManagement.Infrastructure.Context;
 using StudyProgramManagement.Infrastructure.Core;
 
-namespace StudyProgramManagement.Infrastructure.Handlers.CommandHandlers.Student;
+namespace StudyProgramManagement.Infrastructure.Handlers.Student;
 
-public class RemoveStudentCommandHandler: EFCommandHandlerBase<RemoveStudentCommand, StudyProgramManagementDbContext>
+public class RemoveStudentCommandHandler : EFCommandHandlerBase<RemoveStudentCommand, StudyProgramManagementDbContext>
 {
     public RemoveStudentCommandHandler(StudyProgramManagementDbContext dbContext) : base(dbContext)
     {

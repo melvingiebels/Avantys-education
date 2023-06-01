@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1TSJs/mdYNeFELxv0LPvM7Uz8SWbCHJtg+BCRaJl3bIy2i1a7ApRdGhdZPtrxaY3KK0xJd2GLB7mkvLv26hK3Q==",
-  "success": false,
-  "projectFilePath": "C:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement_Write\\StudyProgramManagement.Infrastructure\\StudyProgramManagement.Infrastructure.csproj",
+  "dgSpecHash": "B10wITUbX81Z529s/aLEgQEH1IO7oUZBzrlLwO1zcxzgXvszQOd0Yecmq7ddvcOoBXJWMZY6hCHmUxKm5jOePA==",
+  "success": true,
+  "projectFilePath": "D:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement_Write\\StudyProgramManagement.Infrastructure\\StudyProgramManagement.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\noahd\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\noahd\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
@@ -41,15 +41,5 @@
     "C:\\Users\\noahd\\.nuget\\packages\\system.text.json\\8.0.0-preview.4.23259.5\\system.text.json.8.0.0-preview.4.23259.5.nupkg.sha512",
     "C:\\Users\\noahd\\.nuget\\packages\\zstdsharp.port\\0.6.2\\zstdsharp.port.0.6.2.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement_Write\\StudyProgramManagement.Query\\StudyProgramManagement.Query.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement_Write\\StudyProgramManagement.Query\\StudyProgramManagement.Query.csproj",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    }
-  ]
+  "logs": []
 }

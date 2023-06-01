@@ -16,6 +16,6 @@ public class GetClassByIdHandler: MongoQueryBase<ClassCollection>, IGetClassById
     {
         var filter = Builders<ClassSchema>.Filter
             .Eq(r => r.Id, id);
-        return await Collection.Collection.Find(filter).FirstOrDefaultAsync();
+        return await Collection.MongoClient.Database.GetCollection<ClassSchema>("ClassSchema").Find(filter).FirstOrDefaultAsync();
     }
 }

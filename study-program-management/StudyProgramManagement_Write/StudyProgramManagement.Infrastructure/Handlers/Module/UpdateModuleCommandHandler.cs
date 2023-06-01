@@ -1,11 +1,10 @@
-﻿using StudyProgramManagement.Commands.Commands;
-using StudyProgramManagement.Commands.Commands.Module;
+﻿using StudyProgramManagement.Commands.Commands.Module;
 using StudyProgramManagement.Infrastructure.Context;
 using StudyProgramManagement.Infrastructure.Core;
 
-namespace StudyProgramManagement.Infrastructure.Handlers.CommandHandlers.Module;
+namespace StudyProgramManagement.Infrastructure.Handlers.Module;
 
-public class UpdateModuleCommandHandler: EFCommandHandlerBase<UpdateModuleCommand, StudyProgramManagementDbContext>
+public class UpdateModuleCommandHandler : EFCommandHandlerBase<UpdateModuleCommand, StudyProgramManagementDbContext>
 {
     public UpdateModuleCommandHandler(StudyProgramManagementDbContext dbContext) : base(dbContext)
     {

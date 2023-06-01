@@ -23,16 +23,6 @@ public class TeacherModulesRepository : IRepository<TeacherModules>
         return _dbContext.TeacherModules.FirstAsync(c => c.Id == guid)!;
     }
 
-    public Task<TeacherModules?> GetByTeacherId(Guid guid)
-    {
-        return _dbContext.TeacherModules.FirstAsync(c => c.TeacherId == guid)!;
-    }
-
-    public Task<TeacherModules?> GetByModuleId(Guid guid)
-    {
-        return _dbContext.TeacherModules.FirstAsync(c => c.ModuleId == guid)!;
-    }
-
     public void Create(TeacherModules model)
     {
         _dbContext.TeacherModules.Add(model);
@@ -45,10 +35,21 @@ public class TeacherModulesRepository : IRepository<TeacherModules>
         _dbContext.SaveChanges();
         return model;
     }
+
     public void Delete(Guid guid)
     {
         var teacherModuleToBeRemoved = _dbContext.TeacherModules.FirstAsync(c => c.Id == guid).Result;
         _dbContext.TeacherModules.Remove(teacherModuleToBeRemoved);
         _dbContext.SaveChanges();
+    }
+
+    public Task<TeacherModules?> GetByTeacherId(Guid guid)
+    {
+        return _dbContext.TeacherModules.FirstAsync(c => c.TeacherId == guid)!;
+    }
+
+    public Task<TeacherModules?> GetByModuleId(Guid guid)
+    {
+        return _dbContext.TeacherModules.FirstAsync(c => c.ModuleId == guid)!;
     }
 }

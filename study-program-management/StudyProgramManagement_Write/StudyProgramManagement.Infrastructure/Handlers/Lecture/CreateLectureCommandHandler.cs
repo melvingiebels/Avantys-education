@@ -2,9 +2,9 @@
 using StudyProgramManagement.Infrastructure.Context;
 using StudyProgramManagement.Infrastructure.Core;
 
-namespace StudyProgramManagement.Infrastructure.Handlers.CommandHandlers.Lecture;
+namespace StudyProgramManagement.Infrastructure.Handlers.Lecture;
 
-public class CreateLectureCommandHandler: EFCommandHandlerBase<CreateLectureCommand, StudyProgramManagementDbContext>
+public class CreateLectureCommandHandler : EFCommandHandlerBase<CreateLectureCommand, StudyProgramManagementDbContext>
 {
     public CreateLectureCommandHandler(StudyProgramManagementDbContext dbContext) : base(dbContext)
     {

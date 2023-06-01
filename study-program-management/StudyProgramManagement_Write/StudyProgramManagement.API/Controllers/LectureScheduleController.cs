@@ -6,7 +6,7 @@ namespace StudyProgramManagement.Commands.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class LectureScheduleController: ControllerBase
+public class LectureScheduleController : ControllerBase
 {
     private readonly ICommandsFactory _commandsFactory;
 
@@ -14,19 +14,21 @@ public class LectureScheduleController: ControllerBase
     {
         _commandsFactory = commandsFactory;
     }
+
     [HttpPost]
     public void Create([FromBody] LecturesSchedule model)
     {
         var command = new CreateLectureScheduleCommand(model);
         _commandsFactory.ExecuteQuery(command);
     }
+
     [HttpPut]
     public void Update([FromBody] LecturesSchedule model)
     {
         var command = new UpdateLectureScheduleCommand(model);
         _commandsFactory.ExecuteQuery(command);
     }
-    
+
     [HttpDelete("{lectureScheduleId}")]
     public void Delete([FromBody] Guid modelId)
     {

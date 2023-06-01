@@ -14,6 +14,6 @@ public class GetAllStudyProgramsHandler: MongoQueryBase<StudyProgramCollection>,
 
     public IEnumerable<StudyProgramSchema> Excecute()
     {
-        return Collection.Collection.Find(p => true).ToList();
+        return Collection.MongoClient.Database.GetCollection<StudyProgramSchema>("StudyProgramSchema").Find(_ => true).ToList();
     }
 }

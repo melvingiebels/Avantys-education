@@ -14,6 +14,6 @@ public class GetAllModulesHandler: MongoQueryBase<ModuleCollection>, IGetAllModu
 
     public IEnumerable<ModuleSchema> Excecute()
     {
-        return Collection.Collection.Find(p => true).ToList();
+        return Collection.MongoClient.Database.GetCollection<ModuleSchema>("ModuleSchema").Find(_ => true).ToList();
     }
 }

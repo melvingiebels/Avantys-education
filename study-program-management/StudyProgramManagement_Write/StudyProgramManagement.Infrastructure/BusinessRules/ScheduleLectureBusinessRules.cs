@@ -17,6 +17,7 @@ public class ScheduleLectureBusinessRules
         return LectureShouldNotBeScheduledOnTheSameTimeAsAnotherLecture(lecturesSchedule) &&
                LectureShouldNotBeScheduledIfStartTimePlusDurationIsInAnotherDay(lecturesSchedule);
     }
+
     private bool LectureShouldNotBeScheduledOnTheSameTimeAsAnotherLecture(LecturesSchedule? lecturesSchedule)
     {
         // Retrieve the lectures scheduled on the same day as the given lecture
@@ -35,13 +36,12 @@ public class ScheduleLectureBusinessRules
 
             // Check if the start time and end time of the lecture overlap with the given lecture
             if (lecturesSchedule.DateScheduled < lectureEndTime && lecture.DateScheduled < givenLectureEndTime)
-            {
                 return false; // There is an overlap, so the lecture should not be scheduled
-            }
         }
 
         return true; // No overlapping lectures found, so the lecture can be scheduled
     }
+
     private bool LectureShouldNotBeScheduledIfStartTimePlusDurationIsInAnotherDay(LecturesSchedule? lecturesSchedule)
     {
         // Calculate the end time of the lecture
@@ -50,5 +50,4 @@ public class ScheduleLectureBusinessRules
         // Check if the start and end times are in the same day
         return lecturesSchedule.DateScheduled.Date == endTime.Date;
     }
-
 }

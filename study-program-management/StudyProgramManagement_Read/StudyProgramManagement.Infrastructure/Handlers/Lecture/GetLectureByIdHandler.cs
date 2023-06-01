@@ -16,6 +16,6 @@ public class GetLectureByIdHandler : MongoQueryBase<LectureCollection>, IGetLect
     {
         var filter = Builders<LectureSchema>.Filter
             .Eq(r => r.Id, id);
-        return await Collection.Collection.Find(filter).FirstOrDefaultAsync();
+        return await Collection.MongoClient.Database.GetCollection<LectureSchema>("LectureSchema").Find(filter).FirstOrDefaultAsync();
     }
 }

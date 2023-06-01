@@ -1,11 +1,12 @@
-﻿using StudyProgramManagement.Commands.Commands;
-using StudyProgramManagement.Commands.Commands.LectureSchedule;
+﻿using StudyProgramManagement.Commands.Commands.LectureSchedule;
 using StudyProgramManagement.Infrastructure.Context;
 using StudyProgramManagement.Infrastructure.Core;
 
-namespace StudyProgramManagement.Infrastructure.Handlers.CommandHandlers.LectureSchedule;
+namespace StudyProgramManagement.Infrastructure.Handlers.LectureSchedule;
 
-public class CreateLectureScheduleCommandHandler: EFCommandHandlerBase<CreateLectureScheduleCommand, StudyProgramManagementDbContext>
+public class
+    CreateLectureScheduleCommandHandler : EFCommandHandlerBase<CreateLectureScheduleCommand,
+        StudyProgramManagementDbContext>
 {
     public CreateLectureScheduleCommandHandler(StudyProgramManagementDbContext dbContext) : base(dbContext)
     {

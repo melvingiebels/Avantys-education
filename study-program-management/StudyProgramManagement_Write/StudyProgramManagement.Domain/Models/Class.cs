@@ -3,13 +3,8 @@ using StudyProgramManagement.Domain.Models.Enums;
 
 namespace StudyProgramManagement.Domain.Models;
 
-public class Class
+public class Class : Model
 {
-    public Guid Id { get; set; }
-    [JsonIgnore]
-    public List<Student> Students { get; set; }
-    public ClassNotation ClassNotation { get; set; }
-
     public Class(List<Student> students, ClassNotation classNotation)
     {
         Students = students;
@@ -19,4 +14,10 @@ public class Class
     public Class()
     {
     }
+
+    public Guid Id { get; set; }
+
+    [JsonIgnore] public List<Student> Students { get; set; }
+
+    public ClassNotation ClassNotation { get; set; }
 }

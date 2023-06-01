@@ -16,6 +16,6 @@ public class GetStudyProgramById: MongoQueryBase<StudyProgramCollection>, IGetSt
     {
         var filter = Builders<StudyProgramSchema>.Filter
             .Eq(r => r.Id, id);
-        return await Collection.Collection.Find(filter).FirstOrDefaultAsync();
+        return await Collection.MongoClient.Database.GetCollection<StudyProgramSchema>("StudyProgramSchema").Find(filter).FirstOrDefaultAsync();
     }
 }

@@ -13,8 +13,8 @@ public class GetAllClassesHandler: MongoQueryBase<ClassCollection>, IGetAllClass
     {
     }
 
-    public IEnumerable<ClassSchema> Excecute()
+    public  IEnumerable<ClassSchema> Excecute()
     {
-        return Collection.Collection.Find(_ => true).ToList();
+        return Collection.MongoClient.Database.GetCollection<ClassSchema>("ClassSchema").Find(_ => true).ToList();
     }
 }   

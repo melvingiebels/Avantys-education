@@ -2,7 +2,7 @@
 
 namespace StudyProgramManagement.Domain.Models;
 
-public class LecturesSchedule
+public class LecturesSchedule : Model
 {
     public LecturesSchedule(Lecture lecture)
     {
@@ -16,6 +16,8 @@ public class LecturesSchedule
     public Guid Id { get; set; }
     public DateTime DateScheduled { get; set; }
     public int DurationInMinutes { get; set; }
-    [JsonIgnore]
-    public Lecture Lecture { get; set; }
+
+    public virtual Guid LectureId { get; set; }
+
+    [JsonIgnore] public virtual Lecture Lecture { get; set; }
 }

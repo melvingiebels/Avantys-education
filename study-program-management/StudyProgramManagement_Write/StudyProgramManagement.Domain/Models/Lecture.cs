@@ -2,13 +2,8 @@
 
 namespace StudyProgramManagement.Domain.Models;
 
-public class Lecture
+public class Lecture : Model
 {
-    public Guid Id { get; set; }
-    public string Topic { get; set; }
-    [JsonIgnore]
-    public Module Module { get; set; }
-
     public Lecture(string topic, Module module)
     {
         Id = new Guid();
@@ -19,4 +14,9 @@ public class Lecture
     public Lecture()
     {
     }
+
+    public Guid Id { get; set; }
+    public string Topic { get; set; }
+
+    [JsonIgnore] public Module Module { get; set; }
 }

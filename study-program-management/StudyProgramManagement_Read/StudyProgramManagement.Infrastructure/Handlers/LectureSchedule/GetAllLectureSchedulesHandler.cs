@@ -14,6 +14,6 @@ public class GetAllLectureSchedulesHandler: MongoQueryBase<LectureScheduleCollec
 
     public IEnumerable<LecturesScheduleSchema> Excecute()
     {
-        return Collection.Collection.Find(p => true).ToList();
+        return Collection.MongoClient.Database.GetCollection<LecturesScheduleSchema>("LecturesScheduleSchema").Find(_ => true).ToList();
     }
 }

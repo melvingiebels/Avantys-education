@@ -16,6 +16,6 @@ public class GetModuleByIdHandler: MongoQueryBase<ModuleCollection>, IGetModuleB
     {
         var filter = Builders<ModuleSchema>.Filter
             .Eq(r => r.Id, id);
-        return await Collection.Collection.Find(filter).FirstOrDefaultAsync();
+        return await Collection.MongoClient.Database.GetCollection<ModuleSchema>("ModuleSchema").Find(filter).FirstOrDefaultAsync();
     }
 }

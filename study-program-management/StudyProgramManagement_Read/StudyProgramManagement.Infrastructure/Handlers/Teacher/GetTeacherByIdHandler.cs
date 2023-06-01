@@ -16,6 +16,6 @@ public class GetTeacherByIdHandler: MongoQueryBase<TeacherCollection>, IGetTeach
     {
         var filter = Builders<TeacherSchema>.Filter
             .Eq(r => r.Id, id);
-        return await Collection.Collection.Find(filter).FirstOrDefaultAsync();
+        return await Collection.MongoClient.Database.GetCollection<TeacherSchema>("TeacherSchema").Find(filter).FirstOrDefaultAsync();
     }
 }

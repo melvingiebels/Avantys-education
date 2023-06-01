@@ -16,6 +16,6 @@ public class GetLectureSchedulesByIdHandler: MongoQueryBase<LectureScheduleColle
     {
         var filter = Builders<LecturesScheduleSchema>.Filter
             .Eq(r => r.Id, id);
-        return await Collection.Collection.Find(filter).FirstOrDefaultAsync();
+        return await Collection.MongoClient.Database.GetCollection<LecturesScheduleSchema>("LecturesScheduleSchema").Find(filter).FirstOrDefaultAsync();
     }
 }

@@ -14,6 +14,6 @@ public class GetAllTeacherModulesHandler: MongoQueryBase<TeacherModulesCollectio
 
     public IEnumerable<TeacherModulesSchema> Excecute()
     {
-        return Collection.Collection.Find(p => true).ToList();
+        return Collection.MongoClient.Database.GetCollection<TeacherModulesSchema>("TeacherModulesSchema").Find(_ => true).ToList();
     }
 }

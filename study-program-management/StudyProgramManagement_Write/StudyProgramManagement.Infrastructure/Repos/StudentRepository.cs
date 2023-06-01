@@ -4,7 +4,7 @@ using StudyProgramManagement.Infrastructure.Context;
 
 namespace StudyProgramManagement.Infrastructure.Repos;
 
-public class StudentRepository:IRepository<Student>
+public class StudentRepository : IRepository<Student>
 {
     private readonly StudyProgramManagementDbContext _dbContext;
 
@@ -12,7 +12,7 @@ public class StudentRepository:IRepository<Student>
     {
         _dbContext = dbContext;
     }
-    
+
     public Task<List<Student>> Get()
     {
         return _dbContext.Students.ToListAsync();
@@ -35,6 +35,7 @@ public class StudentRepository:IRepository<Student>
         _dbContext.SaveChanges();
         return model;
     }
+
     public void Delete(Guid guid)
     {
         var studentToBeRemoved = _dbContext.Students.FirstAsync(c => c.Id == guid).Result;

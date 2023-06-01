@@ -16,6 +16,6 @@ public class GetStudentByIdHandler: MongoQueryBase<StudentCollection>, IGetStude
     {
         var filter = Builders<StudentSchema>.Filter
             .Eq(r => r.Id, id);
-        return await Collection.Collection.Find(filter).FirstOrDefaultAsync();
+        return await Collection.MongoClient.Database.GetCollection<StudentSchema>("StudentSchema").Find(filter).FirstOrDefaultAsync();
     }
 }

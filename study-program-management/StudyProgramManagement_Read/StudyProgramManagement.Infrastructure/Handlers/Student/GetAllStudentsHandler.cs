@@ -1,6 +1,7 @@
 ﻿using MongoDB.Driver;
 using StudyProgramManagement.Domain.Schemas;
 using StudyProgramManagement.Infrastructure.Core;
+using StudyProgramManagement.Infrastructure.MongoDb;
 using StudyProgramManagement.Infrastructure.MongoDb.Collection;
 using StudyProgramManagement.Query.Queries.Student;
 
@@ -14,6 +15,6 @@ public class GetAllStudentsHandler: MongoQueryBase<StudentCollection>, IGetAllSt
 
     public IEnumerable<StudentSchema> Excecute()
     {
-        return Collection.Collection.Find(p => true).ToList();
+        return Collection.MongoClient.Database.GetCollection<StudentSchema>("StudentSchema").Find(_ => true).ToList();
     }
 }

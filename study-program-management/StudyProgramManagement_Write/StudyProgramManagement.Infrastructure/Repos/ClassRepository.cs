@@ -4,7 +4,7 @@ using StudyProgramManagement.Infrastructure.Context;
 
 namespace StudyProgramManagement.Infrastructure.Repos;
 
-public class ClassRepository:IRepository<Class>
+public class ClassRepository : IRepository<Class>
 {
     private readonly StudyProgramManagementDbContext _dbContext;
 
@@ -20,7 +20,7 @@ public class ClassRepository:IRepository<Class>
 
     public Task<Class?> GetById(Guid guid)
     {
-       return _dbContext.Classes.FirstAsync(c => c.Id == guid)!;
+        return _dbContext.Classes.FirstAsync(c => c.Id == guid)!;
     }
 
     public void Create(Class model)

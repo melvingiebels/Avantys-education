@@ -2,9 +2,9 @@
 using StudyProgramManagement.Infrastructure.Context;
 using StudyProgramManagement.Infrastructure.Core;
 
-namespace StudyProgramManagement.Infrastructure.Handlers.CommandHandlers.Class;
+namespace StudyProgramManagement.Infrastructure.Handlers.Class;
 
-public class RemoveClassCommandHandler: EFCommandHandlerBase<RemoveClassCommand, StudyProgramManagementDbContext>
+public class RemoveClassCommandHandler : EFCommandHandlerBase<RemoveClassCommand, StudyProgramManagementDbContext>
 {
     public RemoveClassCommandHandler(StudyProgramManagementDbContext dbContext) : base(dbContext)
     {

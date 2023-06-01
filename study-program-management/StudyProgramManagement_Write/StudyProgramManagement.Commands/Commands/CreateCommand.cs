@@ -1,6 +1,6 @@
 ﻿namespace StudyProgramManagement.Commands.Commands;
 
-public abstract class CreateCommand<T> 
+public abstract class CreateCommand<T>
 {
     public T Model;
 

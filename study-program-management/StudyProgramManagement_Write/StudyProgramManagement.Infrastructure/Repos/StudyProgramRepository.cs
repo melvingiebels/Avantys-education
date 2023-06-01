@@ -35,6 +35,7 @@ public class StudyProgramRepository : IRepository<StudyProgram>
         _dbContext.SaveChanges();
         return model;
     }
+
     public void Delete(Guid guid)
     {
         var studyProgramToBeRemoved = _dbContext.StudyPrograms.FirstAsync(c => c.Id == guid).Result;

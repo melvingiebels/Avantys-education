@@ -1,11 +1,7 @@
 ﻿namespace StudyProgramManagement.Domain.Models;
 
-public class Student
+public class Student : Model
 {
-    public Guid Id { get; set; }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public Guid StudyProgramId { get; set; }
     public Student(string firstName, string lastName, Guid studyProgramId)
     {
         Id = new Guid();
@@ -17,4 +13,9 @@ public class Student
     public Student()
     {
     }
+
+    public Guid Id { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public Guid StudyProgramId { get; set; }
 }

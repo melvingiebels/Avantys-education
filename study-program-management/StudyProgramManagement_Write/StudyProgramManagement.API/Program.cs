@@ -8,15 +8,17 @@ using StudyProgramManagement.Commands.Commands.Student;
 using StudyProgramManagement.Commands.Commands.StudyProgram;
 using StudyProgramManagement.Commands.Commands.Teacher;
 using StudyProgramManagement.Commands.Commands.TeacherModules;
+using StudyProgramManagement.Commands.RabbitMq;
+using StudyProgramManagement.Commands.RabbitMq.Handlers;
 using StudyProgramManagement.Infrastructure.Context;
-using StudyProgramManagement.Infrastructure.Handlers.CommandHandlers.Class;
-using StudyProgramManagement.Infrastructure.Handlers.CommandHandlers.Lecture;
-using StudyProgramManagement.Infrastructure.Handlers.CommandHandlers.LectureSchedule;
-using StudyProgramManagement.Infrastructure.Handlers.CommandHandlers.Module;
-using StudyProgramManagement.Infrastructure.Handlers.CommandHandlers.Student;
-using StudyProgramManagement.Infrastructure.Handlers.CommandHandlers.StudyProgram;
-using StudyProgramManagement.Infrastructure.Handlers.CommandHandlers.Teacher;
-using StudyProgramManagement.Infrastructure.Handlers.CommandHandlers.TeacherModules;
+using StudyProgramManagement.Infrastructure.Handlers.Class;
+using StudyProgramManagement.Infrastructure.Handlers.Lecture;
+using StudyProgramManagement.Infrastructure.Handlers.LectureSchedule;
+using StudyProgramManagement.Infrastructure.Handlers.Module;
+using StudyProgramManagement.Infrastructure.Handlers.Student;
+using StudyProgramManagement.Infrastructure.Handlers.StudyProgram;
+using StudyProgramManagement.Infrastructure.Handlers.Teacher;
+using StudyProgramManagement.Infrastructure.Handlers.TeacherModules;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,8 +29,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddTransient<ICommandsFactory>(t => t.GetRequiredService());
 // Commands
-
+builder.Services.AddTransient<EnrollmentAcceptedHandler>();
 // Class
 builder.Services.AddTransient<ICommandHandler<CreateClassCommand>, CreateClassCommandHandler>();
 builder.Services.AddTransient<ICommandHandler<RemoveClassCommand>, RemoveClassCommandHandler>();
@@ -74,7 +77,7 @@ builder.Services.AddDbContext<StudyProgramManagementDbContext>(options =>
 {
     var connectionString = builder.Configuration.GetConnectionString("SQL");
     options.UseSqlServer(connectionString,
-        b => b.MigrationsAssembly("StudyProgramManagement"));
+        b => b.MigrationsAssembly("StudyProgramManagement.API"));
 });
 
 builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
@@ -85,6 +88,15 @@ builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
 }));
 
 var app = builder.Build();
+using (var scope = app.Services.CreateScope())
+{
+    // Resolve the StudyProgramManagementDbContext from the service provider
+    var dbContext = scope.ServiceProvider.GetRequiredService<StudyProgramManagementDbContext>();
+
+    // Start the RabbitMqListenerClient
+    var listener = new RabbitMqListenerClient(dbContext);
+    listener.StartListening();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

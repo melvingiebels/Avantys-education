@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "tF+Z4mAdsB/sk22BcmanbdqHLFG0VVBx05HSkSAGIEA=",
-  "Source": "StudyProgramManagement.Write",
-  "BasePath": "_content/StudyProgramManagement.Write",
+  "Hash": "Mn85+mEvYa8VfVzyn0CkfHJck8jKuHN+wVQf02QWxtA=",
+  "Source": "StudyProgramManagement.API",
+  "BasePath": "_content/StudyProgramManagement.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

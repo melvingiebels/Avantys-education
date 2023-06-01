@@ -13,13 +13,12 @@ public class CommandFactory : ICommandsFactory
         where T : ICommand
     {
         // Initialize context
-        IEnumerable<ICommandHandler<T>> commandHandlers =
+        var commandHandlers =
             _resolveCallback(typeof(ICommandHandler<T>))
                 .OfType<ICommandHandler<T>>();
 
-        if ((commandHandlers != null) && commandHandlers.Any())
-        {
-            foreach (ICommandHandler<T> commandHandler in commandHandlers)
+        if (commandHandlers != null && commandHandlers.Any())
+            foreach (var commandHandler in commandHandlers)
             {
                 // Execute command
                 commandHandler.Execute(command);
@@ -27,7 +26,6 @@ public class CommandFactory : ICommandsFactory
                 // Dispose context
                 commandHandler.Dispose();
             }
-        }
         else
             throw new ArgumentException("Unknown command \"" + typeof(T).FullName + "\"");
     }

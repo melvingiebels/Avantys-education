@@ -2,9 +2,11 @@
 using StudyProgramManagement.Infrastructure.Context;
 using StudyProgramManagement.Infrastructure.Core;
 
-namespace StudyProgramManagement.Infrastructure.Handlers.CommandHandlers.TeacherModules;
+namespace StudyProgramManagement.Infrastructure.Handlers.TeacherModules;
 
-public class CreateTeacherModulesCommandHandler: EFCommandHandlerBase<CreateTeacherModulesCommand, StudyProgramManagementDbContext>
+public class
+    CreateTeacherModulesCommandHandler : EFCommandHandlerBase<CreateTeacherModulesCommand,
+        StudyProgramManagementDbContext>
 {
     public CreateTeacherModulesCommandHandler(StudyProgramManagementDbContext dbContext) : base(dbContext)
     {

@@ -7,5 +7,4 @@ public interface IRepository<T>
     public void Create(T model);
     public T Update(T model);
     public void Delete(Guid guid);
-
 }
