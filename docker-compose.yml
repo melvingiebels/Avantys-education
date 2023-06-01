@@ -46,7 +46,7 @@ services:
     build:
       context: ./learning-resources
     ports:
-      - 3002:3002
+      - "3002:3002"
     volumes:
       - ./learning-resources:/usr/src/guidance-management
     depends_on:
@@ -55,9 +55,11 @@ services:
     env_file:
       - .env
 
-  registrationmanagementapi:
-    image: avantys-education/registrationmanagementapi:1.0
-    build: registration-management-api
+  registration-management-api:
+    image: ${DOCKER_REGISTRY-}study-program-management-read
+    build: 
+      context: ./test-management
+      dockerfile: ./Dockerfile
     depends_on:
       - sqlserver
       - rabbitmq
@@ -90,7 +92,6 @@ services:
     depends_on:
       - sqlserver
       - rabbitmq
-<<<<<<< HEAD
 
   mongodb:
     image: mongo:latest
@@ -101,10 +102,7 @@ services:
       - 27017:27017
     volumes:
       - mongodb_data:/data/db 
-       
-=======
-         
-
+            
   invoicingapi:
     image: avantys-education/invoicingapi:1.0
     build: invoicing
@@ -112,9 +110,8 @@ services:
       - sqlserver
       - rabbitmq
     ports:
-      - "3002:3002"
+      - "3003:3003"
 
->>>>>>> dev
 volumes:
   mongodb_data:
   sqlserverdata:
