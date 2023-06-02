@@ -34,7 +34,7 @@ export class StudentController {
   @Put(':studentId')
   setStudentAcceptance(
     @Param('studentId') studentId: number,
-    @Body() acceptance: boolean,
+    @Body('acceptance') acceptance: boolean,
   ) {
     console.log('Acceptance is: ', acceptance);
     return this.studentService.setStudentAcceptance(studentId, acceptance);

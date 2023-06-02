@@ -33,16 +33,14 @@ export class StudyRegistrationController {
   }
 
   @EventPattern('StudentPaymentAccepted')
-  acceptRegistrationWithPayment(data: Record<string, unknown>) {
+  acceptRegistrationWithPayment(data: number) {
     console.log('Received from invoice', data);
-    const student = new Student(data);
-    return this.studyRegistrationService.acceptEnrollment(student.id);
+    return this.studyRegistrationService.acceptEnrollment(data);
   }
 
   @EventPattern('StudentPaymentDeclined')
-  deleteRegistration(data: Record<string, unknown>) {
+  deleteRegistration(data: number) {
     console.log('Received from invoice', data);
-    const student = new Student(data);
-    return this.studyRegistrationService.deleteStudyRegistration(student.id);
+    return this.studyRegistrationService.deleteStudyRegistration(data);
   }
 }

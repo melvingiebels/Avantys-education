@@ -54,6 +54,7 @@ export class StudentService {
       this.client.emit('StudentPaymentAccepted', studentId);
     }
 
+    delete student.id;
     console.log(student);
     return await this.studentRepository.update(studentId, student);
   }

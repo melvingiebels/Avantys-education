@@ -3,6 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { StudyRegistration } from '../domain/studyRegistration.entity';
 import { ClientProxy } from '@nestjs/microservices';
+import { Student } from 'src/domain/student.entity';
 
 @Injectable()
 export class StudyRegistrationService {
@@ -12,6 +13,8 @@ export class StudyRegistrationService {
     @Inject('GUIDANCE_SERVICE') private clientGuidance: ClientProxy,
     @InjectRepository(StudyRegistration)
     private studyRegistrationRepository: Repository<StudyRegistration>,
+    @InjectRepository(Student)
+    private studentRepository: Repository<Student>,
   ) {}
 
   async getAllStudyRegistrations(): Promise<StudyRegistration[]> {
@@ -34,7 +37,7 @@ export class StudyRegistrationService {
       },
     );
 
-    const student = await this.studyRegistrationRepository.findOne({
+    const student = await this.studentRepository.findOne({
       where: { id: studentId },
     });
 
