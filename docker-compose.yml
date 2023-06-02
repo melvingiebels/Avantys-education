@@ -45,7 +45,7 @@ services:
     build:
       context: ./learning-resources
     ports:
-      - 3002:3002
+      - "3002:3002"
     volumes:
       - ./learning-resources:/usr/src/guidance-management
     depends_on:
@@ -98,6 +98,7 @@ services:
       - 27017:27017
     volumes:
       - mongodb_data:/data/db 
+            
        
 
   test-management-api:
@@ -120,11 +121,10 @@ services:
       - sqlserver
       - rabbitmq
     ports:
-      - "3002:3002"
+      - "3003:3003"
 
 volumes:
   mongodb_data:
   sqlserverdata:
   rabbitmq-data:
   rabbitmq-logs:
-  mongodb_data:
