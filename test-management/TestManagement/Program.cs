@@ -1,8 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-<<<<<<< HEAD
-using StudyProgramManagement.RabbitMq;
 using TestManagement.Infrastructure.Context;
-=======
 using TestManagement.CQS.Command;
 using TestManagement.CQS.Command.Question;
 using TestManagement.CQS.Command.Student;
@@ -17,7 +14,6 @@ using TestManagement.CQS.Queries.Test;
 using TestManagement.Infrastructure.CommandHandlers.Question;
 using TestManagement.Infrastructure.CommandHandlers.Student;
 using TestManagement.Infrastructure.CommandHandlers.Test;
-using TestManagement.Infrastructure.Context;
 using TestManagement.Infrastructure.QueriesHandlers.McQuestion;
 using TestManagement.Infrastructure.QueriesHandlers.OpenQuestion;
 using TestManagement.Infrastructure.QueriesHandlers.Question;
@@ -25,7 +21,6 @@ using TestManagement.Infrastructure.QueriesHandlers.Student;
 using TestManagement.Infrastructure.QueriesHandlers.StudentTests;
 using TestManagement.Infrastructure.QueriesHandlers.Test;
 using TestManagement.RabbitMQ;
->>>>>>> dev
 
 var builder = WebApplication.CreateBuilder(args);
 
