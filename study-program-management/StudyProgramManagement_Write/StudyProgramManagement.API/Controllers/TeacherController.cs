@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using StudyProgramManagement.Commands.Commands.Teacher;
 using StudyProgramManagement.Commands.RabbitMq;
 using StudyProgramManagement.Commands.RabbitMq.Clients;
@@ -13,10 +12,12 @@ public class TeacherController : ControllerBase
 {
     private readonly ICommandsFactory _commandsFactory;
     private readonly RabbitMqSenderClient _senderClient;
+
     public TeacherController(ICommandsFactory commandsFactory)
     {
         _commandsFactory = commandsFactory;
-        _senderClient = new RabbitMqSenderClient(new List<string> {"TEST_QUEUE", "LEARNING_RESOURCES_QUEUE", "GUIDANCE_QUEUE"});
+        _senderClient = new RabbitMqSenderClient(new List<string>
+            { "TEST_QUEUE", "LEARNING_RESOURCES_QUEUE", "GUIDANCE_QUEUE" });
     }
 
     [HttpPost]

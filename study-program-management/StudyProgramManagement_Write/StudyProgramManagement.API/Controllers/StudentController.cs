@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using StudyProgramManagement.Commands.Commands.Student;
 using StudyProgramManagement.Commands.RabbitMq;
 using StudyProgramManagement.Commands.RabbitMq.Clients;
@@ -13,6 +12,7 @@ public class StudentController : ControllerBase
 {
     private readonly ICommandsFactory _commandsFactory;
     private readonly RabbitMqSenderClient _senderClient;
+
     public StudentController(ICommandsFactory commandsFactory)
     {
         _commandsFactory = commandsFactory;
@@ -33,7 +33,6 @@ public class StudentController : ControllerBase
         var command = new UpdateStudentCommand(model);
         _commandsFactory.ExecuteQuery(command);
         _senderClient.SendMessage(new Message("StudentUpdated", model));
-
     }
 
     [HttpDelete("{studentId}")]

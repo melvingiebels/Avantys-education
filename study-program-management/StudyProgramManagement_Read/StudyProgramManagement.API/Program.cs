@@ -45,7 +45,7 @@ builder.Services.AddSingleton<StudyProgramCollection>();
 builder.Services.AddSingleton<TeacherCollection>();
 builder.Services.AddSingleton<TeacherModulesCollection>();
 
-// Queries
+// Queries  
 // Class
 builder.Services.AddTransient<IGetAllClasses, GetAllClassesHandler>();
 builder.Services.AddTransient<IGetClassById, GetClassByIdHandler>();

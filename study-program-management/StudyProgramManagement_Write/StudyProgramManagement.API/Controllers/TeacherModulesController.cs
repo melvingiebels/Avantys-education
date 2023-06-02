@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using StudyProgramManagement.Commands.Commands.TeacherModules;
 using StudyProgramManagement.Commands.RabbitMq;
 using StudyProgramManagement.Commands.RabbitMq.Clients;
@@ -13,6 +12,7 @@ public class TeacherModulesController : ControllerBase
 {
     private readonly ICommandsFactory _commandsFactory;
     private readonly RabbitMqSenderClient _senderClient;
+
     public TeacherModulesController(ICommandsFactory commandsFactory)
     {
         _commandsFactory = commandsFactory;

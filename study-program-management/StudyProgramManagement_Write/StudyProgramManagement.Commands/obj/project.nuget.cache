@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SVYRCFIU2bP6efsD+NxB4tF6MA8nViaDyQmfILJc24FB/0+5EfuP2S6bSq6+jTNvFi42eNKlFNhN4EJkewQMoQ==",
+  "dgSpecHash": "q+9NerNmpXs4Z8PDA5oI9reFttmebQlB0qpKp8mcDIbMwmnBUPJUFxEqWmOZF1pTOzHBxqcao/6NBTMIQemcMQ==",
   "success": true,
-  "projectFilePath": "D:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement_Write\\StudyProgramManagement.Commands\\StudyProgramManagement.Commands.csproj",
+  "projectFilePath": "C:\\source\\Avantys-education\\study-program-management\\StudyProgramManagement_Write\\StudyProgramManagement.Commands\\StudyProgramManagement.Commands.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\noahd\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0-preview.4.23259.5\\microsoft.extensions.dependencyinjection.abstractions.8.0.0-preview.4.23259.5.nupkg.sha512"
   ],

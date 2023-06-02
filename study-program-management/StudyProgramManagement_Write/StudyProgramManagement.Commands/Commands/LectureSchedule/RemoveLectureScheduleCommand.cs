@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace StudyProgramManagement.Commands.Commands.LectureSchedule;
+﻿namespace StudyProgramManagement.Commands.Commands.LectureSchedule;
 
 public class RemoveLectureScheduleCommand : RemoveCommand, ICommand
 {

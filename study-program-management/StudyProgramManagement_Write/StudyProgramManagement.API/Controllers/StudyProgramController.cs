@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using StudyProgramManagement.Commands.Commands.StudyProgram;
 using StudyProgramManagement.Commands.RabbitMq;
 using StudyProgramManagement.Commands.RabbitMq.Clients;
@@ -17,7 +16,7 @@ public class StudyProgramController : ControllerBase
     public StudyProgramController(ICommandsFactory commandsFactory)
     {
         _commandsFactory = commandsFactory;
-        _senderClient = new RabbitMqSenderClient(new List<string> {"REGISTRATION_QUEUE", "LEARNING_RESOURCES_QUEUE"});
+        _senderClient = new RabbitMqSenderClient(new List<string> { "REGISTRATION_QUEUE", "LEARNING_RESOURCES_QUEUE" });
     }
 
     [HttpPost]

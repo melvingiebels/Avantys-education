@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text.Json.Serialization;
-using StudyProgramManagement.Domain.Models.Enums;
+﻿using System.Text.Json.Serialization;
 
 namespace StudyProgramManagement.Domain.Models;
 

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 
 namespace StudyProgramManagement.Commands;
 
@@ -19,16 +17,12 @@ public class CommandFactory : ICommandsFactory
         var commandHandlers = _serviceProvider.GetServices<ICommandHandler<T>>();
 
         if (commandHandlers != null && commandHandlers.Any())
-        {
-            foreach (ICommandHandler<T> commandHandler in commandHandlers)
+            foreach (var commandHandler in commandHandlers)
             {
                 commandHandler.Execute(command);
                 commandHandler.Dispose();
             }
-        }
         else
-        {
             throw new ArgumentException("Unknown command \"" + typeof(T).FullName + "\"");
-        }
     }
 }

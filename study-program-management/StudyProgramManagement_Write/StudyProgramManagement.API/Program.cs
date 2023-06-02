@@ -1,8 +1,4 @@
-using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using StudyProgramManagement.Commands;
 using StudyProgramManagement.Commands.Commands.Class;
 using StudyProgramManagement.Commands.Commands.Lecture;
@@ -12,7 +8,6 @@ using StudyProgramManagement.Commands.Commands.Student;
 using StudyProgramManagement.Commands.Commands.StudyProgram;
 using StudyProgramManagement.Commands.Commands.Teacher;
 using StudyProgramManagement.Commands.Commands.TeacherModules;
-using StudyProgramManagement.Commands.RabbitMq;
 using StudyProgramManagement.Commands.RabbitMq.Clients;
 using StudyProgramManagement.Commands.RabbitMq.Handlers;
 using StudyProgramManagement.Infrastructure.Context;
@@ -100,7 +95,7 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var rabbitMqListener = scope.ServiceProvider.GetRequiredService<RabbitMqListenerClient>();
- // Start listening
+    // Start listening
     rabbitMqListener.StartListening();
 }
 

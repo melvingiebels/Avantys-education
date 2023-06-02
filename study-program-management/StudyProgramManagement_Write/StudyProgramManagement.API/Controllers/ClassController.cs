@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using StudyProgramManagement.Commands.Commands.Class;
 using StudyProgramManagement.Commands.RabbitMq;
 using StudyProgramManagement.Commands.RabbitMq.Clients;
@@ -13,6 +12,7 @@ public class ClassController : ControllerBase
 {
     private readonly ICommandsFactory _commandsFactory;
     private readonly RabbitMqSenderClient _senderClient;
+
     public ClassController(ICommandsFactory commandsFactory)
     {
         _commandsFactory = commandsFactory;

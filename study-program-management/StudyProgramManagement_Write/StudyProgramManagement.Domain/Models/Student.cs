@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace StudyProgramManagement.Domain.Models;
+﻿namespace StudyProgramManagement.Domain.Models;
 
 public class Student : Model
 {

@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using StudyProgramManagement.RabbitMq;
 using TestManagement.Infrastructure.Context;
 using TestManagement.CQS.Command;
 using TestManagement.CQS.Command.Question;
@@ -20,7 +21,6 @@ using TestManagement.Infrastructure.QueriesHandlers.Question;
 using TestManagement.Infrastructure.QueriesHandlers.Student;
 using TestManagement.Infrastructure.QueriesHandlers.StudentTests;
 using TestManagement.Infrastructure.QueriesHandlers.Test;
-using TestManagement.RabbitMQ;
 
 var builder = WebApplication.CreateBuilder(args);
 

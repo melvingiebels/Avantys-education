@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace StudyProgramManagement.Commands.Commands.Class;
+﻿namespace StudyProgramManagement.Commands.Commands.Class;
 
 public class RemoveClassCommand : RemoveCommand, ICommand
 {
