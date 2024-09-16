@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using TestManagement.Infrastructure.Context;
 using TestManagement.CQS.Command;
 using TestManagement.CQS.Command.Question;
 using TestManagement.CQS.Command.Student;
@@ -13,7 +14,6 @@ using TestManagement.CQS.Queries.Test;
 using TestManagement.Infrastructure.CommandHandlers.Question;
 using TestManagement.Infrastructure.CommandHandlers.Student;
 using TestManagement.Infrastructure.CommandHandlers.Test;
-using TestManagement.Infrastructure.Context;
 using TestManagement.Infrastructure.QueriesHandlers.McQuestion;
 using TestManagement.Infrastructure.QueriesHandlers.OpenQuestion;
 using TestManagement.Infrastructure.QueriesHandlers.Question;
