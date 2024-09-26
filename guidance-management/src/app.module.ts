@@ -3,7 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { GuidanceTalkService } from './guidance-talk/guidance-talk.service';
 import { GuidanceTalkController } from './guidance-talk/guidance-talk.controller';
-import {TypeOrmModule} from '@nestjs/typeorm'
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { Student } from './domain/student.model';
 import { Teacher } from './domain/teacher.model';
 import { Note } from './domain/note.model';
@@ -12,24 +12,30 @@ import { Appointment } from './domain/appointment.model';
 import { BaseUser } from './domain/user.abstract';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 
-
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: "mssql",
-      host: "sqlserver",
+      type: 'mssql',
+      host: 'sqlserver',
       port: 1433,
-      database: "AvantysEducationGuidanceTalk",
-      username: "sa",
-      password: "MelvinIsEenBot34",
+      database: 'AvantysEducationGuidanceTalk',
+      username: 'sa',
+      password: 'MelvinIsEenBot34',
       options: {
-        trustServerCertificate: true
+        trustServerCertificate: true,
       },
-      entities: [Student,Teacher,BaseUser,Note,GuidanceTalk,Appointment],
+      entities: [Student, Teacher, BaseUser, Note, GuidanceTalk, Appointment],
       synchronize: true,
-      logging: false
+      logging: false,
     }),
-    TypeOrmModule.forFeature([Student,Teacher,BaseUser,Note,GuidanceTalk,Appointment]),
+    TypeOrmModule.forFeature([
+      Student,
+      Teacher,
+      BaseUser,
+      Note,
+      GuidanceTalk,
+      Appointment,
+    ]),
     ClientsModule.register([
       {
         name: 'GUIDANCE_MANAGEMENT_SERVICE',
@@ -43,9 +49,8 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
         },
       },
     ]),
-
   ],
-  controllers: [AppController,GuidanceTalkController],
+  controllers: [AppController, GuidanceTalkController],
   providers: [AppService, GuidanceTalkService],
 })
 export class AppModule {}

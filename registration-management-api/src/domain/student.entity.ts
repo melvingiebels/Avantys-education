@@ -6,7 +6,7 @@ import {
   OneToOne,
 } from 'typeorm';
 import { StudyRegistration } from './studyRegistration.entity';
-import { Appointment } from './appointment.enity';
+import { Appointment } from './appointment.entity';
 
 @Entity()
 export class Student {
@@ -19,7 +19,7 @@ export class Student {
   )
   studyRegistrations: StudyRegistration[];
 
-  @OneToOne(() => Appointment, (appointment) => appointment.teacher)
+  @OneToMany(() => Appointment, (appointment) => appointment.teacher)
   appointments: Appointment[];
 
   @Column()
